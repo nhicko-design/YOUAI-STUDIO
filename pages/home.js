@@ -1,7 +1,5 @@
 import { getVideos } from "../api.js";
 
-import { getVideos } from "../api.js";
-
 export function Home() {
   setTimeout(loadVideos, 0);
 
@@ -115,22 +113,28 @@ async function loadVideos() {
 function videoCard(v) {
   return `
     <div class="group relative bg-black border border-purple-500/20 
-                rounded-xl overflow-hidden hover:scale-105 transition duration-300">
+                rounded-xl overflow-hidden hover:scale-105 transition">
 
-      <video 
-        src="${v.videoUrl}" 
-        muted 
-        autoplay 
-        loop 
-        playsinline
-        class="w-full h-[220px] object-cover">
-      </video>
+      <video src="${v.videoUrl}" muted autoplay loop playsinline
+             class="w-full h-[220px] object-cover"></video>
 
       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
-      <div class="absolute bottom-3 left-3 text-sm text-white">
+      <div class="absolute bottom-3 left-3 text-sm">
         ${v.title}
       </div>
+
+    </div>
+  `;
+}
+
+function featureCard(icon, text) {
+  return `
+    <div class="p-6 border border-gray-800 rounded-xl text-center 
+                hover:border-purple-500 transition">
+
+      <div class="text-3xl mb-4">${icon}</div>
+      <p class="text-gray-300">${text}</p>
 
     </div>
   `;
