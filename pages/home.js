@@ -61,6 +61,80 @@ export function Home() {
       </div>
     </section>
 
+    <!-- FEATURE SHOWCASE -->
+    <section class="px-10 py-20">
+
+      <h2 class="text-3xl text-center mb-12">
+        Cinematic AI Power
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+
+        <img src="./images/logo.png" 
+            class="w-full rounded-xl border border-purple-500/20"/>
+
+        <div>
+          <h3 class="text-2xl mb-4">Create Stunning AI Films</h3>
+          <p class="text-gray-400">
+            Generate cinematic visuals with realistic lighting, motion, and storytelling.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="px-10 py-20">
+
+      <h2 class="text-3xl text-center mb-12">
+        Use Cases
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        ${useCase("🎬 AI Commercial", "Create ads for brands")}
+        ${useCase("📱 Social Content", "TikTok & Reels videos")}
+        ${useCase("🎥 Short Films", "Story-driven cinematic videos")}
+
+      </div>
+
+    </section>
+
+
+    <section class="px-10 py-20">
+
+      <h2 class="text-3xl text-center mb-12">
+        How It Works
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+
+        ${step("1️⃣", "Send your idea")}
+        ${step("2️⃣", "We generate AI video")}
+        ${step("3️⃣", "Receive final cinematic video")}
+
+      </div>
+
+    </section>
+
+    <section class="px-10 py-20">
+
+      <h2 class="text-3xl text-center mb-12">
+        Visual Showcase
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        ${imageCard()}
+        ${imageCard()}
+        ${imageCard()}
+        ${imageCard()}
+
+      </div>
+
+    </section>
+
     <!-- SERVICES -->
     <section class="px-10 py-20">
       <h2 class="text-3xl mb-12 text-center">
@@ -121,6 +195,18 @@ export function Home() {
   `;
 }
 
+function useCase(icon, text) {
+  return `
+    <div class="p-6 border border-gray-800 rounded-xl text-center 
+                hover:border-purple-500 transition">
+
+      <div class="text-3xl mb-4">${icon}</div>
+      <p class="text-gray-300">${text}</p>
+
+    </div>
+  `;
+}
+
 async function loadVideos() {
   const grid = document.getElementById("video-grid");
 
@@ -162,6 +248,17 @@ function featureCard(icon, text) {
   `;
 }
 
+function step(icon, text) {
+  return `
+    <div class="p-6 border border-purple-500/20 rounded-xl">
+
+      <div class="text-2xl mb-4">${icon}</div>
+      <p class="text-gray-300">${text}</p>
+
+    </div>
+  `;
+}
+
 function pricingCard(title, price, features) {
   return `
     <div class="border border-purple-500/20 p-6 rounded-xl">
@@ -176,6 +273,17 @@ function pricingCard(title, price, features) {
       <button class="w-full py-2 bg-purple-600 rounded-lg">
         Choose Plan
       </button>
+
+    </div>
+  `;
+}
+
+function imageCard() {
+  return `
+    <div class="aspect-square overflow-hidden rounded-xl border border-purple-500/20 
+                hover:scale-105 transition">
+
+      <img src="./images/logo.png" class="w-full h-full object-cover"/>
 
     </div>
   `;
