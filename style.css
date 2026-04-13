@@ -1,7 +1,15 @@
-body {
-  font-family: Arial, sans-serif;
-}
+<style>
+  body {
+    background: #000;
+    color: white;
+  }
 
-video {
-  object-fit: cover;
-}
+  .btn-primary {
+    background: linear-gradient(135deg, #A78BFA, #C084FC);
+    transition: 0.3s;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.8;
+  }
+</style>
