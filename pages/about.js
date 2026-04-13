@@ -1,10 +1,19 @@
 export function About() {
   return `
-    <div class="p-10">
-      <h1 class="text-3xl mb-4">About</h1>
-      <p class="text-gray-400">
-        This is a cinematic AI SaaS-style app built with pure frontend.
+    <section class="py-20 text-center max-w-4xl mx-auto">
+
+      <h2 class="text-3xl mb-6">About Us</h2>
+
+      <p class="text-gray-400 leading-7">
+        We are one of the top creators in CapCut AI Vietnam, with nearly 2 years 
+        of experience in AI-driven video production.
       </p>
-    </div>
+
+      <p class="text-gray-400 mt-4">
+        We specialize in AI films, AI commercials, TVCs, and high-quality 
+        AI-generated visuals for brands.
+      </p>
+
+    </section>
   `;
 }

@@ -16,85 +16,107 @@ export function Home() {
 
         <h1 class="text-6xl font-extrabold mb-6">
           <span class="bg-gradient-to-r from-purple-300 to-purple-600 bg-clip-text text-transparent">
-            Create Cinematic AI Videos
+            YOU AI STUDIO
           </span>
         </h1>
 
         <p class="text-gray-400 text-lg mb-8">
-          Generate Hollywood-quality videos with AI in seconds
+          Create Cinematic AI Videos for Brands & Businesses
         </p>
 
         <div class="flex justify-center gap-4">
           <a href="#gallery" class="px-8 py-4 rounded-xl bg-purple-600 hover:scale-105 transition">
-            Start Creating
+            View Works
           </a>
 
-          <a href="#gallery" class="px-8 py-4 rounded-xl border border-gray-700 hover:border-purple-400 transition">
-            Explore Gallery
+          <a href="#pricing" class="px-8 py-4 rounded-xl border border-gray-700 hover:border-purple-400 transition">
+            Pricing
           </a>
         </div>
 
       </div>
-
     </section>
 
-    <!-- SOCIAL PROOF -->
-    <section class="py-10 text-center text-gray-500">
-      <p class="mb-4">Trusted by creators worldwide</p>
+    <!-- ABOUT -->
+    <section class="py-20 text-center max-w-4xl mx-auto">
+      <h2 class="text-3xl mb-6">About Us</h2>
 
-      <div class="flex justify-center gap-10 opacity-60 text-sm">
-        <span>Netflix</span>
-        <span>Adobe</span>
-        <span>TikTok</span>
-        <span>YouTube</span>
-      </div>
+      <p class="text-gray-400">
+        Top creator of CapCut AI Vietnam with nearly 2 years of experience in AI video production.
+      </p>
+
+      <p class="text-gray-400 mt-4">
+        We specialize in AI films, commercials, TVCs, and cinematic AI visuals.
+      </p>
     </section>
 
     <!-- VIDEO PREVIEW -->
     <section class="px-10 py-20">
-
       <h2 class="text-3xl mb-10 text-center font-semibold">
-        🎬 Trending Cinematic Videos
+        🎬 Our Works
       </h2>
 
       <div id="video-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         ⏳ Loading...
       </div>
-
     </section>
 
-    <!-- FEATURES -->
+    <!-- SERVICES -->
     <section class="px-10 py-20">
-
       <h2 class="text-3xl mb-12 text-center">
-        Powerful AI Video Tools
+        Our Services
       </h2>
 
       <div class="grid md:grid-cols-3 gap-8">
+        ${featureCard("⚡ Basic Video", "Simple commercial AI video")}
+        ${featureCard("🎬 Story Video", "Video with storytelling")}
+        ${featureCard("🎨 Premium Film", "Cinematic AI production")}
+      </div>
+    </section>
 
-        ${featureCard("⚡ Fast Generation", "Create videos in seconds")}
-        ${featureCard("🎬 Cinematic Quality", "Hollywood-style visuals")}
-        ${featureCard("🎨 Style Control", "Customize mood and lighting")}
+    <!-- PRICING -->
+    <section id="pricing" class="px-10 py-20">
+      <h2 class="text-3xl text-center mb-12">Pricing Plans</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        ${pricingCard("Basic 01", "650.000 VND", [
+          "No storyline",
+          "15-30 seconds",
+          "Simple commercial video",
+          "1 feedback round"
+        ])}
+
+        ${pricingCard("Basic 02", "1.000.000 VND", [
+          "Story-based video",
+          "30-40 seconds",
+          "High quality",
+          "2 feedback rounds"
+        ])}
+
+        ${pricingCard("Premium", "7.500.000 VND", [
+          "Cinematic short film",
+          "1 - 1.5 minutes",
+          "High-end production",
+          "2 feedback rounds"
+        ])}
 
       </div>
-
     </section>
 
     <!-- CTA -->
     <section class="text-center py-20">
-
-      <h2 class="text-4xl mb-6 font-bold">
-        Start Creating Today
+      <h2 class="text-4xl mb-6">
+        Ready to Create Your AI Video?
       </h2>
 
       <p class="text-gray-400 mb-8">
-        Join thousands of creators using AI to produce cinematic videos
+        Contact us today and bring your ideas to life
       </p>
 
-      <a href="#gallery" class="px-10 py-4 rounded-xl bg-purple-600 hover:scale-105 transition">
-        Get Started
+      <a class="px-10 py-4 bg-purple-600 rounded-xl hover:scale-105 transition">
+        Contact Now
       </a>
-
     </section>
   `;
 }
@@ -135,6 +157,25 @@ function featureCard(icon, text) {
 
       <div class="text-3xl mb-4">${icon}</div>
       <p class="text-gray-300">${text}</p>
+
+    </div>
+  `;
+}
+
+function pricingCard(title, price, features) {
+  return `
+    <div class="border border-purple-500/20 p-6 rounded-xl">
+
+      <h3 class="text-xl mb-2">${title}</h3>
+      <p class="text-2xl text-purple-400 mb-4">${price}</p>
+
+      <ul class="text-gray-400 mb-6">
+        ${features.map(f => `<li>✔ ${f}</li>`).join("")}
+      </ul>
+
+      <button class="w-full py-2 bg-purple-600 rounded-lg">
+        Choose Plan
+      </button>
 
     </div>
   `;
