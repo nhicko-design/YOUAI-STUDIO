@@ -2,23 +2,26 @@ import { getVideos } from "../api.js";
 
 export function Home() {
   setTimeout(() => {
-    loadVideos();
-    initAnimations();
+      loadVideos();
+      initAnimations();
+      initButtonScroll();
+      initVideoAutoPlay();
   }, 0);
 
   return `
     <!-- HERO -->
-    <section class="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+    <section class="hero">
 
-      <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black"></div>
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source id="bg-source" src="" type="video/mp4" />
+      </video>
 
-      <div class="glow absolute w-[600px] h-[600px] bg-purple-500/20 blur-3xl rounded-full top-[-100px]"></div>
+      <div class="overlay_background"></div>
 
-      <div class="relative z-10 max-w-4xl px-6 fade-in">
-
+      <div class="hero-content">
         <img src="./images/logo.png" class="w-20 h-20 mx-auto mb-6 rounded-full"/>
 
-        <h1 class="text-6xl font-extrabold mb-6 gradient-text">
+        <h1 class="logo-title">
           YOU AI STUDIO
         </h1>
 
@@ -34,10 +37,10 @@ export function Home() {
           <a href="#pricing" class="btn px-8 py-4 rounded-xl border border-gray-700">
             Pricing
           </a>
-        </div>
-
       </div>
+
     </section>
+
 
     <!-- ABOUT -->
     <section class="py-20 text-center max-w-4xl mx-auto fade-in">
@@ -99,16 +102,15 @@ export function Home() {
       </div>
     </section>
 
-    <section class="horizontal-section">
+    <section class="horizontal-section fade-in">
+
+      <!-- BUTTON -->
+      <button id="btn-left" class="nav-btn left">←</button>
+      <button id="btn-right" class="nav-btn right">→</button>
 
       <div class="sticky-wrapper">
         <div class="scroll-track" id="scroll-track">
-
-          ${videoHorizontal()}
-          ${videoHorizontal()}
-          ${videoHorizontal()}
-          ${videoHorizontal()}
-
+          ⏳ Loading...
         </div>
       </div>
 
@@ -168,13 +170,50 @@ export function Home() {
 
 async function loadVideos() {
   const grid = document.getElementById("video-grid");
-
+  const track = document.getElementById("scroll-track");
+  
   try {
     const data = await getVideos();
-    grid.innerHTML = data.map(videoCard).join("");
+
+    // grid bình thường
+    if (grid) {
+      grid.innerHTML = data.map(videoCard).join("");
+    }
+
+    if (track) {
+      track.innerHTML = data.map(videoHorizontalCard).join("");
+
+      setTimeout(() => {
+        loadBackgroundVideo();
+        initSnapSlider();     // 🔥 QUAN TRỌNG
+        initVideoAutoPlay();
+      }, 100);
+}
+
   } catch {
-    grid.innerHTML = "❌ Failed to load";
+    if (grid) grid.innerHTML = "❌ Failed";
+    if (track) track.innerHTML = "❌ Failed";
   }
+}
+
+function videoHorizontalCard(v) {
+  return `
+    <div class="h-card">
+
+      <video 
+        src="${v.videoUrl}" 
+        muted 
+        loop 
+        playsinline
+        class="video-el">
+      </video>
+
+      <div class="overlay">
+        ${v.title}
+      </div>
+
+    </div>
+  `;
 }
 
 function videoCard(v) {
@@ -256,6 +295,22 @@ function initAnimations() {
   elements.forEach(el => observer.observe(el));
 }
 
+function initVideoAutoPlay() {
+  const videos = document.querySelectorAll(".video-el");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.play();
+      } else {
+        entry.target.pause();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  videos.forEach(v => observer.observe(v));
+}
+
 function videoHorizontal() {
   return `
     <div class="h-card">
@@ -266,4 +321,205 @@ function videoHorizontal() {
       </video>
     </div>
   `;
+}
+
+function initHorizontalScroll() {
+  const section = document.querySelector(".horizontal-section");
+  const track = document.getElementById("scroll-track");
+
+  if (!section || !track) return;
+
+  let current = 0;
+  let target = 0;
+
+  function lerp(start, end, t) {
+    return start * (1 - t) + end * t;
+  }
+
+  function animate() {
+    current = lerp(current, target, 0.08);
+
+    track.style.transform = `translate3d(-${current}px,0,0)`;
+
+    updateCards();
+
+    requestAnimationFrame(animate);
+  }
+
+  function updateCards() {
+    const cards = document.querySelectorAll(".h-card");
+    const center = window.innerWidth / 2;
+
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const cardCenter = rect.left + rect.width / 2;
+
+      const dist = Math.abs(center - cardCenter);
+
+      const scale = Math.max(0.85, 1 - dist / 1000);
+      const blur = Math.min(6, dist / 200);
+
+      card.style.transform = `scale(${scale})`;
+      card.style.filter = `blur(${blur}px)`;
+    });
+  }
+
+  function onScroll() {
+    const rect = section.getBoundingClientRect();
+
+    const progress = Math.min(
+      Math.max(-rect.top / (section.offsetHeight - window.innerHeight), 0),
+      1
+    );
+
+    const maxMove = track.scrollWidth - window.innerWidth;
+
+    target = progress * maxMove;
+  }
+
+  window.addEventListener("scroll", onScroll);
+
+  animate();
+}
+
+function initDragScroll() {
+  const track = document.getElementById("scroll-track");
+  if (!track) return;
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  track.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX;
+    scrollLeft = track.scrollLeft;
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDown = false;
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+
+    const x = e.pageX;
+    const walk = (x - startX) * 2;
+
+    track.scrollLeft = scrollLeft - walk;
+  });
+}
+
+function initButtonScroll() {
+  const track = document.getElementById("scroll-track");
+  const btnLeft = document.getElementById("btn-left");
+  const btnRight = document.getElementById("btn-right");
+
+  if (!track || !btnLeft || !btnRight) return;
+
+  let current = 0;
+
+  const step = window.innerWidth * 0.6;
+
+  btnRight.onclick = () => {
+    current += step;
+    move();
+  };
+
+  btnLeft.onclick = () => {
+    current -= step;
+    move();
+  };
+
+  function move() {
+    const max = track.scrollWidth - window.innerWidth;
+
+    current = Math.max(0, Math.min(current, max));
+
+    track.style.transform = `translate3d(-${current}px,0,0)`;
+
+    updateCards();
+  }
+}
+
+function initSnapSlider() {
+  const track = document.getElementById("scroll-track");
+  const btnLeft = document.getElementById("btn-left");
+  const btnRight = document.getElementById("btn-right");
+
+  if (!track) return;
+
+  const cards = document.querySelectorAll(".h-card");
+
+  let currentIndex = 0;
+
+  function update() {
+    const card = cards[0];
+    if (!card) return;
+
+    const cardWidth = card.offsetWidth + 40; // gap
+
+    const offset = currentIndex * cardWidth;
+
+    track.style.transform = `translate3d(-${offset}px,0,0)`;
+
+    updateEffects();
+    updateButtons();
+  }
+
+  function updateEffects() {
+    cards.forEach((card, index) => {
+      const dist = Math.abs(index - currentIndex);
+
+      const scale = dist === 0 ? 1 : 0.85;
+      const blur = dist === 0 ? 0 : 4;
+
+      card.style.transform = `scale(${scale})`;
+      card.style.filter = `blur(${blur}px)`;
+      card.style.opacity = dist > 2 ? 0.3 : 1;
+    });
+  }
+
+  function updateButtons() {
+    btnLeft.style.opacity = currentIndex === 0 ? 0.3 : 1;
+    btnRight.style.opacity = currentIndex === cards.length - 1 ? 0.3 : 1;
+  }
+
+  btnRight.onclick = () => {
+    if (currentIndex < cards.length - 1) {
+      currentIndex++;
+      update();
+    }
+  };
+
+  btnLeft.onclick = () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      update();
+    }
+  };
+
+  // 👉 init
+  update();
+}
+
+
+async function loadBackgroundVideo() {
+  try {
+    const data = await getVideos();
+
+    if (!data || data.length === 0) return;
+
+    const video = document.querySelector(".bg-video");
+    const source = document.getElementById("bg-source");
+
+    // 👉 lấy video đầu tiên
+    source.src = data[0].videoUrl;
+
+    video.load();
+    video.play();
+
+  } catch (err) {
+    console.error("Load video failed", err);
+  }
 }

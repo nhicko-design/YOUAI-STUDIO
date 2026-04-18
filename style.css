@@ -3,6 +3,88 @@
     color: white;
   }
 
+.logo-title {
+  animation: fadeUp 1s ease forwards;
+  font-size: clamp(30px, 8vw, 70px);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+
+  background: linear-gradient(90deg, #a855f7, #ec4899, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-align: center;
+
+  text-shadow: 
+    0 0 20px rgba(168,85,247,0.4),
+    0 0 40px rgba(168,85,247,0.2);
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 🎥 video full màn */
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+
+  z-index: 0;
+}
+
+/* 🌑 overlay làm tối */
+.overlay_background {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(2px);
+
+  z-index: 1;
+}
+
+/* 🔥 content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.9)
+  );
+}
+
+.bg-video {
+  filter: brightness(0.7) contrast(1.1);
+}
   .btn-primary {
     background: linear-gradient(135deg, #A78BFA, #C084FC);
     transition: 0.3s;
@@ -35,7 +117,6 @@
     background: linear-gradient(270deg,#a78bfa,#c084fc,#a78bfa);
     background-size: 400% 400%;
     animation: gradientMove 6s ease infinite;
-    -webkit-background-clip: text;
     color: transparent;
   }
 
@@ -45,14 +126,14 @@
     100% {background-position:0%}
   }
   .horizontal-section {
-  height: 300vh; /* tạo không gian scroll */
+  height: auto; /* tạo không gian scroll */
   position: relative;
 }
 
 .sticky-wrapper {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: auto;
   overflow: hidden;
 }
 
@@ -70,4 +151,141 @@
   flex-shrink: 0;
   border-radius: 20px;
   overflow: hidden;
+}
+
+
+
+.scroll-track {
+  display: flex;
+  height: 100%;
+  gap: 30px;
+  padding: 0 10vw;
+  will-change: transform;
+}
+
+.h-card {
+  width: 70vw;
+  height: 80vh;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-el {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+
+.scroll-track {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 40px;
+  padding: 0 15vw;
+  will-change: transform;
+}
+
+.h-card {
+  width: 60vw;
+  height: 75vh;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+
+  transition: transform 0.4s, filter 0.4s;
+}
+
+.video-el {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(168,85,247,0.5);
+  padding: 12px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-btn.left { left: 20px; }
+.nav-btn.right { right: 20px; }
+
+.nav-btn:hover {
+  background: rgba(168,85,247,0.6);
+}
+
+.scroll-track {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 40px;
+  padding: 0 calc(50vw - 30vw); /* 🔥 trick center */
+  transition: transform 0.6s cubic-bezier(.22,1,.36,1);
+}
+
+.h-card {
+  width: 60vw;
+  height: 75vh;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+
+  transition: transform 0.5s, filter 0.5s;
+}
+
+.thumb-track {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 12px;
+  z-index: 20;
+}
+
+.thumb-card {
+  width: 120px;
+  height: 70px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.thumb-card.active {
+  opacity: 1;
+  border: 2px solid #a855f7;
+  transform: scale(1.1);
+}
+
+.thumb-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

@@ -52,14 +52,20 @@ function initHorizontalScroll() {
 
   if (!section || !track) return;
 
-  window.addEventListener("scroll", () => {
+  function onScroll() {
     const rect = section.getBoundingClientRect();
-    const progress = -rect.top / (section.offsetHeight - window.innerHeight);
+
+    const progress = Math.min(
+      Math.max(-rect.top / (section.offsetHeight - window.innerHeight), 0),
+      1
+    );
 
     const maxMove = track.scrollWidth - window.innerWidth;
 
-    track.style.transform = `translateX(-${progress * maxMove}px)`;
-  });
+    track.style.transform = `translate3d(-${progress * maxMove}px,0,0)`;
+  }
+
+  window.addEventListener("scroll", onScroll);
 }
 
 window.addEventListener("load", () => {
