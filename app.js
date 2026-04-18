@@ -20,6 +20,7 @@ function render() {
   requestAnimationFrame(() => {
     renderRoute();
   });
+  setTimeout(initHorizontalScroll, 0);
 }
 
 function initAnimations() {
@@ -44,6 +45,22 @@ window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
   glow.style.transform = `translateY(${scrollY * 0.3}px)`;
 });
+
+function initHorizontalScroll() {
+  const section = document.querySelector(".horizontal-section");
+  const track = document.getElementById("scroll-track");
+
+  if (!section || !track) return;
+
+  window.addEventListener("scroll", () => {
+    const rect = section.getBoundingClientRect();
+    const progress = -rect.top / (section.offsetHeight - window.innerHeight);
+
+    const maxMove = track.scrollWidth - window.innerWidth;
+
+    track.style.transform = `translateX(-${progress * maxMove}px)`;
+  });
+}
 
 window.addEventListener("load", () => {
   setTimeout(initAnimations, 100);

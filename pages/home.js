@@ -99,6 +99,21 @@ export function Home() {
       </div>
     </section>
 
+    <section class="horizontal-section">
+
+      <div class="sticky-wrapper">
+        <div class="scroll-track" id="scroll-track">
+
+          ${videoHorizontal()}
+          ${videoHorizontal()}
+          ${videoHorizontal()}
+          ${videoHorizontal()}
+
+        </div>
+      </div>
+
+    </section>
+
     <!-- VISUAL GRID -->
     <section class="px-10 py-20 fade-in">
       <h2 class="text-3xl text-center mb-12">Visual Showcase</h2>
@@ -239,4 +254,16 @@ function initAnimations() {
   });
 
   elements.forEach(el => observer.observe(el));
+}
+
+function videoHorizontal() {
+  return `
+    <div class="h-card">
+      <video 
+        src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+        muted loop playsinline
+        class="w-full h-full object-cover rounded-xl">
+      </video>
+    </div>
+  `;
 }

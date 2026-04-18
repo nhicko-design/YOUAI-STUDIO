@@ -44,3 +44,30 @@
     50% {background-position:100%}
     100% {background-position:0%}
   }
+  .horizontal-section {
+  height: 300vh; /* tạo không gian scroll */
+  position: relative;
+}
+
+.sticky-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll-track {
+  display: flex;
+  height: 100%;
+  width: 400vw; /* số lượng card */
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.h-card {
+  width: 80vw;
+  height: 80vh;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
