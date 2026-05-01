@@ -1,14 +1,18 @@
 [
   {
-    "videoUrl": "https://drive.google.com/file/d/1bf1rgEUh9e4XYNSs7Xr1cqYz54ocYMnJ/preview",
+    "videoBackground": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
     "title": "Cinematic Scene 1"
   },
   {
-    "videoUrl": "https://drive.google.com/file/d/1bf1rgEUh9e4XYNSs7Xr1cqYz54ocYMnJ/preview",
+    "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
+    "title": "Cinematic Scene 1"
+  },
+  {
+    "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4",
     "title": "Cinematic Scene 2"
   },
   {
-    "videoUrl": "https://samplelib.com/lib/preview/mp4/sample-15s.mp4",
+    "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649005/samples/elephants.mp4",
     "title": "Cinematic Scene 3"
   }
 ]

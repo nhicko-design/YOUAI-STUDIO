@@ -201,7 +201,7 @@ function videoHorizontalCard(v) {
     <div class="h-card">
 
       <video 
-        src="${v.videoUrl}" 
+        src="${v.videoBackground}" 
         muted 
         loop 
         playsinline
@@ -514,7 +514,7 @@ async function loadBackgroundVideo() {
     const source = document.getElementById("bg-source");
 
     // 👉 lấy video đầu tiên
-    source.src = data[0].videoUrl;
+    source.src = data[0].videoBackground;
 
     video.load();
     video.play();
