@@ -185,7 +185,7 @@ async function loadVideos() {
 
       setTimeout(() => {
         loadBackgroundVideo();
-        initSnapSlider();     // 🔥 QUAN TRỌNG
+        initSnapSlider();     
         initVideoAutoPlay();
       }, 100);
 }
@@ -311,17 +311,6 @@ function initVideoAutoPlay() {
   videos.forEach(v => observer.observe(v));
 }
 
-function videoHorizontal() {
-  return `
-    <div class="h-card">
-      <video 
-        src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
-        muted loop playsinline
-        class="w-full h-full object-cover rounded-xl">
-      </video>
-    </div>
-  `;
-}
 
 
 
@@ -362,7 +351,6 @@ function initSnapSlider() {
   const btnLeft = document.getElementById("btn-left");
   const btnRight = document.getElementById("btn-right");
 
-  if (!track) return;
 
   const cards = document.querySelectorAll(".h-card");
 
