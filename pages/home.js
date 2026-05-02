@@ -26,7 +26,7 @@ export function Home() {
         </h1>
 
         <p class="text-gray-400 text-lg mb-8">
-          Create Cinematic AI Videos for Brands & Businesses
+          We create cinematic AI experiences
         </p>
 
         <div class="flex justify-center gap-4">
@@ -47,7 +47,7 @@ export function Home() {
       <h2 class="text-3xl mb-6">About Us</h2>
 
       <p class="text-gray-400">
-        Top creator of CapCut AI Vietnam with nearly 2 years of experience in AI video production.
+        YOUAI Studio is a creative studio specializing in AI Films, AI Commercial Videos, AI TVCs, and AI-generated imagery. With nearly two years of experience in AI-driven video production, YOUAI Studio has collaborated with major brands to deliver high-quality, innovative, and cost-effective content. The team at YOUAI Studio continuously adopts the latest technologies while blending cinematic thinking and storytelling to create emotionally engaging visuals. YOUAI Studio is proud to have received prestigious awards such as the “AI POP CULTURE IMPACT 2025” and 4th place in the Film Bootcamp Micro Drama, reinforcing its credibility and expertise in the industry. YOUAI Studio is committed to delivering premium-quality productions to you on time, consistently exceeding expectations.
       </p>
 
       <p class="text-gray-400 mt-4">
@@ -201,7 +201,7 @@ function videoHorizontalCard(v) {
     <div class="h-card">
 
       <video 
-        src="${v.videoBackground}" 
+        src="${v.videoUrl}" 
         muted 
         loop 
         playsinline
@@ -323,92 +323,7 @@ function videoHorizontal() {
   `;
 }
 
-function initHorizontalScroll() {
-  const section = document.querySelector(".horizontal-section");
-  const track = document.getElementById("scroll-track");
 
-  if (!section || !track) return;
-
-  let current = 0;
-  let target = 0;
-
-  function lerp(start, end, t) {
-    return start * (1 - t) + end * t;
-  }
-
-  function animate() {
-    current = lerp(current, target, 0.08);
-
-    track.style.transform = `translate3d(-${current}px,0,0)`;
-
-    updateCards();
-
-    requestAnimationFrame(animate);
-  }
-
-  function updateCards() {
-    const cards = document.querySelectorAll(".h-card");
-    const center = window.innerWidth / 2;
-
-    cards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      const cardCenter = rect.left + rect.width / 2;
-
-      const dist = Math.abs(center - cardCenter);
-
-      const scale = Math.max(0.85, 1 - dist / 1000);
-      const blur = Math.min(6, dist / 200);
-
-      card.style.transform = `scale(${scale})`;
-      card.style.filter = `blur(${blur}px)`;
-    });
-  }
-
-  function onScroll() {
-    const rect = section.getBoundingClientRect();
-
-    const progress = Math.min(
-      Math.max(-rect.top / (section.offsetHeight - window.innerHeight), 0),
-      1
-    );
-
-    const maxMove = track.scrollWidth - window.innerWidth;
-
-    target = progress * maxMove;
-  }
-
-  window.addEventListener("scroll", onScroll);
-
-  animate();
-}
-
-function initDragScroll() {
-  const track = document.getElementById("scroll-track");
-  if (!track) return;
-
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
-  track.addEventListener("mousedown", (e) => {
-    isDown = true;
-    startX = e.pageX;
-    scrollLeft = track.scrollLeft;
-  });
-
-  window.addEventListener("mouseup", () => {
-    isDown = false;
-  });
-
-  window.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-
-    const x = e.pageX;
-    const walk = (x - startX) * 2;
-
-    track.scrollLeft = scrollLeft - walk;
-  });
-}
 
 function initButtonScroll() {
   const track = document.getElementById("scroll-track");
@@ -443,7 +358,7 @@ function initButtonScroll() {
 }
 
 function initSnapSlider() {
-  const track = document.getElementById("scroll-track");
+  // const track = document.getElementById("scroll-track");
   const btnLeft = document.getElementById("btn-left");
   const btnRight = document.getElementById("btn-right");
 
@@ -461,7 +376,7 @@ function initSnapSlider() {
 
     const offset = currentIndex * cardWidth;
 
-    track.style.transform = `translate3d(-${offset}px,0,0)`;
+    // track.style.transform = `translate3d(-${offset}px,0,0)`;
 
     updateEffects();
     updateButtons();
@@ -508,16 +423,22 @@ async function loadBackgroundVideo() {
   try {
     const data = await getVideos();
 
-    if (!data || data.length === 0) return;
+    // 👉 check đúng structure mới
+    if (!data || !data.hero || !data.hero.backgroundVideos?.length) return;
+
+    const bg = data.hero.backgroundVideos[0];
 
     const video = document.querySelector(".bg-video");
     const source = document.getElementById("bg-source");
 
-    // 👉 lấy video đầu tiên
-    source.src = data[0].videoBackground;
+    // 👉 set video background
+    source.src = bg.videoUrl;
 
     video.load();
-    video.play();
+
+    // 👉 đảm bảo autoplay không lỗi
+    video.muted = true;
+    video.play().catch(() => {});
 
   } catch (err) {
     console.error("Load video failed", err);

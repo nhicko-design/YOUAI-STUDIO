@@ -1,18 +1,35 @@
-[
-  {
-    "videoBackground": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
-    "title": "Cinematic Scene 1"
+{
+  "hero": {
+    "backgroundVideos": [
+      {
+        "id": "bg1",
+        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
+        "title": "BackGround"
+      }
+    ]
   },
-  {
-    "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
-    "title": "Cinematic Scene 1"
-  },
-  {
-    "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4",
-    "title": "Cinematic Scene 2"
-  },
-  {
-    "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649005/samples/elephants.mp4",
-    "title": "Cinematic Scene 3"
-  }
-]
+
+  "videos": [
+    {
+      "id": "v1",
+      "title": "Cinematic Scene 1",
+      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
+      "thumbnail": "",
+      "cardImage": ""
+    },
+    {
+      "id": "v2",
+      "title": "Cinematic Scene 2",
+      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4",
+      "thumbnail": "",
+      "cardImage": ""
+    },
+    {
+      "id": "v3",
+      "title": "Cinematic Scene 3",
+      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649005/samples/elephants.mp4",
+      "thumbnail": "",
+      "cardImage": ""
+    }
+  ]
+}
