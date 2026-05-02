@@ -12,7 +12,8 @@ export function Navbar() {
 
         <div class="flex gap-6 text-gray-300">
           <a href="#home" class="hover:text-white">Home</a>
-          <a href="#gallery" class="hover:text-white">Gallery</a>
+          <a href="#filmAI" class="hover:text-white">Film AI</a>
+          <a href="#commercial" class="hover:text-white">Commercial</a>
           <a href="#about" class="hover:text-white">About</a>
         </div>
 

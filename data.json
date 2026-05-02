@@ -4,7 +4,17 @@
       {
         "id": "bg1",
         "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
-        "title": "BackGround"
+        "title": "BackGround1"
+      },
+      {
+        "id": "bg2",
+        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4",
+        "title": "BackGround2"
+      },
+      {
+        "id": "bg3",
+        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649005/samples/elephants.mp4",
+        "title": "BackGround3"
       }
     ]
   },
@@ -12,21 +22,21 @@
   "videos": [
     {
       "id": "v1",
-      "title": "Cinematic Scene 1",
+      "title": "Film AI",
       "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
       "thumbnail": "",
       "cardImage": ""
     },
     {
       "id": "v2",
-      "title": "Cinematic Scene 2",
+      "title": "TVC / Commercial",
       "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4",
       "thumbnail": "",
       "cardImage": ""
     },
     {
       "id": "v3",
-      "title": "Cinematic Scene 3",
+      "title": "AI Imagery",
       "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649005/samples/elephants.mp4",
       "thumbnail": "",
       "cardImage": ""

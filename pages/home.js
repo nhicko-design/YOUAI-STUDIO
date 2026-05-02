@@ -31,7 +31,7 @@ export function Home() {
 
         <div class="flex justify-center gap-4">
           <a href="#gallery" class="btn px-8 py-4 rounded-xl bg-purple-600">
-            View Works
+            Film AI
           </a>
 
           <a href="#pricing" class="btn px-8 py-4 rounded-xl border border-gray-700">
@@ -50,9 +50,6 @@ export function Home() {
         YOUAI Studio is a creative studio specializing in AI Films, AI Commercial Videos, AI TVCs, and AI-generated imagery. With nearly two years of experience in AI-driven video production, YOUAI Studio has collaborated with major brands to deliver high-quality, innovative, and cost-effective content. The team at YOUAI Studio continuously adopts the latest technologies while blending cinematic thinking and storytelling to create emotionally engaging visuals. YOUAI Studio is proud to have received prestigious awards such as the “AI POP CULTURE IMPACT 2025” and 4th place in the Film Bootcamp Micro Drama, reinforcing its credibility and expertise in the industry. YOUAI Studio is committed to delivering premium-quality productions to you on time, consistently exceeding expectations.
       </p>
 
-      <p class="text-gray-400 mt-4">
-        We specialize in AI films, commercials, TVCs, and cinematic visuals.
-      </p>
     </section>
 
     <!-- VIDEO -->
@@ -74,20 +71,9 @@ export function Home() {
         <div>
           <h3 class="text-2xl mb-4">Create Stunning AI Films</h3>
           <p class="text-gray-400">
-            Generate cinematic visuals with realistic lighting, motion, and storytelling.
+            YOUAI Studio is a creative studio specializing in AI Films, AI Commercial Videos, AI TVCs, and AI-generated imagery. With nearly two years of experience in AI-driven video production, YOUAI Studio has collaborated with major brands to deliver high-quality, innovative, and cost-effective content. The team at YOUAI Studio continuously adopts the latest technologies while blending cinematic thinking and storytelling to create emotionally engaging visuals. YOUAI Studio is proud to have received prestigious awards such as the “AI POP CULTURE IMPACT 2025” and 4th place in the Film Bootcamp Micro Drama, reinforcing its credibility and expertise in the industry. YOUAI Studio is committed to delivering premium-quality productions to you on time, consistently exceeding expectations.
           </p>
         </div>
-      </div>
-    </section>
-
-    <!-- USE CASE -->
-    <section class="px-10 py-20 fade-in">
-      <h2 class="text-3xl text-center mb-12">Use Cases</h2>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        ${useCase("🎬", "AI Commercial")}
-        ${useCase("📱", "Social Content")}
-        ${useCase("🎥", "Short Films")}
       </div>
     </section>
 
@@ -128,9 +114,9 @@ export function Home() {
       </div>
     </section>
 
-    <!-- PRICING -->
+    <!-- Pick your plan -->
     <section id="pricing" class="px-10 py-20 fade-in">
-      <h2 class="text-3xl text-center mb-12">Pricing</h2>
+      <h2 class="text-3xl text-center mb-12">Pick your plan</h2>
 
       <div class="grid md:grid-cols-3 gap-8">
 
@@ -159,8 +145,11 @@ export function Home() {
     <section class="text-center py-20 fade-in">
       <h2 class="text-4xl mb-6">Start Your AI Video Today</h2>
 
+      <a class="btn px-10 py-4 bg-purple-600 rounded-xl mr-4">
+        Work with us
+      </a>
       <a class="btn px-10 py-4 bg-purple-600 rounded-xl">
-        Contact Now
+        View projects
       </a>
     </section>
   `;
@@ -173,16 +162,19 @@ async function loadVideos() {
   const track = document.getElementById("scroll-track");
   
   try {
+    
     const data = await getVideos();
-
+ 
     // grid bình thường
     if (grid) {
-      grid.innerHTML = data.map(videoCard).join("");
+      grid.innerHTML = data.videos.map(videoCard).join("");
+      
     }
 
     if (track) {
-      track.innerHTML = data.map(videoHorizontalCard).join("");
-
+      
+      track.innerHTML = data.videos.map(videoHorizontalCard).join("");
+      
       setTimeout(() => {
         loadBackgroundVideo();
         initSnapSlider();     // 🔥 QUAN TRỌNG
@@ -191,8 +183,8 @@ async function loadVideos() {
 }
 
   } catch {
-    if (grid) grid.innerHTML = "❌ Failed";
-    if (track) track.innerHTML = "❌ Failed";
+    if (grid) grid.innerHTML = "❌ GRID Failed";
+    if (track) track.innerHTML = "❌ TRACK Failed";
   }
 }
 
@@ -221,7 +213,8 @@ function videoCard(v) {
     <div class="card-hover relative bg-black border border-purple-500/20 
                 rounded-xl overflow-hidden">
 
-      <video src="${v.videoUrl}" muted loop playsinline
+      <video src="${v.videoUrl}" 
+        muted loop playsinline
         onmouseover="this.play()" 
         onmouseout="this.pause()"
         class="w-full h-[220px] object-cover">
@@ -230,6 +223,7 @@ function videoCard(v) {
       <div class="absolute bottom-3 left-3 text-sm">
         ${v.title}
       </div>
+
     </div>
   `;
 }
@@ -271,9 +265,6 @@ function pricingCard(title, price, features) {
         ${features.map(f => `<li>✔ ${f}</li>`).join("")}
       </ul>
 
-      <button class="btn w-full py-2 bg-purple-600 rounded-lg">
-        Choose Plan
-      </button>
 
     </div>
   `;
@@ -357,6 +348,93 @@ function initButtonScroll() {
   }
 }
 
+function initHorizontalScroll() {
+  const section = document.querySelector(".horizontal-section");
+  const track = document.getElementById("scroll-track");
+
+  if (!section || !track) return;
+
+  let current = 0;
+  let target = 0;
+
+  function lerp(start, end, t) {
+    return start * (1 - t) + end * t;
+  }
+
+  function animate() {
+    current = lerp(current, target, 0.08);
+
+    track.style.transform = `translate3d(-${current}px,0,0)`;
+
+    updateCards();
+
+    requestAnimationFrame(animate);
+  }
+
+  function updateCards() {
+    const cards = document.querySelectorAll(".h-card");
+    const center = window.innerWidth / 2;
+
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const cardCenter = rect.left + rect.width / 2;
+
+      const dist = Math.abs(center - cardCenter);
+
+      const scale = Math.max(0.85, 1 - dist / 1000);
+      const blur = Math.min(6, dist / 200);
+
+      card.style.transform = `scale(${scale})`;
+      card.style.filter = `blur(${blur}px)`;
+    });
+  }
+
+  function onScroll() {
+    const rect = section.getBoundingClientRect();
+
+    const progress = Math.min(
+      Math.max(-rect.top / (section.offsetHeight - window.innerHeight), 0),
+      1
+    );
+
+    const maxMove = track.scrollWidth - window.innerWidth;
+
+    target = progress * maxMove;
+  }
+
+  window.addEventListener("scroll", onScroll);
+
+  animate();
+}
+
+function initDragScroll() {
+  const track = document.getElementById("scroll-track");
+  if (!track) return;
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  track.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX;
+    scrollLeft = track.scrollLeft;
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDown = false;
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+
+    const x = e.pageX;
+    const walk = (x - startX) * 2;
+
+    track.scrollLeft = scrollLeft - walk;
+  });
+}
+
 function initSnapSlider() {
   const track = document.getElementById("scroll-track");
   const btnLeft = document.getElementById("btn-left");
@@ -424,7 +502,12 @@ async function loadBackgroundVideo() {
     const data = await getVideos();
 
     // 👉 check đúng structure mới
-    if (!data || !data.hero || !data.hero.backgroundVideos?.length) return;
+    if (!data || !data.hero || !data.hero.backgroundVideos?.length) 
+      {
+        console.error('Loi')
+        return;
+      }
+    console.log("OK");  
 
     const bg = data.hero.backgroundVideos[0];
 

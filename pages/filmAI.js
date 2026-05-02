@@ -1,7 +1,7 @@
 import { getVideos } from "../api.js";
 import { VideoCard } from "../components/card.js";
 
-export function Gallery() {
+export function FilmAI() {
   setTimeout(loadVideos, 0);
 
   return `
@@ -20,7 +20,7 @@ async function loadVideos() {
   try {
     const data = await getVideos();
 
-    grid.innerHTML = data.map(VideoCard).join("");
+    grid.innerHTML = data.videos.map(VideoCard).join("");
   } catch {
     grid.innerHTML = "❌ Failed to load";
   }
