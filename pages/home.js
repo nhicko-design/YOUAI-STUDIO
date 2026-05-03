@@ -102,7 +102,7 @@ export function Home() {
           </h2>
 
           <p class="mt-4 text-gray-400">
-            Create cinematic AI-generated videos with powerful tools.
+            Create high-impact commercial videos with AI — fast, scalable, and visually stunning.
           </p>
 
         </div>
@@ -110,7 +110,7 @@ export function Home() {
         <!-- 👉 RIGHT BUTTON -->
         <a href="#filmAI" 
           class="commer-btn mt-4 md:mt-0 self-start md:self-center">
-          Explore Commercial →
+          Commercial →
         </a>
 
       </div>
@@ -277,7 +277,7 @@ async function loadVideos() {
 
       // 👉 mobile chỉ lấy 3 video
       if (isMobile) {
-        list = list.slice(0, 3);
+        list = list.slice(0, 1);
       }
       else
       {

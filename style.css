@@ -347,16 +347,13 @@
   width: 60%;
 }
 .video-grid-advanced {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 
-  overflow-x: auto;
-  padding-bottom: 10px;
+  grid-auto-flow: dense;
 }
 
-.video-grid-advanced::-webkit-scrollbar {
-  display: none;
-}
 .video-grid-advanced .card-hover:nth-child(3n) {
   grid-column: span 2;
 }
@@ -383,8 +380,27 @@
 }
 
 
+/* 📱 MOBILE: 1 cột full width */
+@media (max-width: 767px) {
+  .video-grid-advanced {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .card-hover video {
+    height: 260px;
+  }
+}
+/* 💻 TABLET */
 @media (min-width: 768px) {
-  .section-box {
-    padding: 32px;
+  .video-grid-advanced {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 🖥️ DESKTOP */
+@media (min-width: 1024px) {
+  .video-grid-advanced {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 }
