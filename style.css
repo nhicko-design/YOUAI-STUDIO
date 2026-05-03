@@ -289,3 +289,54 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* 🎬 FILM TITLE */
+.film-title {
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+
+  background: linear-gradient(90deg, #a855f7, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🔥 BUTTON */
+.film-btn {
+  display: inline-block;
+  padding: 12px 20px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(168,85,247,0.5);
+
+  background: rgba(168,85,247,0.1);
+
+  transition: 0.3s;
+}
+
+.film-btn:hover {
+  background: #a855f7;
+  color: white;
+}
+
+.md\:w-3\/10 {
+  width: 30%;
+}
+
+.md\:w-7\/10 {
+  width: 70%;
+}
+.video-grid-advanced {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
+  gap: 16px;
+}
+.video-grid-advanced .card-hover:nth-child(3n) {
+  grid-column: span 2;
+}
+
+.video-grid-advanced .card-hover:nth-child(5n) {
+  grid-row: span 2;
+}

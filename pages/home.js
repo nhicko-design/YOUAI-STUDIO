@@ -52,14 +52,42 @@ export function Home() {
 
     </section>
 
-    <!-- VIDEO -->
-    <section class="px-10 py-20 fade-in">
-      <h2 class="text-3xl mb-10 text-center">🎬 Our Works</h2>
+    <section class="px-6 md:px-10 py-20 fade-in">
 
-      <div id="video-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        ⏳ Loading...
+  <section class="px-6 md:px-10 py-20 fade-in">
+
+    <div class="flex flex-col md:flex-row gap-10">
+
+      <!-- 🟣 LEFT (3/10) -->
+      <div class="md:w-3/10 flex flex-col justify-center">
+
+        <h2 class="film-title">
+          FILM AI
+        </h2>
+
+        <p class="mt-4 text-gray-400">
+          Create cinematic AI-generated videos with powerful tools.
+        </p>
+
+        <a href="#film-ai" class="film-btn mt-6">
+          Explore Film AI →
+        </a>
+
       </div>
-    </section>
+
+      <!-- 🎬 RIGHT (7/10) -->
+      <div class="md:w-7/10">
+
+        <div id="video-grid"
+          class="video-grid-advanced">
+          ⏳ Loading...
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
 
     <!-- FEATURE SHOWCASE -->
     <section class="px-10 py-20 fade-in">
@@ -179,6 +207,8 @@ async function loadVideos() {
         loadBackgroundVideo();
         initSnapSlider();     // 🔥 QUAN TRỌNG
         initVideoAutoPlay();
+        initAutoPlayOnScroll(); // 🔥 QUAN TRỌNG
+
       }, 100);
 }
 
@@ -215,9 +245,7 @@ function videoCard(v) {
 
       <video src="${v.videoUrl}" 
         muted loop playsinline
-        onmouseover="this.play()" 
-        onmouseout="this.pause()"
-        class="w-full h-[220px] object-cover">
+        class="video-auto w-full h-[220px] object-cover">
       </video>
 
       <div class="absolute bottom-3 left-3 text-sm">
@@ -526,4 +554,24 @@ async function loadBackgroundVideo() {
   } catch (err) {
     console.error("Load video failed", err);
   }
+}
+
+function initAutoPlayOnScroll() {
+  const videos = document.querySelectorAll(".video-auto");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+
+      if (entry.isIntersecting) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
+  }, {
+    threshold: 0.5 // 👉 50% mới play (đẹp hơn)
+  });
+
+  videos.forEach(video => observer.observe(video));
 }
