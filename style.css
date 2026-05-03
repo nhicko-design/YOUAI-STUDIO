@@ -348,18 +348,14 @@
 }
 .video-grid-advanced {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-
+  gap: 10px;
   grid-auto-flow: dense;
+  
 }
 
-.video-grid-advanced .card-hover:nth-child(3n) {
-  grid-column: span 2;
-}
-
-.video-grid-advanced .card-hover:nth-child(5n) {
-  grid-row: span 2;
+.video-grid-advanced .card-hover:nth-child(2),
+.video-grid-advanced .card-hover:nth-child(4) {
+  grid-column: span 2;/* 👉 nếu muốn to cả chiều cao */
 }
 
 .section-box {
@@ -401,6 +397,7 @@
 /* 🖥️ DESKTOP */
 @media (min-width: 1024px) {
   .video-grid-advanced {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 2fr));
+    align-items: right;
   }
 }

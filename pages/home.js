@@ -59,7 +59,7 @@ export function Home() {
           <div class="flex flex-col md:flex-row gap-10">
 
             <!-- 🟣 LEFT (3/10) -->
-            <div class="w-full md:w-3/10 flex-col">
+            <div class="w-full md:w-3/10">
 
               <h2 class="film-title">
                 FILM AI
@@ -76,7 +76,7 @@ export function Home() {
             </div>
 
             <!-- 🎬 RIGHT (7/10) -->
-            <div class="w-full md:w-7/10 justify-center">
+            <div class=" md:w-7/10 flex-shrink-0">
 
               <div id="video-grid"
                 class="video-grid-advanced">
@@ -139,7 +139,7 @@ export function Home() {
           </div>
 
           <!-- 🎬 RIGHT (7/10) -->
-          <div class="w-full md:w-7/10 justify-center">
+          <div class="w-full md:w-7/10">
 
             <div id="video-grid"
               class="video-grid-advanced">
@@ -281,10 +281,9 @@ async function loadVideos() {
       }
       else
       {
-        list = list.slice(0, 5);
+        list = list.slice(0, 6);
       }
 
-      grid.innerHTML = list.map(videoCard).join("");
       grid.innerHTML = list.map(videoCard).join("");
       
     }
