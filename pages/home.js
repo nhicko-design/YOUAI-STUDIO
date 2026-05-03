@@ -55,11 +55,83 @@ export function Home() {
     <section class="px-6 md:px-10 py-20 fade-in">
 
   <section class="px-6 md:px-10 py-20 fade-in">
+    <div class="section-box">
+
+      <div class="flex flex-col md:flex-row gap-10">
+
+        <!-- 🟣 LEFT (3/10) -->
+        <div class="w-full md:w-3/10 flex-col">
+
+          <h2 class="film-title">
+            FILM AI
+          </h2>
+
+          <p class="mt-4 text-gray-400">
+            Create cinematic AI-generated videos with powerful tools.
+          </p>
+
+          <a href="#filmAI" class="film-btn mt-6">
+            Explore Film AI →
+          </a>
+
+        </div>
+
+        <!-- 🎬 RIGHT (7/10) -->
+        <div class="w-full md:w-7/10 justify-center">
+
+          <div id="video-grid"
+            class="video-grid-advanced">
+            ⏳ Loading...
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+    <section class="px-6 md:px-10 py-20 fade-in">
+
+    <div class="flex flex-col md:flex-row gap-10">
+      <!-- 🎬 RIGHT (7/10) -->
+      <div class="w-full md:w-6/10 justify-center">
+
+        <div id="video-grid"
+          class="video-grid-advanced">
+          ⏳ Loading...
+        </div>
+
+      </div>
+      <!-- 🟣 LEFT (3/10) -->
+      <div class="w-full md:w-4/10 flex-col">
+
+        <h2 class="film-title">
+          COMMERCIAL
+        </h2>
+
+        <p class="mt-4 text-gray-400">
+          Create cinematic AI-generated videos with powerful tools.
+        </p>
+
+        <a href="#filmAI" class="film-btn mt-6">
+          Explore Film AI →
+        </a>
+
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+    <section class="px-6 md:px-10 py-20 fade-in">
 
     <div class="flex flex-col md:flex-row gap-10">
 
       <!-- 🟣 LEFT (3/10) -->
-      <div class="md:w-3/10 flex flex-col justify-center">
+      <div class="w-full md:w-3/10 flex-col">
 
         <h2 class="film-title">
           FILM AI
@@ -69,14 +141,14 @@ export function Home() {
           Create cinematic AI-generated videos with powerful tools.
         </p>
 
-        <a href="#film-ai" class="film-btn mt-6">
+        <a href="#filmAI" class="film-btn mt-6">
           Explore Film AI →
         </a>
 
       </div>
 
       <!-- 🎬 RIGHT (7/10) -->
-      <div class="md:w-7/10">
+      <div class="w-full md:w-7/10 justify-center">
 
         <div id="video-grid"
           class="video-grid-advanced">
@@ -170,15 +242,26 @@ export function Home() {
     </section>
 
     <!-- CTA -->
-    <section class="text-center py-20 fade-in">
-      <h2 class="text-4xl mb-6">Start Your AI Video Today</h2>
+    <section class="text-center py-16 md:py-20 fade-in">
 
-      <a class="btn px-10 py-4 bg-purple-600 rounded-xl mr-4">
-        Work with us
-      </a>
-      <a class="btn px-10 py-4 bg-purple-600 rounded-xl">
-        View projects
-      </a>
+      <h2 class="text-2xl md:text-4xl mb-6">
+        Start Your AI Video Today
+      </h2>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+
+        <a class="btn w-full sm:w-auto px-6 md:px-10 py-3 md:py-4 
+                  bg-purple-600 rounded-xl text-center">
+          Work with us
+        </a>
+
+        <a class="btn w-full sm:w-auto px-6 md:px-10 py-3 md:py-4 
+                  bg-purple-600 rounded-xl text-center">
+          View projects
+        </a>
+
+      </div>
+
     </section>
   `;
 }
@@ -195,7 +278,23 @@ async function loadVideos() {
  
     // grid bình thường
     if (grid) {
-      grid.innerHTML = data.videos.map(videoCard).join("");
+      // const list = data.videos.slice(0, 6);
+      let list = data?.videos || [];
+
+      // 👉 detect mobile
+      const isMobile = window.innerWidth < 768;
+
+      // 👉 mobile chỉ lấy 3 video
+      if (isMobile) {
+        list = list.slice(0, 3);
+      }
+      else
+      {
+        list = list.slice(0, 5);
+      }
+
+      grid.innerHTML = list.map(videoCard).join("");
+      grid.innerHTML = list.map(videoCard).join("");
       
     }
 

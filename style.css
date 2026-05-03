@@ -292,8 +292,8 @@
 
 /* 🎬 FILM TITLE */
 .film-title {
-  font-size: clamp(40px, 6vw, 80px);
-  font-weight: 900;
+  font-size: clamp(40px, 6vw, 60px);
+  font-weight: 700;
   letter-spacing: 0.1em;
 
   background: linear-gradient(90deg, #a855f7, #6366f1);
@@ -327,11 +327,15 @@
   width: 70%;
 }
 .video-grid-advanced {
-  display: grid;
-
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-
+  display: flex;
   gap: 16px;
+
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.video-grid-advanced::-webkit-scrollbar {
+  display: none;
 }
 .video-grid-advanced .card-hover:nth-child(3n) {
   grid-column: span 2;
@@ -339,4 +343,28 @@
 
 .video-grid-advanced .card-hover:nth-child(5n) {
   grid-row: span 2;
+}
+
+.section-box {
+  border-radius: 16px;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+
+  padding: 16px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.15),
+    rgba(99, 102, 241, 0.1)
+  );
+
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+
+@media (min-width: 768px) {
+  .section-box {
+    padding: 32px;
+  }
 }
