@@ -52,114 +52,105 @@ export function Home() {
 
     </section>
 
-    <section class="px-6 md:px-10 py-20 fade-in">
 
-  <section class="px-6 md:px-10 py-20 fade-in">
-    <div class="section-box">
+      <section class="px-6 md:px-10 py-20 fade-in">
+        <div class="section-box">
 
-      <div class="flex flex-col md:flex-row gap-10">
+          <div class="flex flex-col md:flex-row gap-10">
 
-        <!-- 🟣 LEFT (3/10) -->
-        <div class="w-full md:w-3/10 flex-col">
+            <!-- 🟣 LEFT (3/10) -->
+            <div class="w-full md:w-3/10 flex-col">
+
+              <h2 class="film-title">
+                FILM AI
+              </h2>
+
+              <p class="mt-4 text-gray-400">
+                Create cinematic AI-generated videos with powerful tools.
+              </p>
+
+              <a href="#filmAI" class="film-btn mt-6">
+                Explore Film AI →
+              </a>
+
+            </div>
+
+            <!-- 🎬 RIGHT (7/10) -->
+            <div class="w-full md:w-7/10 justify-center">
+
+              <div id="video-grid"
+                class="video-grid-advanced">
+                ⏳ Loading...
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="px-6 md:px-10 py-20 fade-in">
+
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+        <!-- 🟣 LEFT -->
+        <div class="w-full md:w-4/10">
 
           <h2 class="film-title">
-            FILM AI
+            COMMERCIAL
           </h2>
 
           <p class="mt-4 text-gray-400">
             Create cinematic AI-generated videos with powerful tools.
           </p>
 
-          <a href="#filmAI" class="film-btn mt-6">
-            Explore Film AI →
-          </a>
-
         </div>
 
-        <!-- 🎬 RIGHT (7/10) -->
-        <div class="w-full md:w-7/10 justify-center">
+        <!-- 👉 RIGHT BUTTON -->
+        <a href="#filmAI" 
+          class="commer-btn mt-4 md:mt-0 self-start md:self-center">
+          Explore Commercial →
+        </a>
 
-          <div id="video-grid"
-            class="video-grid-advanced">
-            ⏳ Loading...
+      </div>
+
+      </section>
+
+      <section class="px-6 md:px-10 py-20 fade-in">
+
+        <div class="flex flex-col md:flex-row gap-10">
+
+          <!-- 🟣 LEFT (3/10) -->
+          <div class="w-full md:w-3/10 flex-col">
+
+            <h2 class="film-title">
+              FILM AI
+            </h2>
+
+            <p class="mt-4 text-gray-400">
+              Create cinematic AI-generated videos with powerful tools.
+            </p>
+
+            <a href="#filmAI" class="film-btn mt-6">
+              Explore Film AI →
+            </a>
+
+          </div>
+
+          <!-- 🎬 RIGHT (7/10) -->
+          <div class="w-full md:w-7/10 justify-center">
+
+            <div id="video-grid"
+              class="video-grid-advanced">
+              ⏳ Loading...
+            </div>
+
           </div>
 
         </div>
 
-      </div>
-    </div>
-
-  </section>
-
-    <section class="px-6 md:px-10 py-20 fade-in">
-
-    <div class="flex flex-col md:flex-row gap-10">
-      <!-- 🎬 RIGHT (7/10) -->
-      <div class="w-full md:w-6/10 justify-center">
-
-        <div id="video-grid"
-          class="video-grid-advanced">
-          ⏳ Loading...
-        </div>
-
-      </div>
-      <!-- 🟣 LEFT (3/10) -->
-      <div class="w-full md:w-4/10 flex-col">
-
-        <h2 class="film-title">
-          COMMERCIAL
-        </h2>
-
-        <p class="mt-4 text-gray-400">
-          Create cinematic AI-generated videos with powerful tools.
-        </p>
-
-        <a href="#filmAI" class="film-btn mt-6">
-          Explore Film AI →
-        </a>
-
-      </div>
-
-
-
-    </div>
-
-  </section>
-
-    <section class="px-6 md:px-10 py-20 fade-in">
-
-    <div class="flex flex-col md:flex-row gap-10">
-
-      <!-- 🟣 LEFT (3/10) -->
-      <div class="w-full md:w-3/10 flex-col">
-
-        <h2 class="film-title">
-          FILM AI
-        </h2>
-
-        <p class="mt-4 text-gray-400">
-          Create cinematic AI-generated videos with powerful tools.
-        </p>
-
-        <a href="#filmAI" class="film-btn mt-6">
-          Explore Film AI →
-        </a>
-
-      </div>
-
-      <!-- 🎬 RIGHT (7/10) -->
-      <div class="w-full md:w-7/10 justify-center">
-
-        <div id="video-grid"
-          class="video-grid-advanced">
-          ⏳ Loading...
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
+      </section>
 
     <!-- FEATURE SHOWCASE -->
     <section class="px-10 py-20 fade-in">
