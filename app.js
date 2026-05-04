@@ -20,7 +20,6 @@ function render() {
   requestAnimationFrame(() => {
     renderRoute();
   });
-  setTimeout(initHorizontalScroll, 0);
 }
 
 function initHorizontalScroll() {

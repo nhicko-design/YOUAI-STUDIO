@@ -6,7 +6,6 @@ export function Home() {
       initAnimations();
       initButtonScroll();
       initVideoAutoPlay();
-      loadImagery(); 
   }, 0);
 
   return `
@@ -165,34 +164,10 @@ export function Home() {
             </a>
 
           </div>
-          <section class="px-4 md:px-10 py-20 fade-in">
-
-            <div class="section-box">
-
-              <!-- HEADER -->
-              <div class="flex justify-between items-center mb-10">
-
-                <div>
-                  <h2 class="imagery-title">AI IMAGERY</h2>
-                  <p class="text-gray-400 mt-3">
-                    Transform ideas into breathtaking visuals powered by AI.
-                  </p>
-                </div>
-
-                <a href="#imagery" class="imagery-btn">
-                  Explore →
-                </a>
-
-              </div>
-
-              <!-- GRID -->
-              <div id="imagery-grid" class="imagery-grid">
-                ⏳ Loading...
-              </div>
-
-            </div>
-
-          </section>
+          <!-- GRID -->
+          <div id="imagery-grid" class="imagery-grid">
+            ⏳ Loading...
+          </div>
 
         </div>
 
@@ -304,6 +279,8 @@ async function loadDatas() {
       initSnapSlider?.();
       initVideoAutoPlay?.();
       initAutoPlayOnScroll?.();
+      detectImageRatio();
+      showImagery();
     }, 100);
 
   } catch (err) {
@@ -583,29 +560,50 @@ function initAutoPlayOnScroll() {
 
 function imageCard(img) {
   return `
-    <div class="img-card">
+    <div class="img-card ${img.type || ""}">
       <img src="${img.imageUrl}" alt="${img.title}" />
-
-      <div class="img-overlay">
-        ${img.title}
-      </div>
     </div>
   `;
 }
 
-async function loadImagery() {
-  const container = document.getElementById("imagery-grid");
+function showImagery() {
+  const cards = document.querySelectorAll(".img-card");
 
-  try {
-    const data = await getVideos(); // bạn đang dùng chung hàm này
+  cards.forEach((card, i) => {
+    setTimeout(() => {
+      card.classList.add("show");
+    }, i * 100);
+  });
+}
 
-    if (!data.imagery) return;
+function detectImageRatio() {
+  const images = document.querySelectorAll(".img-card img");
 
-    container.innerHTML = data.imagery
-      .map(imageCard)
-      .join("");
+  images.forEach((img) => {
+    // nếu ảnh đã load sẵn
+    if (img.complete) {
+      applyRatio(img);
+    } else {
+      img.onload = () => applyRatio(img);
+    }
+  });
+}
 
-  } catch (err) {
-    console.error("Load imagery failed", err);
+function applyRatio(img) {
+  const card = img.closest(".img-card");
+
+  const w = img.naturalWidth;
+  const h = img.naturalHeight;
+
+  if (!w || !h) return;
+
+  const ratio = w / h;
+
+  if (ratio < 0.8) {
+    card.classList.add("portrait");
+  } else if (ratio > 1.2) {
+    card.classList.add("landscape");
+  } else {
+    card.classList.add("square");
   }
 }

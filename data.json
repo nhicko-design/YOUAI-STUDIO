@@ -73,20 +73,29 @@
   
   "imagery": [
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649016/cld-sample-5.jpg",
-      "title": "Futuristic City"
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649011/samples/outdoor-woman.jpg",
+      "title": "Futuristic City",
+      "type": "portrait"
     },
     {
       "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649016/cld-sample.jpg",
-      "title": "AI Portrait"
+      "title": "AI Portrait",
+      "type": "portrait"
     },
     {
       "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649014/samples/woman-on-a-football-field.jpg",
-      "title": "Cyberpunk Scene"
+      "title": "Cyberpunk Scene",
+      "type": "portrait"
     },
     {
       "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649013/samples/coffee.jpg",
-      "title": "Abstract AI Art"
+      "title": "Abstract AI Art",
+      "type": "portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649013/samples/chair-and-coffee-table.jpg",
+      "title": "Abstract AI Art",
+      "type": "portrait"
     }
   ]
 
