@@ -2,10 +2,11 @@ import { getVideos } from "../api.js";
 
 export function Home() {
   setTimeout(() => {
-      loadVideos();
+      loadDatas();
       initAnimations();
       initButtonScroll();
       initVideoAutoPlay();
+      loadImagery(); 
   }, 0);
 
   return `
@@ -94,104 +95,110 @@ export function Home() {
 
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
 
-        <!-- 🟣 LEFT -->
-        <div class="w-full md:w-4/10">
-
-          <h2 class="film-title">
-            COMMERCIAL
-          </h2>
-
-          <p class="mt-4 text-gray-400">
-            Create high-impact commercial videos with AI — fast, scalable, and visually stunning.
-          </p>
-
-        </div>
-
-        <!-- 👉 RIGHT BUTTON -->
-        <a href="#filmAI" 
-          class="commer-btn mt-4 md:mt-0 self-start md:self-center">
-          Commercial →
-        </a>
-
-      </div>
-
-      </section>
-
-      <section class="px-6 md:px-10 py-20 fade-in">
-
-        <div class="flex flex-col md:flex-row gap-10">
-
-          <!-- 🟣 LEFT (3/10) -->
-          <div class="w-full md:w-3/10 flex-col">
+          <!-- 🟣 LEFT -->
+          <div class="w-full">
 
             <h2 class="film-title">
-              FILM AI
+              COMMERCIAL
             </h2>
 
             <p class="mt-4 text-gray-400">
-              Create cinematic AI-generated videos with powerful tools.
+              Create high-impact commercial videos with AI — fast, scalable, and visually stunning.
             </p>
 
-            <a href="#filmAI" class="film-btn mt-6">
-              Explore Film AI →
+          </div>
+
+          <!-- 👉 RIGHT BUTTON -->
+          <a href="#filmAI" 
+            class="commer-btn mt-4 md:mt-0 self-start md:self-center">
+            Commercial →
+          </a>
+
+        </div>
+      <div class="w-full">
+        <section class="horizontal-section fade-in">
+
+          <!-- 🔥 HEADER (chứa nút) -->
+          <div class="flex justify-end gap-3 mb-6">
+
+            <button id="btn-left" class="nav-btn">
+              ←
+            </button>
+
+            <button id="btn-right" class="nav-btn">
+              →
+            </button>
+
+          </div>
+
+          <!-- 🎬 VIDEO -->
+          <div class="sticky-wrapper">
+            <div class="scroll-track" id="scroll-track">
+              ⏳ Loading...
+            </div>
+          </div>
+
+        </section>
+      </div>
+
+      </section>
+
+      <section class="px-4 md:px-10 py-20 fade-in">
+
+        <div class="section-box">
+
+          <!-- 🔥 HEADER -->
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+
+            <div>
+              <h2 class="imagery-title">
+                AI IMAGERY
+              </h2>
+
+              <p class="mt-4 text-gray-400 max-w-xl">
+                Transform ideas into breathtaking visuals powered by AI.
+              </p>
+            </div>
+
+            <a href="#imagery" class="imagery-btn">
+              Explore Imagery →
             </a>
 
           </div>
+          <section class="px-4 md:px-10 py-20 fade-in">
 
-          <!-- 🎬 RIGHT (7/10) -->
-          <div class="w-full md:w-7/10">
+            <div class="section-box">
 
-            <div id="video-grid"
-              class="video-grid-advanced">
-              ⏳ Loading...
+              <!-- HEADER -->
+              <div class="flex justify-between items-center mb-10">
+
+                <div>
+                  <h2 class="imagery-title">AI IMAGERY</h2>
+                  <p class="text-gray-400 mt-3">
+                    Transform ideas into breathtaking visuals powered by AI.
+                  </p>
+                </div>
+
+                <a href="#imagery" class="imagery-btn">
+                  Explore →
+                </a>
+
+              </div>
+
+              <!-- GRID -->
+              <div id="imagery-grid" class="imagery-grid">
+                ⏳ Loading...
+              </div>
+
             </div>
 
-          </div>
+          </section>
 
         </div>
 
       </section>
 
-    <!-- FEATURE SHOWCASE -->
-    <section class="px-10 py-20 fade-in">
-      <h2 class="text-3xl text-center mb-12">Cinematic AI Power</h2>
 
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <img src="./images/logo.png" class="w-full rounded-xl border border-purple-500/20"/>
-
-        <div>
-          <h3 class="text-2xl mb-4">Create Stunning AI Films</h3>
-          <p class="text-gray-400">
-            YOUAI Studio is a creative studio specializing in AI Films, AI Commercial Videos, AI TVCs, and AI-generated imagery. With nearly two years of experience in AI-driven video production, YOUAI Studio has collaborated with major brands to deliver high-quality, innovative, and cost-effective content. The team at YOUAI Studio continuously adopts the latest technologies while blending cinematic thinking and storytelling to create emotionally engaging visuals. YOUAI Studio is proud to have received prestigious awards such as the “AI POP CULTURE IMPACT 2025” and 4th place in the Film Bootcamp Micro Drama, reinforcing its credibility and expertise in the industry. YOUAI Studio is committed to delivering premium-quality productions to you on time, consistently exceeding expectations.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- WORKFLOW -->
-    <section class="px-10 py-20 fade-in">
-      <h2 class="text-3xl text-center mb-12">How It Works</h2>
-
-      <div class="grid md:grid-cols-3 gap-6 text-center">
-        ${step("1️⃣", "Send your idea")}
-        ${step("2️⃣", "We create AI video")}
-        ${step("3️⃣", "Receive final video")}
-      </div>
-    </section>
-
-    <section class="horizontal-section fade-in">
-
-      <!-- BUTTON -->
-      <button id="btn-left" class="nav-btn left">←</button>
-      <button id="btn-right" class="nav-btn right">→</button>
-
-      <div class="sticky-wrapper">
-        <div class="scroll-track" id="scroll-track">
-          ⏳ Loading...
-        </div>
-      </div>
-
-    </section>
 
     <!-- VISUAL GRID -->
     <section class="px-10 py-20 fade-in">
@@ -258,52 +265,65 @@ export function Home() {
 }
 
 /* ========================= */
-
-async function loadVideos() {
+async function loadDatas() {
   const grid = document.getElementById("video-grid");
   const track = document.getElementById("scroll-track");
-  
+  const imagery = document.getElementById("imagery-grid"); // 🔥 thêm
+
   try {
-    
     const data = await getVideos();
- 
-    // grid bình thường
+
+    // =========================
+    // 🎬 VIDEO GRID
+    // =========================
     if (grid) {
-      // const list = data.videos.slice(0, 6);
       let list = data?.videos || [];
 
-      // 👉 detect mobile
       const isMobile = window.innerWidth < 768;
 
-      // 👉 mobile chỉ lấy 3 video
       if (isMobile) {
         list = list.slice(0, 1);
-      }
-      else
-      {
+      } else {
         list = list.slice(0, 6);
       }
 
       grid.innerHTML = list.map(videoCard).join("");
-      
     }
 
+    // =========================
+    // 🎬 SCROLL TRACK
+    // =========================
     if (track) {
-      
-      track.innerHTML = data.videos.map(videoHorizontalCard).join("");
-      
-      setTimeout(() => {
-        loadBackgroundVideo();
-        initSnapSlider();     // 🔥 QUAN TRỌNG
-        initVideoAutoPlay();
-        initAutoPlayOnScroll(); // 🔥 QUAN TRỌNG
+      track.innerHTML = (data?.videos || [])
+        .map(videoHorizontalCard)
+        .join("");
+    }
 
-      }, 100);
-}
+    // =========================
+    // 🎨 IMAGERY GRID (🔥 NEW)
+    // =========================
+    if (imagery && data?.imagery) {
+      imagery.innerHTML = data.imagery
+        .map(imageCard)
+        .join("");
+    }
 
-  } catch {
+    // =========================
+    // ⚡ INIT SAU KHI RENDER
+    // =========================
+    setTimeout(() => {
+      loadBackgroundVideo?.();
+      initSnapSlider?.();
+      initVideoAutoPlay?.();
+      initAutoPlayOnScroll?.();
+    }, 100);
+
+  } catch (err) {
+    console.error(err);
+
     if (grid) grid.innerHTML = "❌ GRID Failed";
     if (track) track.innerHTML = "❌ TRACK Failed";
+    if (imagery) imagery.innerHTML = "❌ IMAGERY Failed";
   }
 }
 
@@ -363,13 +383,6 @@ function step(icon, text) {
   `;
 }
 
-function imageCard() {
-  return `
-    <div class="card-hover aspect-square overflow-hidden rounded-xl border border-purple-500/20">
-      <img src="./images/logo.png" class="w-full h-full object-cover"/>
-    </div>
-  `;
-}
 
 function pricingCard(title, price, features) {
   return `
@@ -465,92 +478,7 @@ function initButtonScroll() {
   }
 }
 
-function initHorizontalScroll() {
-  const section = document.querySelector(".horizontal-section");
-  const track = document.getElementById("scroll-track");
 
-  if (!section || !track) return;
-
-  let current = 0;
-  let target = 0;
-
-  function lerp(start, end, t) {
-    return start * (1 - t) + end * t;
-  }
-
-  function animate() {
-    current = lerp(current, target, 0.08);
-
-    track.style.transform = `translate3d(-${current}px,0,0)`;
-
-    updateCards();
-
-    requestAnimationFrame(animate);
-  }
-
-  function updateCards() {
-    const cards = document.querySelectorAll(".h-card");
-    const center = window.innerWidth / 2;
-
-    cards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      const cardCenter = rect.left + rect.width / 2;
-
-      const dist = Math.abs(center - cardCenter);
-
-      const scale = Math.max(0.85, 1 - dist / 1000);
-      const blur = Math.min(6, dist / 200);
-
-      card.style.transform = `scale(${scale})`;
-      card.style.filter = `blur(${blur}px)`;
-    });
-  }
-
-  function onScroll() {
-    const rect = section.getBoundingClientRect();
-
-    const progress = Math.min(
-      Math.max(-rect.top / (section.offsetHeight - window.innerHeight), 0),
-      1
-    );
-
-    const maxMove = track.scrollWidth - window.innerWidth;
-
-    target = progress * maxMove;
-  }
-
-  window.addEventListener("scroll", onScroll);
-
-  animate();
-}
-
-function initDragScroll() {
-  const track = document.getElementById("scroll-track");
-  if (!track) return;
-
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
-  track.addEventListener("mousedown", (e) => {
-    isDown = true;
-    startX = e.pageX;
-    scrollLeft = track.scrollLeft;
-  });
-
-  window.addEventListener("mouseup", () => {
-    isDown = false;
-  });
-
-  window.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-
-    const x = e.pageX;
-    const walk = (x - startX) * 2;
-
-    track.scrollLeft = scrollLeft - walk;
-  });
-}
 
 function initSnapSlider() {
   const track = document.getElementById("scroll-track");
@@ -663,4 +591,33 @@ function initAutoPlayOnScroll() {
   });
 
   videos.forEach(video => observer.observe(video));
+}
+
+function imageCard(img) {
+  return `
+    <div class="img-card">
+      <img src="${img.imageUrl}" alt="${img.title}" />
+
+      <div class="img-overlay">
+        ${img.title}
+      </div>
+    </div>
+  `;
+}
+
+async function loadImagery() {
+  const container = document.getElementById("imagery-grid");
+
+  try {
+    const data = await getVideos(); // bạn đang dùng chung hàm này
+
+    if (!data.imagery) return;
+
+    container.innerHTML = data.imagery
+      .map(imageCard)
+      .join("");
+
+  } catch (err) {
+    console.error("Load imagery failed", err);
+  }
 }

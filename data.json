@@ -69,5 +69,25 @@
       "thumbnail": "",
       "cardImage": ""
     }
+  ],
+  
+  "imagery": [
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649016/cld-sample-5.jpg",
+      "title": "Futuristic City"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649016/cld-sample.jpg",
+      "title": "AI Portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649014/samples/woman-on-a-football-field.jpg",
+      "title": "Cyberpunk Scene"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649013/samples/coffee.jpg",
+      "title": "Abstract AI Art"
+    }
   ]
+
 }
