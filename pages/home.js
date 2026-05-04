@@ -6,6 +6,7 @@ export function Home() {
       initAnimations();
       initButtonScroll();
       initVideoAutoPlay();
+      lazyLoadVideoSection();
   }, 0);
 
   return `
@@ -224,6 +225,25 @@ export function Home() {
       </div>
 
     </section>
+    <div id="gallery" class="gallery hidden">
+
+  <!-- overlay -->
+  <div class="gallery-overlay"></div>
+
+  <!-- content -->
+  <div class="gallery-content">
+
+    <button id="gallery-close" class="gallery-btn close">✕</button>
+
+    <button id="gallery-prev" class="gallery-btn prev">←</button>
+
+    <img id="gallery-image" src="" />
+
+    <button id="gallery-next" class="gallery-btn next">→</button>
+
+  </div>
+
+</div>
   `;
 }
 
@@ -279,8 +299,10 @@ async function loadDatas() {
       initSnapSlider?.();
       initVideoAutoPlay?.();
       initAutoPlayOnScroll?.();
-      detectImageRatio();
+      autoGridLayout();
       showImagery();
+      initGallery();
+      initGalleryControls();
     }, 100);
 
   } catch (err) {
@@ -576,15 +598,23 @@ function showImagery() {
   });
 }
 
-function detectImageRatio() {
-  const images = document.querySelectorAll(".img-card img");
+function autoGridLayout() {
+  const grid = document.querySelector(".imagery-grid");
+  const cards = grid.querySelectorAll(".img-card");
 
-  images.forEach((img) => {
-    // nếu ảnh đã load sẵn
+  cards.forEach(card => {
+    const img = card.querySelector("img");
+
+    function resize() {
+      const rowHeight = 10;
+      const rowSpan = Math.ceil(img.clientHeight / rowHeight);
+      card.style.gridRowEnd = `span ${rowSpan}`;
+    }
+
     if (img.complete) {
-      applyRatio(img);
+      resize();
     } else {
-      img.onload = () => applyRatio(img);
+      img.onload = resize;
     }
   });
 }
@@ -606,4 +636,97 @@ function applyRatio(img) {
   } else {
     card.classList.add("square");
   }
+}
+
+let currentIndex = 0;
+let galleryImages = [];
+
+function initGallery() {
+  const cards = document.querySelectorAll(".img-card img");
+
+  galleryImages = Array.from(cards).map(img => img.src);
+
+  cards.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      openGallery(index);
+    });
+  });
+}
+
+function openGallery(index) {
+  currentIndex = index;
+
+  const gallery = document.getElementById("gallery");
+  const image = document.getElementById("gallery-image");
+
+  image.src = galleryImages[index];
+  gallery.classList.remove("hidden");
+}
+
+function closeGallery() {
+  document.getElementById("gallery").classList.add("hidden");
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  updateImage();
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  updateImage();
+}
+
+function updateImage() {
+  document.getElementById("gallery-image").src = galleryImages[currentIndex];
+}
+
+/* controls */
+function initGalleryControls() {
+  document.getElementById("gallery-close").onclick = closeGallery;
+  document.getElementById("gallery-next").onclick = nextImage;
+  document.getElementById("gallery-prev").onclick = prevImage;
+
+  document.querySelector(".gallery-overlay").onclick = closeGallery;
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeGallery();
+    if (e.key === "ArrowRight") nextImage();
+    if (e.key === "ArrowLeft") prevImage();
+  });
+}
+
+function lazyLoadVideoSection() {
+  const section = document.querySelector("#video-grid");
+
+  if (!section) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        
+        loadVideos(); // 🔥 chỉ load khi thấy
+
+        observer.unobserve(section);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  observer.observe(section);
+}
+
+function initFadeIn() {
+  const els = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  els.forEach(el => observer.observe(el));
 }
