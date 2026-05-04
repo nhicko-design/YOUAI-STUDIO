@@ -200,18 +200,6 @@ export function Home() {
 
 
 
-    <!-- VISUAL GRID -->
-    <section class="px-10 py-20 fade-in">
-      <h2 class="text-3xl text-center mb-12">Visual Showcase</h2>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        ${imageCard()}
-        ${imageCard()}
-        ${imageCard()}
-        ${imageCard()}
-      </div>
-    </section>
-
     <!-- Pick your plan -->
     <section id="pricing" class="px-10 py-20 fade-in">
       <h2 class="text-3xl text-center mb-12">Pick your plan</h2>
