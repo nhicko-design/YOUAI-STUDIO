@@ -42,8 +42,7 @@ export function Home() {
 
           <!-- DESCRIPTION -->
           <p class="hero-desc">
-            Crafting cinematic AI visuals, films, and digital experiences
-            that merge storytelling with next-generation creativity.
+            We create cinematic AI experiences
           </p>
 
           <!-- SCROLL -->
@@ -55,125 +54,198 @@ export function Home() {
 
       </section>
 
-      <section class="px-6 md:px-10 py-20 fade-in">
-        <div class="section-box">
+      <section class="film-ai-section fade-in">
 
-          <div class="flex flex-col md:flex-row gap-10">
+  <div class="film-shell">
 
-            <!-- 🟣 LEFT (3/10) -->
-            <div class="w-full md:w-3/10">
+    <!-- LEFT -->
+    <div class="film-info">
 
-              <h2 class="film-title">
-                FILM AI
-              </h2>
+      <span class="film-badge">
+        AI CINEMA ENGINE
+      </span>
 
-              <p class="mt-4 text-gray-400">
-                Create cinematic AI-generated videos with powerful tools.
-              </p>
+      <h2 class="film-title-neo">
+        FILM <span>AI</span>
+      </h2>
 
-              <a href="#filmAI" class="film-btn mt-6">
-                Explore Film AI →
-              </a>
+      <div class="film-line"></div>
 
-            </div>
+      <p class="film-desc">
+        Generate cinematic experiences powered by advanced artificial
+        intelligence — crafted with emotion, motion, and visual precision.
+      </p>
 
-            <!-- 🎬 RIGHT (7/10) -->
-            <div class=" md:w-7/10 flex-shrink-0">
+      <div class="film-stats">
 
-              <div id="video-grid"
-                class="video-grid-advanced">
-                ⏳ Loading...
-              </div>
-
-            </div>
-
-          </div>
+        <div class="film-stat-card">
+          <h3>250+</h3>
+          <span>Projects</span>
         </div>
 
-      </section>
-
-      <section class="px-6 md:px-10 py-20 fade-in">
-
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-
-          <!-- 🟣 LEFT -->
-          <div class="w-full">
-
-            <h2 class="film-title">
-              COMMERCIAL
-            </h2>
-
-            <p class="mt-4 text-gray-400">
-              Create high-impact commercial videos with AI — fast, scalable, and visually stunning.
-            </p>
-
-          </div>
-
-          <!-- 👉 RIGHT BUTTON -->
-          <a href="#filmAI" 
-            class="commer-btn mt-4 md:mt-0 self-start md:self-center">
-            Commercial →
-          </a>
-
+        <div class="film-stat-card">
+          <h3>4K</h3>
+          <span>Output</span>
         </div>
-      <div class="w-full">
-        <section class="horizontal-section fade-in">
 
-          <!-- 🔥 HEADER (chứa nút) -->
-          <div class="flex justify-end gap-3 mb-6">
+        <div class="film-stat-card">
+          <h3>AI+</h3>
+          <span>Visual FX</span>
+        </div>
 
-            <button id="btn-left" class="nav-btn">
-              ←
-            </button>
-
-            <button id="btn-right" class="nav-btn">
-              →
-            </button>
-
-          </div>
-
-          <!-- 🎬 VIDEO -->
-          <div class="sticky-wrapper">
-            <div class="scroll-track" id="scroll-track">
-              ⏳ Loading...
-            </div>
-          </div>
-
-        </section>
       </div>
 
-      </section>
+      <a href="#filmAI" class="film-btn-neo">
+        Explore Film AI
+      </a>
 
-      <section class="px-4 md:px-10 py-20 fade-in">
+    </div>
 
-        <div class="section-box">
+    <!-- RIGHT -->
+    <div class="film-showcase">
 
-          <!-- 🔥 HEADER -->
-          <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+      <div class="film-grid-glow"></div>
 
-            <div>
-              <h2 class="imagery-title">
-                AI IMAGERY
-              </h2>
+      <div id="video-grid" class="video-grid-neo">
+        ⏳ Loading...
+      </div>
 
-              <p class="mt-4 text-gray-400 max-w-xl">
-                Transform ideas into breathtaking visuals powered by AI.
-              </p>
-            </div>
+    </div>
 
-            <a href="#imagery" class="imagery-btn">
-              Explore Imagery →
-            </a>
+  </div>
 
-          </div>
-          <!-- GRID -->
-          <div id="imagery-grid" class="imagery-grid">
-            ⏳ Loading...
-          </div>
+</section>
 
+      <section class="commercial-section fade-in">
+
+  <div class="commercial-shell">
+
+    <!-- ===================================== -->
+    <!-- LEFT CONTENT -->
+    <!-- ===================================== -->
+
+    <div class="commercial-header">
+
+      <div>
+
+        <span class="commercial-tag">
+          AI COMMERCIAL SYSTEM
+        </span>
+
+        <h2 class="commercial-title">
+          COMMERCIAL
+        </h2>
+
+      </div>
+
+      <p class="commercial-desc">
+        High-impact AI commercials engineered for brands, products,
+        campaigns, and next-generation storytelling.
+      </p>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- TOP RIGHT -->
+    <!-- ===================================== -->
+
+    <div class="commercial-actions">
+
+      <a href="#filmAI" class="commercial-btn">
+        Explore Commercial →
+      </a>
+
+      <div class="commercial-nav">
+
+        <button id="btn-left" class="nav-btn-commercial">
+          ←
+        </button>
+
+        <button id="btn-right" class="nav-btn-commercial">
+          →
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ===================================== -->
+  <!-- SLIDER -->
+  <!-- ===================================== -->
+
+  <div class="commercial-slider-wrap">
+
+    <!-- glow -->
+    <div class="commercial-glow"></div>
+
+    <section class="horizontal-section">
+
+      <div class="sticky-wrapper">
+
+        <div class="scroll-track commercial-track" id="scroll-track">
+          ⏳ Loading...
         </div>
 
-      </section>
+      </div>
+
+    </section>
+
+  </div>
+
+</section>
+<section class="ai-gallery-section fade-in">
+
+  <!-- ================================= -->
+  <!-- TOP -->
+  <!-- ================================= -->
+
+  <div class="gallery-top">
+
+    <div>
+
+      <span class="gallery-label">
+        VISUAL INTELLIGENCE
+      </span>
+
+      <h2 class="gallery-title">
+        AI IMAGERY
+      </h2>
+
+    </div>
+
+    <a href="#imagery" class="gallery-btn">
+      View Gallery →
+    </a>
+
+  </div>
+
+  <!-- ================================= -->
+  <!-- CENTER SHOWCASE -->
+  <!-- ================================= -->
+
+  <div class="gallery-stage">
+
+    <!-- LEFT -->
+    <div class="gallery-side-text">
+
+      <p>
+        AI-crafted imagery blending cinematic lighting,
+        surreal compositions, futuristic aesthetics,
+        and emotionally-driven storytelling.
+      </p>
+
+    </div>
+
+    <!-- GRID -->
+    <div id="imagery-grid" class="gallery-grid">
+      ⏳ Loading...
+    </div>
+
+  </div>
+
+</section>
 
 
 
@@ -264,33 +336,7 @@ export function Home() {
       </div>
 
     </section>
-    <!-- Pick your plan -->
-    <section id="pricing" class="px-10 py-20 fade-in">
-      <h2 class="text-3xl text-center mb-12">Pick your plan</h2>
-
-      <div class="grid md:grid-cols-3 gap-8">
-
-        ${pricingCard("Basic 01", "650.000 VND", [
-          "15-30s video",
-          "No storyline",
-          "1 feedback"
-        ])}
-
-        ${pricingCard("Basic 02", "1.000.000 VND", [
-          "Story video",
-          "30-40s",
-          "2 feedback"
-        ])}
-
-        ${pricingCard("Premium", "7.500.000 VND", [
-          "Cinematic film",
-          "1-1.5 minutes",
-          "High-end"
-        ])}
-
-      </div>
-    </section>
-
+    
     <!-- CTA -->
     <section class="text-center py-16 md:py-20 fade-in">
 
@@ -722,7 +768,7 @@ function showImagery() {
 
 function autoGridLayout() {
   const grid = document.querySelector(".imagery-grid");
-  const cards = grid.querySelectorAll(".img-card");
+  const cards = document.querySelectorAll(".img-card");
 
   cards.forEach(card => {
     const img = card.querySelector("img");
@@ -839,20 +885,13 @@ function lazyLoadVideoSection() {
   observer.observe(section);
 }
 
-function initFadeIn() {
-  const els = document.querySelectorAll(".fade-in");
+async function loadVideos() {
+  const data = await getVideos();
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, { threshold: 0.1 });
+  allVideos = data.videos || [];
 
-  els.forEach(el => observer.observe(el));
+  renderVirtualVideos();
 }
-
 let allVideos = [];
 
 function renderVirtualVideos() {
@@ -881,4 +920,19 @@ function renderVirtualVideos() {
 
   initAutoPlayOnScroll?.();
 }
+
+function initFadeIn() {
+  const els = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  els.forEach(el => observer.observe(el));
+}
+
 
