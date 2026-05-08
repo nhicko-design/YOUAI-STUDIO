@@ -22,23 +22,26 @@
 
 .hero {
   position: relative;
+
   height: 100vh;
   overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: black;
 }
 
 /* 🎥 video full màn */
 .bg-video {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  inset: 0;
 
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
 
-  transform: translate(-50%, -50%);
   object-fit: cover;
-
-  z-index: 0;
 }
 
 /* 🌑 overlay làm tối */
@@ -46,24 +49,196 @@
   position: absolute;
   inset: 0;
 
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(2px);
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.8)
+    );
 
   z-index: 1;
 }
 
-/* 🔥 content */
+.hero-glow {
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  background: radial-gradient(
+    circle,
+    rgba(168,85,247,0.22),
+    transparent 70%
+  );
+
+  filter: blur(60px);
+
+  z-index: 1;
+
+  animation: pulseGlow 6s infinite alternate;
+}
+
+/* =========================
+   CONTENT
+========================= */
 .hero-content {
   position: relative;
   z-index: 2;
 
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+
+  padding: 0 24px;
 
   text-align: center;
+}
+
+/* =========================
+   LOGO
+========================= */
+.hero-logo-wrap {
+  margin-bottom: 28px;
+}
+
+.hero-logo {
+  width: 88px;
+  height: 88px;
+
+  margin: auto;
+
+  border-radius: 999px;
+
+  object-fit: cover;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+    0 0 40px rgba(168,85,247,0.4);
+}
+
+/* =========================
+   TITLE
+========================= */
+.hero-title {
+  font-size: clamp(4rem, 10vw, 9rem);
+
+  font-weight: 800;
+  line-height: 0.9;
+
+  letter-spacing: -4px;
+
+  margin-bottom: 28px;
+}
+
+.hero-title span {
+  display: block;
+
+  color: #c084fc;
+
+  text-shadow:
+    0 0 30px rgba(168,85,247,0.5);
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+.hero-desc {
+  max-width: 760px;
+
+  margin: auto;
+
+  color: rgba(255,255,255,0.72);
+
+  font-size: clamp(1rem, 2vw, 1.3rem);
+
+  line-height: 1.8;
+}
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+.hero-scroll {
+  margin-top: 60px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.hero-scroll span {
+  width: 2px;
+  height: 80px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0.7)
+  );
+
+  animation: scrollDown 1.8s infinite;
+}
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .hero-title {
+    font-size: 4rem;
+    letter-spacing: -2px;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hero-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .hero-scroll span {
+    height: 60px;
+  }
+
+}
+/* =========================
+   TAG
+========================= */
+.hero-tag {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(12px);
+
+  font-size: 12px;
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,0.7);
+
+  margin-bottom: 34px;
 }
 
 @keyframes fadeUp {
@@ -138,13 +313,6 @@
   overflow: hidden;
 }
 
-.scroll-track {
-  display: flex;
-  height: 100%;
-  width: 400vw; /* số lượng card */
-  gap: 20px;
-  padding: 0 40px;
-}
 
 .h-card {
   width: 80vw;
@@ -156,13 +324,6 @@
 
 
 
-.scroll-track {
-  display: flex;
-  height: 100%;
-  gap: 30px;
-  padding: 0 10vw;
-  will-change: transform;
-}
 
 .h-card {
   width: 70vw;
@@ -182,14 +343,6 @@
 }
 
 
-.scroll-track {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  gap: 40px;
-  padding: 0 15vw;
-  will-change: transform;
-}
 
 .h-card {
   width: 60vw;
@@ -231,6 +384,28 @@
   z-index: 999; /* 🔥 cực quan trọng */
 }
 
+.video-card {
+  position: relative;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: #111;
+
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+
+  backface-visibility: hidden;
+}
+
 /* nếu có overlay */
 .section-box::before {
   pointer-events: none;
@@ -250,14 +425,37 @@
   background: rgba(168, 85, 247, 0.8);
 }
 
+
+
 .scroll-track {
   display: flex;
-  align-items: center;
-  height: 100%;
   gap: 40px;
-  padding: 0 calc(50vw - 30vw); /* 🔥 trick center */
-  transition: transform 0.6s cubic-bezier(.22,1,.36,1);
+  align-items: center;
+  padding: 0 10vw;
+  transition: transform 0.6s cubic-bezier(.22,.61,.36,1);
+  width: auto;
+  will-change: transform;
+
+  transform: translate3d(0,0,0);
 }
+
+.snap-card {
+  flex-shrink: 0;
+
+  width: min(75vw, 1000px);
+
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.snap-video {
+  width: 100%;
+  height: 70vh;
+
+  object-fit: cover;
+  display: block;
+}
+
 
 .h-card {
   width: 60vw;
@@ -362,6 +560,8 @@
   display: grid;
   gap: 10px;
   grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
   
 }
 
@@ -417,15 +617,15 @@
 
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
+  transform: translateY(50px);
+  transition: all 1s ease;
   will-change: transform, opacity; /* 🔥 */
 }
 
 /* 👉 khi hiện ra */
 .fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 2;
+  transform: translateY(1);
 }
 
 .imagery-title {
@@ -439,6 +639,7 @@
 .imagery-grid {
   column-count: 3;
   column-gap: 14px;
+  grid-auto-flow: dense;
 }
 
 .img-card {
@@ -571,4 +772,116 @@
 /* hover */
 .gallery-btn:hover {
   background: rgba(168,85,247,0.8);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-image {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+
+  border-radius: 24px;
+
+  transition: 0.6s;
+}
+
+.about-image:hover {
+  transform: scale(1.02);
+}
+
+/* overlay */
+.about-overlay {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.55),
+    transparent
+  );
+}
+
+/* badge */
+.about-badge {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(168,85,247,0.18);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+/* tag */
+.about-tag {
+  color: #c084fc;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* title */
+.about-title {
+  font-size: clamp(2.2rem, 4vw, 4.5rem);
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+/* text */
+.about-text {
+  color: #9ca3af;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* stats */
+.about-stat {
+  padding: 22px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.03);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  text-align: center;
+}
+
+.about-stat h3 {
+  font-size: 2rem;
+  font-weight: 700;
+
+  color: #c084fc;
+}
+
+.about-stat p {
+  color: #9ca3af;
+  font-size: 13px;
+
+  margin-top: 6px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+  .about-image {
+    height: 420px;
+  }
+
+  .about-title {
+    font-size: 2.4rem;
+  }
+
 }

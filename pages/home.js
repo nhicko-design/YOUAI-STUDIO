@@ -11,48 +11,49 @@ export function Home() {
 
   return `
     <!-- HERO -->
-    <section class="hero">
+      <section class="hero">
 
-      <video class="bg-video" autoplay muted loop playsinline>
-        <source id="bg-source" src="" type="video/mp4" />
-      </video>
+        <!-- 🎬 BACKGROUND VIDEO -->
+        <video class="bg-video" autoplay muted loop playsinline preload="metadata">
+          <source id="bg-source" src="" type="video/mp4" />
+        </video>
 
-      <div class="overlay_background"></div>
+        <!-- 🌑 DARK OVERLAY -->
+        <div class="overlay_background"></div>
 
-      <div class="hero-content">
-        <img src="./images/logo.png" class="w-20 h-20 mx-auto mb-6 rounded-full"/>
+        <!-- ✨ FLOATING GLOW -->
+        <div class="hero-glow"></div>
 
-        <h1 class="logo-title">
-          YOU AI STUDIO
-        </h1>
+        <!-- HERO CONTENT -->
+        <div class="hero-content">
 
-        <p class="text-gray-400 text-lg mb-8">
-          We create cinematic AI experiences
-        </p>
+          
 
-        <div class="flex justify-center gap-4">
-          <a href="#gallery" class="btn px-8 py-4 rounded-xl bg-purple-600">
-            Film AI
-          </a>
+          <!-- MINI LABEL -->
+          <span class="hero-tag">
+            AI FILMS • AI COMMERCIAL • AI IMAGERY
+          </span>
 
-          <a href="#pricing" class="btn px-8 py-4 rounded-xl border border-gray-700">
-            Pricing
-          </a>
-      </div>
+          <!-- TITLE -->
+          <h1 class="hero-title">
+            YOUAI
+            <span>STUDIO</span>
+          </h1>
 
-    </section>
+          <!-- DESCRIPTION -->
+          <p class="hero-desc">
+            Crafting cinematic AI visuals, films, and digital experiences
+            that merge storytelling with next-generation creativity.
+          </p>
 
+          <!-- SCROLL -->
+          <div class="hero-scroll">
+            <span></span>
+          </div>
 
-    <!-- ABOUT -->
-    <section class="py-20 text-center max-w-4xl mx-auto fade-in">
-      <h2 class="text-3xl mb-6">About Us</h2>
+        </div>
 
-      <p class="text-gray-400">
-        YOUAI Studio is a creative studio specializing in AI Films, AI Commercial Videos, AI TVCs, and AI-generated imagery. With nearly two years of experience in AI-driven video production, YOUAI Studio has collaborated with major brands to deliver high-quality, innovative, and cost-effective content. The team at YOUAI Studio continuously adopts the latest technologies while blending cinematic thinking and storytelling to create emotionally engaging visuals. YOUAI Studio is proud to have received prestigious awards such as the “AI POP CULTURE IMPACT 2025” and 4th place in the Film Bootcamp Micro Drama, reinforcing its credibility and expertise in the industry. YOUAI Studio is committed to delivering premium-quality productions to you on time, consistently exceeding expectations.
-      </p>
-
-    </section>
-
+      </section>
 
       <section class="px-6 md:px-10 py-20 fade-in">
         <div class="section-box">
@@ -176,6 +177,93 @@ export function Home() {
 
 
 
+      
+    <!-- ABOUT -->
+    <section class="px-6 md:px-10 py-24 fade-in">
+
+      <div class="section-box overflow-hidden">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+          <!-- 🖼️ LEFT IMAGE -->
+          <div class="relative">
+
+            <img 
+              src="https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649014/samples/woman-on-a-football-field.jpg"
+              alt="YOUAI Studio"
+              class="about-image"
+            />
+
+            <!-- overlay -->
+            <div class="about-overlay"></div>
+
+            <!-- floating badge -->
+            <div class="about-badge">
+              AI FILMMAKING
+            </div>
+
+          </div>
+
+          <!-- ✨ RIGHT CONTENT -->
+          <div class="flex flex-col justify-center">
+
+            <span class="about-tag">
+              ABOUT YOUAI
+            </span>
+
+            <h2 class="about-title mt-4">
+              Cinematic AI Production <br />
+              For The Next Generation
+            </h2>
+
+            <p class="about-text mt-6">
+              YOUAI Studio is a creative studio specializing in AI Films,
+              AI Commercial Videos, AI TVCs, and AI-generated imagery.
+              With nearly two years of experience in AI-driven production,
+              the studio has collaborated with major brands to deliver
+              visually striking and emotionally engaging content.
+            </p>
+
+            <p class="about-text mt-4">
+              By combining storytelling, cinematic thinking, and cutting-edge AI tools,
+              YOUAI Studio creates premium-quality productions efficiently and creatively.
+              The studio is proud to have received awards such as
+              <span class="text-purple-300">
+                “AI POP CULTURE IMPACT 2025”
+              </span>
+              and
+              <span class="text-purple-300">
+                4th Place in Film Bootcamp Micro Drama
+              </span>.
+            </p>
+
+            <!-- STATS -->
+            <div class="grid grid-cols-3 gap-4 mt-10">
+
+              <div class="about-stat">
+                <h3>2+</h3>
+                <p>Years AI Experience</p>
+              </div>
+
+              <div class="about-stat">
+                <h3>50+</h3>
+                <p>Creative Projects</p>
+              </div>
+
+              <div class="about-stat">
+                <h3>100%</h3>
+                <p>Cinematic Quality</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
     <!-- Pick your plan -->
     <section id="pricing" class="px-10 py-20 fade-in">
       <h2 class="text-3xl text-center mb-12">Pick your plan</h2>
@@ -303,6 +391,7 @@ async function loadDatas() {
       showImagery();
       initGallery();
       initGalleryControls();
+      initLazyVideos();
     }, 100);
 
   } catch (err) {
@@ -314,19 +403,52 @@ async function loadDatas() {
   }
 }
 
-function videoHorizontalCard(v) {
+function videoHorizontalCard(v, index) {
   return `
-    <div class="h-card">
+    <div class="snap-card" data-index="${index}">
 
-      <video 
-        src="${v.videoUrl}" 
-        muted 
-        loop 
+      <video
+        class="snap-video"
+        src="${v.videoUrl}"
+        muted
+        loop
         playsinline
-        class="video-el">
-      </video>
+        preload="metadata"
+      ></video>
 
-      <div class="overlay">
+    </div>
+  `;
+}
+
+function playActiveVideo(index) {
+  const videos = document.querySelectorAll(".snap-video");
+
+  videos.forEach((video, i) => {
+
+    if (i === index) {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+      video.currentTime = 0;
+    }
+
+  });
+}
+
+function videoCard(v) {
+  return `
+    <div class="card-hover video-card">
+
+      <video
+        class="lazy-video"
+        data-src="${v.videoUrl}"
+        muted
+        loop
+        playsinline
+        preload="none"
+      ></video>
+
+      <div class="absolute bottom-3 left-3 text-sm z-10">
         ${v.title}
       </div>
 
@@ -334,22 +456,38 @@ function videoHorizontalCard(v) {
   `;
 }
 
-function videoCard(v) {
-  return `
-    <div class="card-hover relative bg-black border border-purple-500/20 
-                rounded-xl overflow-hidden">
+function initLazyVideos() {
 
-      <video src="${v.videoUrl}" 
-        muted loop playsinline
-        class="video-auto w-full h-[220px] object-cover">
-      </video>
+  const videos = document.querySelectorAll(".lazy-video");
 
-      <div class="absolute bottom-3 left-3 text-sm">
-        ${v.title}
-      </div>
+  const observer = new IntersectionObserver((entries) => {
 
-    </div>
-  `;
+    entries.forEach(entry => {
+
+      const video = entry.target;
+
+      if (entry.isIntersecting) {
+
+        // load source lần đầu
+        if (!video.src) {
+          video.src = video.dataset.src;
+        }
+
+        video.play().catch(() => {});
+
+      } else {
+
+        video.pause();
+
+      }
+
+    });
+
+  }, {
+    threshold: 0.6
+  });
+
+  videos.forEach(video => observer.observe(video));
 }
 
 function useCase(icon, text) {
@@ -459,73 +597,57 @@ function initButtonScroll() {
 
     current = Math.max(0, Math.min(current, max));
 
-    track.style.transform = `translate3d(-${current}px,0,0)`;
+    track.style.transform = `translate3d(${x}px,0,0)`;
 
     updateCards();
   }
 }
 
 
+let current = 0;
 
 function initSnapSlider() {
+
   const track = document.getElementById("scroll-track");
-  const btnLeft = document.getElementById("btn-left");
-  const btnRight = document.getElementById("btn-right");
 
-  if (!track) return;
+  const cards = document.querySelectorAll(".snap-card");
 
-  const cards = document.querySelectorAll(".h-card");
+  const next = document.getElementById("btn-right");
+  const prev = document.getElementById("btn-left");
 
-  let currentIndex = 0;
+  if (!track || !cards.length) return;
 
-  function update() {
-    const card = cards[0];
-    if (!card) return;
+  const cardWidth = cards[0].offsetWidth + 24;
 
-    const cardWidth = card.offsetWidth + 40; // gap
+  function updateSlider() {
 
-    const offset = currentIndex * cardWidth;
+    track.style.transform =
+      `translate3d(-${current * cardWidth}px,0,0)`;
 
-    track.style.transform = `translate3d(-${offset}px,0,0)`;
-
-    updateEffects();
-    updateButtons();
+    playActiveVideo(current);
   }
 
-  function updateEffects() {
-    cards.forEach((card, index) => {
-      const dist = Math.abs(index - currentIndex);
+  next.onclick = () => {
 
-      const scale = dist === 0 ? 1 : 0.85;
-      const blur = dist === 0 ? 0 : 4;
+    current++;
 
-      card.style.transform = `scale(${scale})`;
-      card.style.filter = `blur(${blur}px)`;
-      card.style.opacity = dist > 2 ? 0.3 : 1;
-    });
-  }
+    if (current >= cards.length)
+      current = cards.length - 1;
 
-  function updateButtons() {
-    btnLeft.style.opacity = currentIndex === 0 ? 0.3 : 1;
-    btnRight.style.opacity = currentIndex === cards.length - 1 ? 0.3 : 1;
-  }
-
-  btnRight.onclick = () => {
-    if (currentIndex < cards.length - 1) {
-      currentIndex++;
-      update();
-    }
+    updateSlider();
   };
 
-  btnLeft.onclick = () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      update();
-    }
+  prev.onclick = () => {
+
+    current--;
+
+    if (current < 0)
+      current = 0;
+
+    updateSlider();
   };
 
-  // 👉 init
-  update();
+  updateSlider();
 }
 
 
@@ -730,3 +852,33 @@ function initFadeIn() {
 
   els.forEach(el => observer.observe(el));
 }
+
+let allVideos = [];
+
+function renderVirtualVideos() {
+  const grid = document.getElementById("video-grid");
+
+  if (!grid) return;
+
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  const itemHeight = 280; // chiều cao card
+  const columns = window.innerWidth < 768 ? 1 : 3;
+
+  const startIndex =
+    Math.floor(scrollTop / itemHeight) * columns;
+
+  const visibleCount = columns * 6;
+
+  const endIndex = startIndex + visibleCount;
+
+  const visibleVideos = allVideos.slice(startIndex, endIndex);
+
+  grid.innerHTML = visibleVideos
+    .map(videoCard)
+    .join("");
+
+  initAutoPlayOnScroll?.();
+}
+
