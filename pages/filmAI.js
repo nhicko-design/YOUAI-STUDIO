@@ -1,27 +1,98 @@
 import { getVideos } from "../api.js";
-import { VideoCard } from "../components/card.js";
+import { FilmCard } from "../components/film-card.js";
 
 export function FilmAI() {
-  setTimeout(loadVideos, 0);
+  setTimeout(loadFilmAI, 0);
 
   return `
-    <div class="p-6">
-      <h1 class="text-3xl mb-6">Gallery</h1>
-      <div id="grid" class="grid grid-cols-3 gap-6">
-        ⏳ Loading...
-      </div>
-    </div>
+    <section id="film-ai-page">
+
+      <div id="film-ai-hero"></div>
+
+      <section class="film-projects-section">
+
+        <div class="film-projects-header">
+
+          <span class="film-label">
+            AI STORYTELLING
+          </span>
+
+          <h2 class="film-heading">
+            Featured Projects
+          </h2>
+
+        </div>
+
+        <div
+          id="film-project-grid"
+          class="film-project-grid"
+        >
+          Loading...
+        </div>
+
+      </section>
+
+    </section>
   `;
 }
 
-async function loadVideos() {
-  const grid = document.getElementById("grid");
+async function loadFilmAI() {
 
-  try {
-    const data = await getVideos();
+  const data = await getVideos();
 
-    grid.innerHTML = data.videos.map(VideoCard).join("");
-  } catch {
-    grid.innerHTML = "❌ Failed to load";
-  }
+  renderHero(data.filmAI.hero);
+
+  renderProjects(data.filmAI.projects);
+}
+
+function renderHero(hero) {
+
+  const el = document.getElementById("film-ai-hero");
+
+  el.innerHTML = `
+    <section class="film-hero">
+
+      <video
+        class="film-hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="${hero.backgroundVideo}" type="video/mp4">
+      </video>
+
+      <div class="film-hero-overlay"></div>
+
+      <div class="film-hero-content">
+
+        <span class="film-hero-tag">
+          YOUAI FILM DIVISION
+        </span>
+
+        <h1 class="film-hero-title">
+          ${hero.title}
+        </h1>
+
+        <h2 class="film-hero-subtitle">
+          ${hero.subtitle}
+        </h2>
+
+        <p class="film-hero-desc">
+          ${hero.description}
+        </p>
+
+      </div>
+
+    </section>
+  `;
+}
+
+function renderProjects(projects) {
+
+  const grid = document.getElementById("film-project-grid");
+
+  grid.innerHTML = projects
+    .map(FilmCard)
+    .join("");
 }

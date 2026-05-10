@@ -1,13 +1,38 @@
-export function VideoCard(v) {
+export function VideoCard(video) {
+
   return `
-    <div class="bg-black border border-purple-500/20 p-3 rounded-xl 
-                hover:scale-105 hover:border-purple-400 transition">
+  
+    <div class="showreel-card">
 
-      <video muted autoplay loop 
-             src="${v.videoUrl}" 
-             class="w-full rounded-lg"></video>
+      <video
+        class="hover-video"
+        muted
+        loop
+        playsinline
+      >
 
-      <p class="mt-2 text-sm text-gray-300">${v.prompt}</p>
+        <source
+          src="${video.url}"
+          type="video/mp4"
+        >
+
+      </video>
+
+      <div class="showreel-dark"></div>
+
+      <div class="video-info">
+
+        <div class="video-label">
+          AI FILM
+        </div>
+
+        <h3 class="video-title">
+          ${video.title}
+        </h3>
+
+      </div>
+
     </div>
+
   `;
 }
