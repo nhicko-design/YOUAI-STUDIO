@@ -1,0 +1,117 @@
+
+/* =========================================================
+   🔘 BUTTONS
+========================================================= */
+
+.btn,
+.btn-primary,
+.film-btn,
+.commer-btn,
+.imagery-btn,
+.nav-btn {
+  transition: 0.3s;
+}
+
+.btn:hover,
+.film-btn:hover,
+.commer-btn:hover,
+.imagery-btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:hover {
+  box-shadow:
+    0 10px 30px rgba(168,85,247,0.5);
+}
+
+.btn-primary {
+  background:
+    linear-gradient(
+      135deg,
+      #A78BFA,
+      #C084FC
+    );
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+/* COMMON BUTTON */
+
+.film-btn,
+.commer-btn,
+.imagery-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 22px;
+
+  border-radius: 999px;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  backdrop-filter: blur(10px);
+
+  border:
+    1px solid rgba(168,85,247,0.25);
+
+  background:
+    rgba(168,85,247,0.12);
+}
+
+.film-btn:hover,
+.commer-btn:hover,
+.imagery-btn:hover {
+  background:
+    rgba(168,85,247,0.2);
+
+  box-shadow:
+    0 10px 40px rgba(168,85,247,0.25);
+}
+
+/* SPECIAL */
+
+.commer-btn {
+  width: 200px;
+  height: 10px;
+
+  color: #a855f7;
+}
+
+/* NAV */
+
+.nav-btn {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 999px;
+
+  color: white;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 999;
+}
+
+.nav-btn:hover {
+  background:
+    rgba(168,85,247,0.2);
+
+  transform: scale(1.05);
+}

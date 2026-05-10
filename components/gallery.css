@@ -1,0 +1,40 @@
+.gallery {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery.hidden {
+  display: none;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.9);
+
+  backdrop-filter: blur(10px);
+}
+
+.gallery-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.gallery-content img {
+  max-width: 100%;
+  max-height: 90vh;
+
+  border-radius: 12px;
+
+  animation: zoomIn 0.3s ease;
+}

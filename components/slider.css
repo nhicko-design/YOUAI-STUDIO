@@ -1,0 +1,27 @@
+.scroll-track {
+  display: flex;
+
+  gap: 24px;
+
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+
+  padding: 0 10vw 10px;
+}
+
+.scroll-track::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-card {
+  position: relative;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+}

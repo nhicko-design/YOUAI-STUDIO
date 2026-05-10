@@ -1,0 +1,49 @@
+.gradient-text {
+  background:
+    linear-gradient(
+      270deg,
+      #a78bfa,
+      #c084fc,
+      #a78bfa
+    );
+
+  background-size: 400% 400%;
+
+  animation: gradientMove 6s ease infinite;
+
+  color: transparent;
+}
+
+.fade-in {
+  opacity: 0;
+
+  transform: translateY(50px);
+
+  transition: all 1s ease;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.fade-in.show {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.md\:w-3\/10 {
+  width: 30%;
+}
+
+.md\:w-4\/10 {
+  width: 40%;
+}
+
+.md\:w-6\/10 {
+  width: 60%;
+}
+
+.md\:w-7\/10 {
+  width: 70%;
+}

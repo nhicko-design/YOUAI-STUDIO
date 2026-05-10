@@ -1,0 +1,34 @@
+@media (max-width: 1200px) {
+  .film-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .imagery-grid {
+    column-count: 2;
+  }
+
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+    letter-spacing: -2px;
+  }
+
+  .imagery-grid {
+    column-count: 1;
+  }
+
+  .video-grid-neo {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+}

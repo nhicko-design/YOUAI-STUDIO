@@ -1,0 +1,351 @@
+.cta-section {
+  position: relative;
+
+  padding:
+    120px 24px;
+
+  overflow: hidden;
+}
+
+.cta-shell {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding:
+    100px 40px;
+
+  border-radius: 36px;
+}
+
+
+/* =========================================================
+   CTA SECTION
+========================================================= */
+
+.cta-section {
+  position: relative;
+
+  padding:
+    120px 24px;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   SHELL
+========================================================= */
+
+.cta-shell {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding:
+    100px 40px;
+
+  border-radius: 36px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.015)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.cta-glow {
+  position: absolute;
+
+  inset: auto;
+
+  top: -120px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(168,85,247,0.28),
+      transparent 70%
+    );
+
+  filter: blur(80px);
+
+  z-index: -1;
+
+  animation:
+    pulseGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+
+  from {
+    transform:
+      translateX(-50%)
+      scale(1);
+  }
+
+  to {
+    transform:
+      translateX(-50%)
+      scale(1.08);
+  }
+
+}
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.cta-tag {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    12px 20px;
+
+  border-radius: 999px;
+
+  margin-bottom: 30px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:
+    rgba(255,255,255,0.72);
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  backdrop-filter: blur(10px);
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.cta-title {
+  font-size:
+    clamp(3rem, 7vw, 6.5rem);
+
+  line-height: 0.95;
+
+  font-weight: 800;
+
+  letter-spacing: -4px;
+
+  margin-bottom: 28px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #ffffff,
+      #c084fc
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 40px rgba(168,85,247,0.25);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.cta-desc {
+  max-width: 760px;
+
+  margin:
+    0 auto 44px;
+
+  color:
+    rgba(255,255,255,0.65);
+
+  font-size:
+    clamp(1rem, 2vw, 1.15rem);
+
+  line-height: 1.9;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.cta-actions {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.cta-btn-primary {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    16px 30px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #a855f7,
+      #7c3aed
+    );
+
+  box-shadow:
+    0 10px 40px rgba(168,85,247,0.35);
+
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s,
+    opacity 0.35s;
+}
+
+.cta-btn-primary:hover {
+  transform:
+    translateY(-4px)
+    scale(1.02);
+
+  box-shadow:
+    0 18px 60px rgba(168,85,247,0.5);
+}
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.cta-btn-secondary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    16px 30px;
+
+  border-radius: 18px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.35s,
+    background 0.35s,
+    border 0.35s;
+}
+
+.cta-btn-secondary:hover {
+  transform:
+    translateY(-4px);
+
+  background:
+    rgba(168,85,247,0.12);
+
+  border:
+    1px solid rgba(168,85,247,0.35);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .cta-section {
+    padding:
+      90px 16px;
+  }
+
+  .cta-shell {
+    padding:
+      70px 24px;
+
+    border-radius: 28px;
+  }
+
+  .cta-title {
+    letter-spacing: -2px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+
+  .cta-btn-primary,
+  .cta-btn-secondary {
+    width: 100%;
+  }
+
+  .cta-glow {
+    width: 420px;
+    height: 420px;
+  }
+
+}

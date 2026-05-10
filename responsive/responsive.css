@@ -1,0 +1,73 @@
+@media (max-width: 1024px) {
+
+  .imagery-grid {
+    column-count: 2;
+  }
+
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .hero-title {
+    font-size: 4rem;
+
+    letter-spacing: -2px;
+  }
+
+.hero-desc {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .hero-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .hero-scroll span {
+    height: 60px;
+  }
+
+  .video-grid-advanced {
+    grid-template-columns: 1fr;
+  }
+
+  .card-hover video {
+    height: 260px;
+  }
+
+  .imagery-grid {
+    column-count: 1;
+  }
+
+  .about-image {
+    height: 420px;
+  }
+
+  .about-title {
+    font-size: 2.4rem;
+  }
+
+
+}
+
+.md\:w-3\/10 {
+  width: 30%;
+}
+
+.md\:w-4\/10 {
+  width: 40%;
+}
+
+.md\:w-6\/10 {
+  width: 60%;
+}
+
+.md\:w-7\/10 {
+  width: 70%;
+}
