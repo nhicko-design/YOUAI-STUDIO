@@ -1,98 +1,43 @@
 import { getVideos } from "../api.js";
-import { FilmCard } from "../components/film-card.js";
 
-export function FilmAI() {
-  setTimeout(loadFilmAI, 0);
+import { FilmAIHero }
+from "../sections/film-ai/film-ai-hero.js";
 
-  return `
-    <section id="film-ai-page">
+import { FilmShowreel }
+from "../sections/film-ai/film-ai-showreel.js";
 
-      <div id="film-ai-hero"></div>
+import { FilmCaseStudies }
+from "../sections/film-ai/film-ai-case-studies.js";
 
-      <section class="film-projects-section">
+import { ProjectShowcase }
+from "../sections/film-ai/project-showcase.js";
 
-        <div class="film-projects-header">
-
-          <span class="film-label">
-            AI STORYTELLING
-          </span>
-
-          <h2 class="film-heading">
-            Featured Projects
-          </h2>
-
-        </div>
-
-        <div
-          id="film-project-grid"
-          class="film-project-grid"
-        >
-          Loading...
-        </div>
-
-      </section>
-
-    </section>
-  `;
-}
-
-async function loadFilmAI() {
+import { StartFilmSection }
+from "../sections/film-ai/start-film.js";
+export async function FilmAI() {
 
   const data = await getVideos();
 
-  renderHero(data.filmAI.hero);
+  return `
 
-  renderProjects(data.filmAI.projects);
-}
+    ${FilmAIHero(
+      data.filmAI.hero,
+      data.filmAI.projects
+    )}
 
-function renderHero(hero) {
+    ${FilmShowreel(
+      data.filmAI.projects
+    )}
 
-  const el = document.getElementById("film-ai-hero");
+    ${FilmCaseStudies(
+      data.filmAI.projects
+    )}
 
-  el.innerHTML = `
-    <section class="film-hero">
+    ${ProjectShowcase(
+      data.filmAI.projects
+    )}
 
-      <video
-        class="film-hero-video"
-        autoplay
-        muted
-        loop
-        playsinline
-      >
-        <source src="${hero.backgroundVideo}" type="video/mp4">
-      </video>
+    ${StartFilmSection()}
 
-      <div class="film-hero-overlay"></div>
-
-      <div class="film-hero-content">
-
-        <span class="film-hero-tag">
-          YOUAI FILM DIVISION
-        </span>
-
-        <h1 class="film-hero-title">
-          ${hero.title}
-        </h1>
-
-        <h2 class="film-hero-subtitle">
-          ${hero.subtitle}
-        </h2>
-
-        <p class="film-hero-desc">
-          ${hero.description}
-        </p>
-
-      </div>
-
-    </section>
   `;
-}
-
-function renderProjects(projects) {
-
-  const grid = document.getElementById("film-project-grid");
-
-  grid.innerHTML = projects
-    .map(FilmCard)
-    .join("");
 }

@@ -18,3 +18,13 @@
 @import url("./responsive/responsive.css");
 
 @import url("./styles/film-ai.css");
+@import url("./sections/film-ai/film-ai-hero.css");
+@import url("./sections/film-ai/film-ai-intro.css");
+@import url("./sections/film-ai/film-ai-showreel.css");
+@import url("./sections/film-ai/film-ai-case-studies.css");
+@import url("./sections/film-ai/project-showcase.css");
+@import url("./sections/film-ai/start-film.css");
+
+@import url("./sections/commercial/commercial-hero.css");
+@import url("./sections/commercial/commercial-showcase.css");
+@import url("./sections/commercial/commercial-brands.css");

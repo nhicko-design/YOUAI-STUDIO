@@ -1,0 +1,360 @@
+/* =========================================================
+   CASE STUDIES
+========================================================= */
+
+.film-case-section{
+  position: relative;
+  padding: 120px 0;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(124,58,237,.10),
+      transparent 40%
+    ),
+    #020202;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.film-case-heading{
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.film-case-heading h2{
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1;
+  margin-bottom: 18px;
+
+  font-weight: 800;
+}
+
+.film-case-heading p{
+  width: min(700px, 100%);
+  margin: auto;
+
+  color: rgba(255,255,255,.66);
+
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* =========================================
+   LIST
+========================================= */
+
+.film-case-list{
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* =========================================
+   ITEM
+========================================= */
+
+.film-case-item{
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 40px;
+
+  align-items: center;
+
+  padding: 28px;
+
+  border-radius: 34px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.02)
+    );
+
+  border: 1px solid rgba(255,255,255,.06);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    background .35s ease;
+}
+
+.film-case-item:hover{
+  transform: translateY(-6px);
+
+  border-color: rgba(168,85,247,.35);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.07),
+      rgba(255,255,255,.03)
+    );
+}
+
+/* reverse */
+
+.film-case-item.reverse .film-case-media{
+  order: 2;
+}
+
+.film-case-item.reverse .film-case-content{
+  order: 1;
+}
+
+/* =========================================
+   MEDIA
+========================================= */
+
+.film-case-media{
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.film-case-media::before{
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.45),
+      transparent 40%
+    );
+
+  z-index: 2;
+}
+
+.film-case-media video{
+  width: 100%;
+  height: 280px;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 28px;
+
+  transition: transform .5s ease;
+}
+
+.film-case-item:hover .film-case-media video{
+  transform: scale(1.05);
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.film-case-content{
+  position: relative;
+}
+
+.film-case-number{
+  position: absolute;
+  top: -10px;
+  right: 0;
+
+  font-size: 90px;
+  font-weight: 900;
+
+  color: rgba(255,255,255,.04);
+
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+.film-case-genre{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  background: rgba(168,85,247,.12);
+
+  border: 1px solid rgba(168,85,247,.20);
+
+  color: #d8b4fe;
+
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.film-case-content h3{
+  font-size: clamp(28px, 3vw, 46px);
+  line-height: 1.1;
+
+  margin-bottom: 18px;
+
+  font-weight: 800;
+}
+
+.film-case-content p{
+  color: rgba(255,255,255,.68);
+
+  line-height: 1.8;
+
+  font-size: 15px;
+
+  margin-bottom: 28px;
+
+  max-width: 760px;
+}
+
+/* =========================================
+   PIPELINE
+========================================= */
+
+.film-case-pipeline{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 28px;
+}
+
+.film-pipeline-item{
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.05);
+
+  border: 1px solid rgba(255,255,255,.07);
+
+  font-size: 13px;
+
+  color: rgba(255,255,255,.82);
+
+  transition:
+    background .3s ease,
+    border-color .3s ease,
+    transform .3s ease;
+}
+
+.film-pipeline-item:hover{
+  background: rgba(168,85,247,.12);
+
+  border-color: rgba(168,85,247,.28);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.film-case-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #a855f7,
+      #7c3aed
+    );
+
+  color: white;
+
+  padding: 14px 26px;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px rgba(124,58,237,.30);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.film-case-btn:hover{
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 40px rgba(124,58,237,.42);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width: 1100px){
+
+  .film-case-item{
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .film-case-item.reverse .film-case-media{
+    order: 1;
+  }
+
+  .film-case-item.reverse .film-case-content{
+    order: 2;
+  }
+
+  .film-case-media video{
+    height: 340px;
+  }
+
+}
+
+@media(max-width: 768px){
+
+  .film-case-section{
+    padding: 90px 0;
+  }
+
+  .film-case-heading{
+    margin-bottom: 50px;
+  }
+
+  .film-case-item{
+    padding: 20px;
+    border-radius: 26px;
+  }
+
+  .film-case-media video{
+    height: 240px;
+    border-radius: 22px;
+  }
+
+  .film-case-number{
+    font-size: 56px;
+  }
+
+  .film-case-content h3{
+    font-size: 30px;
+  }
+
+  .film-case-content p{
+    font-size: 14px;
+  }
+
+}

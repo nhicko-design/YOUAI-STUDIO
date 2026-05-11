@@ -1,27 +1,24 @@
 import { getVideos } from "../api.js";
-import { VideoCard } from "../components/card.js";
 
-export function Commercial() {
-  setTimeout(loadVideos, 0);
+import { CommercialHero } from "../sections/commercial/commercial-hero.js";
+//import { CommercialServices } from "../sections/commercial/commercial-services.js";
+import { CommercialShowcase } from "../sections/commercial/commercial-showcase.js";
+import { CommercialBrands } from "../sections/commercial/commercial-brands.js";
+//import { CommercialCTA } from "../sections/commercial/commercial-cta.js";
+
+export async function Commercial() {
+
+  const data = await getVideos();
 
   return `
-    <div class="p-6">
-      <h1 class="text-3xl mb-6">Gallery</h1>
-      <div id="grid" class="grid grid-cols-3 gap-6">
-        ⏳ Loading...
-      </div>
-    </div>
+    
+    ${CommercialHero(data.commercial.hero)}
+
+
+    ${CommercialShowcase(data.commercial.showcase)}
+
+    ${CommercialBrands()}
+
+
   `;
-}
-
-async function loadVideos() {
-  const grid = document.getElementById("grid");
-
-  try {
-    const data = await getVideos();
-
-    grid.innerHTML = data.videos.map(VideoCard).join("");
-  } catch {
-    grid.innerHTML = "❌ Failed to load";
-  }
 }

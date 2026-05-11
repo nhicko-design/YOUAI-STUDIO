@@ -1,0 +1,132 @@
+/* =========================================================
+   🎬 FILM INTRO
+========================================================= */
+
+.film-intro{
+  position: relative;
+
+  padding:
+    140px 5vw;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   SHELL
+========================================================= */
+
+.film-intro-shell{
+  max-width: 1500px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 520px;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.film-intro-tag{
+  display: inline-flex;
+
+  padding:
+    10px 18px;
+
+  border-radius: 999px;
+
+  margin-bottom: 28px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  color:
+    rgba(255,255,255,.7);
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+}
+
+.film-intro-title{
+  font-size:
+    clamp(3rem,7vw,7rem);
+
+  line-height: .9;
+
+  font-weight: 900;
+
+  letter-spacing: -5px;
+
+  color: white;
+}
+
+.film-intro-title span{
+  background:
+    linear-gradient(
+      90deg,
+      #a855f7,
+      #ec4899
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   RIGHT
+========================================================= */
+
+.film-intro-right{
+  display: flex;
+  flex-direction: column;
+
+  gap: 28px;
+}
+
+.film-intro-right p{
+  color:
+    rgba(255,255,255,.65);
+
+  font-size: 16px;
+
+  line-height: 1.9;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px){
+
+  .film-intro-shell{
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+}
+
+@media (max-width: 768px){
+
+  .film-intro{
+    padding:
+      100px 24px;
+  }
+
+  .film-intro-title{
+    font-size: 4rem;
+
+    letter-spacing: -2px;
+  }
+
+}

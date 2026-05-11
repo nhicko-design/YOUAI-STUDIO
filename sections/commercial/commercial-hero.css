@@ -1,0 +1,129 @@
+/* =========================================
+   HERO
+========================================= */
+
+.commercial-hero{
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background: black;
+}
+
+.commercial-bg-video{
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.commercial-overlay{
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.75),
+      rgba(0,0,0,.9)
+    );
+}
+
+.commercial-hero-content{
+  position: relative;
+  z-index: 5;
+
+  max-width: 850px;
+}
+
+.commercial-badge{
+  display: inline-flex;
+
+  padding: 12px 20px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.08);
+
+  border: 1px solid rgba(255,255,255,.1);
+
+  margin-bottom: 30px;
+
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.commercial-hero h1{
+  font-size: clamp(56px, 7vw, 110px);
+  line-height: .95;
+
+  margin-bottom: 24px;
+}
+
+.commercial-hero h2{
+  font-size: clamp(24px, 3vw, 40px);
+
+  color: rgba(255,255,255,.7);
+
+  margin-bottom: 32px;
+
+  font-weight: 400;
+}
+
+.commercial-hero p{
+  font-size: 18px;
+  line-height: 1.9;
+
+  color: rgba(255,255,255,.72);
+
+  max-width: 720px;
+
+  margin-bottom: 50px;
+}
+
+.commercial-actions{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.commercial-btn-primary{
+  padding: 18px 34px;
+
+  background: white;
+  color: black;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+}
+
+.commercial-btn-secondary{
+  padding: 18px 34px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,.2);
+
+  background: rgba(255,255,255,.06);
+
+  backdrop-filter: blur(10px);
+}
+
+@media(max-width:768px){
+
+  .commercial-hero{
+    padding: 140px 0 100px;
+  }
+
+  .commercial-actions{
+    flex-direction: column;
+  }
+
+}

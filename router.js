@@ -3,15 +3,40 @@ import { FilmAI } from "./pages/filmAI.js";
 import { Commercial } from "./pages/commercial.js";
 import { About } from "./pages/about.js";
 
-export function renderRoute() {
-  const page = document.getElementById("page");
-  const hash = window.location.hash || "#home";
+export async function renderRoute() {
+
+  const page =
+    document.getElementById("page");
+
+  const hash =
+    window.location.hash || "#home";
 
   if (hash === "#filmAI") {
-    page.innerHTML = FilmAI();
-  } else if (hash === "#about") {
-    page.innerHTML = About();
-  } else {
-    page.innerHTML = Home();
+
+    page.innerHTML =
+      await FilmAI();
+
   }
+
+  else if (hash === "#commercial") {
+
+    page.innerHTML =
+      await Commercial();
+
+  }
+
+  else if (hash === "#about") {
+
+    page.innerHTML =
+      await About();
+
+  }
+
+  else {
+
+    page.innerHTML =
+      await Home();
+
+  }
+
 }

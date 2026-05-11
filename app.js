@@ -22,6 +22,23 @@ function render() {
   });
 }
 
+window.scrollFilmShowreel = function(direction){
+
+  const slider = document.getElementById(
+    "film-showreel-slider"
+  );
+
+  if(!slider) return;
+
+  const amount = 600;
+
+  slider.scrollBy({
+    left: amount * direction,
+    behavior: "smooth"
+  });
+
+};
+
 function initHorizontalScroll() {
   const section = document.querySelector(".horizontal-section");
   const track = document.getElementById("scroll-track");
