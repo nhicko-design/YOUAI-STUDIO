@@ -1,32 +1,67 @@
 console.log("APP LOADED");
-
 import { renderRoute } from "./router.js";
-import { Navbar } from "./components/navbar.js";
+
+import { Navbar }
+from "./components/navbar.js";
+
+import { VideoModal }
+from "./components/video-modal.js";
+
+import "./components/video-modal-handler.js";
+
+/* =========================================================
+   RENDER APP
+========================================================= */
 
 function render() {
-  const app = document.getElementById("app");
+
+  const app =
+    document.getElementById("app");
 
   if (!app) {
-    console.error("Missing #app in index.html");
+
+    console.error(
+      "Missing #app in index.html"
+    );
+
     return;
   }
 
   app.innerHTML = `
+    
     ${Navbar()}
+
     <div id="page"></div>
+
+    ${VideoModal()}
+
   `;
 
-  // đảm bảo DOM đã render xong
+  // render route sau khi DOM mount
   requestAnimationFrame(() => {
     renderRoute();
+
+    // re-init effects
+    setTimeout(() => {
+
+      initAnimations();
+
+    }, 50);
+
   });
+
 }
+
+/* =========================================================
+   SHOWREEL SCROLL
+========================================================= */
 
 window.scrollFilmShowreel = function(direction){
 
-  const slider = document.getElementById(
-    "film-showreel-slider"
-  );
+  const slider =
+    document.getElementById(
+      "film-showreel-slider"
+    );
 
   if(!slider) return;
 
@@ -39,56 +74,72 @@ window.scrollFilmShowreel = function(direction){
 
 };
 
-function initHorizontalScroll() {
-  const section = document.querySelector(".horizontal-section");
-  const track = document.getElementById("scroll-track");
 
-  if (!section || !track) return;
-
-  function onScroll() {
-    const rect = section.getBoundingClientRect();
-
-    const progress = Math.min(
-      Math.max(-rect.top / (section.offsetHeight - window.innerHeight), 0),
-      1
-    );
-
-    const maxMove = track.scrollWidth - window.innerWidth;
-
-    track.style.transform = `translate3d(-${progress * maxMove}px,0,0)`;
-  }
-
-  window.addEventListener("scroll", onScroll);
-}
+/* =========================================================
+   FADE ANIMATION
+========================================================= */
 
 function initAnimations() {
-  const elements = document.querySelectorAll(".fade-in");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
+  const elements =
+    document.querySelectorAll(".fade-in");
+
+  const observer =
+    new IntersectionObserver((entries) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add("show");
+
+        }
+
+      });
+
     });
-  });
 
-  elements.forEach(el => observer.observe(el));
+  elements.forEach(el =>
+    observer.observe(el)
+  );
+
 }
 
+
+/* =========================================================
+   GLOW PARALLAX
+========================================================= */
+
 window.addEventListener("scroll", () => {
-  const glow = document.querySelector(".glow");
+
+  const glow =
+    document.querySelector(".glow");
 
   if (!glow) return;
 
   const scrollY = window.scrollY;
-  glow.style.transform = `translateY(${scrollY * 0.3}px)`;
+
+  glow.style.transform =
+    `translateY(${scrollY * 0.3}px)`;
+
 });
 
+/* =========================================================
+   EVENTS
+========================================================= */
 
-window.addEventListener("load", () => {
-  setTimeout(initAnimations, 100);
-});
-window.addEventListener("hashchange", render);
-window.addEventListener("load", render);
+window.addEventListener(
+  "hashchange",
+  render
+);
+
+window.addEventListener(
+  "load",
+  render
+);
+
+/* =========================================================
+   START
+========================================================= */
 
 render();

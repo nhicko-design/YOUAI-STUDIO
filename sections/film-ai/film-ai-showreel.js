@@ -1,7 +1,11 @@
 export function FilmShowreel(projects = []) {
 
   return `
-    <section class="film-showreel-section" id="showreel">
+
+    <section
+      class="film-showreel-section"
+      id="showreel"
+    >
 
       <div class="film-container">
 
@@ -26,92 +30,14 @@ export function FilmShowreel(projects = []) {
         <!-- GRID -->
         <div class="film-showreel-grid">
 
-          ${projects.map(project => `
-
-            <div class="film-showreel-card">
-
-              <!-- video -->
-              <video
-                src="${project.videoUrl}"
-                muted
-                loop
-                playsinline
-                onmouseenter="this.play()"
-                onmouseleave="this.pause()"
-              ></video>
-
-              <!-- overlay -->
-              <div class="film-showreel-overlay">
-
-                <div class="film-showreel-genre">
-                  ${project.genre}
-                </div>
-
-                <h3>
-                  ${project.title}
-                </h3>
-
-                <p>
-                  ${project.description}
-                </p>
-
-                <!-- buttons -->
-                <div class="film-showreel-actions">
-
-                  <button
-                    class="film-watch-btn"
-                    onclick="openFilmVideo('${project.videoUrl}')"
-                  >
-                    ▶ Watch Preview
-                  </button>
-
-                  <button class="film-detail-btn">
-                    View Case Study
-                  </button>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          `).join("")}
-
-        </div>
-
-      </div>
-
-      <!-- VIDEO MODAL -->
-      <div
-        class="film-video-modal"
-        id="film-video-modal"
-      >
-
-        <div
-          class="film-video-backdrop"
-          onclick="closeFilmVideo()"
-        ></div>
-
-        <div class="film-video-content">
-
-          <button
-            class="film-video-close"
-            onclick="closeFilmVideo()"
-          >
-            ✕
-          </button>
-
-          <video
-            id="film-modal-video"
-            controls
-            autoplay
-          ></video>
+          ${projects.map(showreelCard).join("")}
 
         </div>
 
       </div>
 
     </section>
+
   `;
 }
 
@@ -123,25 +49,29 @@ function showreelCard(project){
 
   return `
 
-    <div class="film-show-card">
+    <div class="film-showreel-card">
 
+      <!-- VIDEO -->
       <video
-        autoplay
         muted
         loop
         playsinline
+        preload="metadata"
+        onmouseenter="this.play()"
+        onmouseleave="this.pause()"
       >
+
         <source
           src="${project.videoUrl}"
           type="video/mp4"
         >
+
       </video>
 
-      <div class="film-show-overlay"></div>
+      <!-- OVERLAY -->
+      <div class="film-showreel-overlay">
 
-      <div class="film-show-content">
-
-        <div class="film-show-genre">
+        <div class="film-showreel-genre">
           ${project.genre}
         </div>
 
@@ -152,6 +82,24 @@ function showreelCard(project){
         <p>
           ${project.description}
         </p>
+
+        <!-- ACTIONS -->
+        <div class="film-showreel-actions">
+
+          <button
+            class="film-watch-btn"
+            onclick="openVideoModal('${project.videoUrl}')"
+          >
+            ▶ Watch Preview
+          </button>
+
+          <button
+            class="film-detail-btn"
+          >
+            View Case Study
+          </button>
+
+        </div>
 
       </div>
 

@@ -39,14 +39,14 @@ export function CommercialHero(hero){
             ${hero.description}
           </p>
 
-          <div class="commercial-actions">
+          <div class="commercial-action">
 
-            <a href="#commercial-showcase"
+            <a href="#commercialShowcase"
                class="commercial-btn-primary">
               View Showcase
             </a>
 
-            <a href="#commercial-cta"
+            <a href="#commercialCta"
                class="commercial-btn-secondary">
               Start Your Campaign
             </a>

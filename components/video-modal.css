@@ -1,0 +1,138 @@
+/* =========================================================
+   VIDEO MODAL
+========================================================= */
+
+.video-modal{
+  position: fixed;
+  inset: 0;
+
+  z-index: 99999;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: .4s ease;
+}
+
+/* =========================================
+   ACTIVE
+========================================= */
+
+.video-modal.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.video-modal-overlay{
+  position: absolute;
+  inset: 0;
+
+  background:
+    rgba(0,0,0,.86);
+
+  backdrop-filter: blur(12px);
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.video-modal-content{
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    scale(.9);
+
+  width: min(1400px, 92%);
+  aspect-ratio: 16/9;
+
+  transition: .4s ease;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  background: black;
+
+  box-shadow:
+    0 0 80px rgba(0,0,0,.6);
+}
+
+.video-modal.active .video-modal-content{
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+}
+
+/* =========================================
+   VIDEO
+========================================= */
+
+.video-modal-content video{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  background: black;
+}
+
+/* =========================================
+   CLOSE
+========================================= */
+
+.video-modal-close{
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  z-index: 20;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 999px;
+
+  border: none;
+
+  background:
+    rgba(255,255,255,.12);
+
+  backdrop-filter: blur(10px);
+
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+}
+
+.video-modal-close:hover{
+  background:
+    rgba(255,255,255,.2);
+
+  transform: rotate(90deg);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .video-modal-content{
+    width: 95%;
+  }
+
+}

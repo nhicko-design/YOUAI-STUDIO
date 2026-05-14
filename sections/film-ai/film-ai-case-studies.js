@@ -154,10 +154,6 @@ function card(item, index){
 
         </div>
 
-        <button class="film-case-btn">
-          Explore Workflow
-        </button>
-
       </div>
 
     </article>

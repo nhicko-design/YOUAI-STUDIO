@@ -1,7 +1,8 @@
 import { Home } from "./pages/home.js";
 import { FilmAI } from "./pages/filmAI.js";
 import { Commercial } from "./pages/commercial.js";
-import { About } from "./pages/about.js";
+import { Contact } from "./pages/contact.js";
+import { Imagery } from "./pages/imagery.js";
 
 export async function renderRoute() {
 
@@ -25,13 +26,16 @@ export async function renderRoute() {
 
   }
 
-  else if (hash === "#about") {
-
-    page.innerHTML =
-      await About();
-
+  else if (hash === "#imagery") {
+    page.innerHTML = await Imagery();
   }
 
+  else if (hash === "#contact") {
+
+    page.innerHTML =
+      await Contact();
+
+  }
   else {
 
     page.innerHTML =

@@ -8,13 +8,8 @@
       },
       {
         "id": "bg2",
-        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4",
+        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1778772642/MACBOOK_PRO_adew4w.mov",
         "title": "BackGround2"
-      },
-      {
-        "id": "bg3",
-        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649005/samples/elephants.mp4",
-        "title": "BackGround3"
       }
     ]
   },
@@ -71,30 +66,74 @@
     }
   ],
   
-  "imagery": [
+  "imageryFashion": [
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649011/samples/outdoor-woman.jpg",
-      "title": "Futuristic City",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773247/Cartier_7__lid03a.jpg",
+      "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649016/cld-sample.jpg",
-      "title": "AI Portrait",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773245/Cartier_5_c6iq1w.jpg",
+      "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649014/samples/woman-on-a-football-field.jpg",
-      "title": "Cyberpunk Scene",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773245/Cartier_6_eriwj8.jpg",
+      "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649013/samples/coffee.jpg",
-      "title": "Abstract AI Art",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773243/Cartier_3_qks1ok.jpg",
+      "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649013/samples/chair-and-coffee-table.jpg",
-      "title": "Abstract AI Art",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773241/Cartier_2_ly9h2c.jpg",
+      "title": "Fashion",
+      "type": "portrait"
+    }
+  ],
+  "imageryProduct": [
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773237/2_1_bcdhry.png",
+      "title": "Product",
+      "type": "portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773240/4_1_pcrm5w.png",
+      "title": "Product",
+      "type": "portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773237/3_1_hruhtr.png",
+      "title": "Product",
+      "type": "portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773249/1_1_wbry3x.png",
+      "title": "Product",
+      "type": "portrait"
+    }
+  ],
+  "imageryConceptArt": [
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773235/4_gdt8gb.png",
+      "title": "Concept Art",
+      "type": "portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773233/3_lwzdfu.png",
+      "title": "Concept Art",
+      "type": "portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773231/2_i3jag4.png",
+      "title": "Concept Art",
+      "type": "portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773229/1_nesxrn.png",
+      "title": "Concept Art",
       "type": "portrait"
     }
   ],
@@ -153,28 +192,28 @@
     "title": "AI-Powered Commercial Production",
     "subtitle": "Smarter Production. Faster Results. Stronger Impact.",
     "description": "We help brands create high-quality commercials using AI — reducing production time, optimizing costs, and unlocking limitless creative possibilities.",
-    "backgroundVideo": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4"
+    "backgroundVideo": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1778772784/NIKE_1_qr9ol9.mov"
   },
 
   "showcase": [
     {
-      "title": "Beauty Commercial",
-      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4"
+      "title": "Laroche Posay",
+      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1778772802/LAROCHE_POSAY_efu7kk.mov"
     },
 
     {
-      "title": "Fashion Campaign",
-      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4"
+      "title": "Iphone",
+      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1778772774/IPHONE_17_PRO_v5m89y.mov"
     },
 
     {
-      "title": "Product Storytelling",
-      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649005/samples/elephants.mp4"
+      "title": "CARTIER",
+      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1778772775/CARTIER_hnkc8g.mov"
     },
 
     {
-      "title": "Social Media Ads",
-      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4"
+      "title": "MACORNER",
+      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1778772777/MACORNER_zova2a.mov"
     }
   ],
 

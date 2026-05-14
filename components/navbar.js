@@ -14,7 +14,8 @@ export function Navbar() {
           <a href="#home" class="hover:text-white">Home</a>
           <a href="#filmAI" class="hover:text-white">Film AI</a>
           <a href="#commercial" class="hover:text-white">Commercial</a>
-          <a href="#about" class="hover:text-white">About</a>
+          <a href="#imagery" class="hover:text-white">Imagery</a>
+          <a href="#contact" class="hover:text-white">Contact</a>
         </div>
 
       </div>

@@ -1,0 +1,264 @@
+/* =========================================================
+   IMAGERY HERO
+========================================================= */
+
+.imagery-hero{
+  position: relative;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagery-hero-bg{
+  position: absolute;
+  inset: 0;
+}
+
+.imagery-hero-bg img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.08);
+}
+
+.imagery-hero-overlay{
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.5),
+      rgba(0,0,0,.9)
+    );
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.imagery-hero-content{
+  position: relative;
+  z-index: 10;
+
+  width: min(1100px, 92%);
+
+  text-align: center;
+}
+
+.imagery-tag{
+  display: inline-flex;
+
+  padding: 12px 24px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,.08);
+
+  backdrop-filter: blur(10px);
+
+  margin-bottom: 30px;
+
+  letter-spacing: 2px;
+
+  font-size: 12px;
+}
+
+.imagery-hero-content h1{
+  font-size: clamp(60px, 8vw, 120px);
+
+  line-height: .95;
+
+  margin-bottom: 30px;
+}
+
+.imagery-hero-content h1 span{
+  color: #c084fc;
+}
+
+.imagery-hero-content p{
+  width: min(760px, 100%);
+  margin: auto;
+
+  color: rgba(255,255,255,.74);
+
+  line-height: 1.8;
+
+  font-size: 18px;
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.imagery-gallery-section{
+  padding: 160px 0;
+}
+
+.imagery-gallery-heading{
+  text-align: center;
+
+  margin-bottom: 80px;
+}
+
+.imagery-gallery-heading h2{
+  font-size: clamp(46px,5vw,80px);
+
+  margin-bottom: 20px;
+}
+
+.imagery-gallery-heading p{
+  width: min(700px,100%);
+  margin: auto;
+
+  color: rgba(255,255,255,.7);
+
+  line-height: 1.8;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.imagery-grid{
+  columns: 4 320px;
+  column-gap: 24px;
+}
+
+.imagery-card{
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  margin-bottom: 24px;
+
+  break-inside: avoid;
+
+  cursor: pointer;
+}
+
+.imagery-card img{
+  width: 100%;
+
+  display: block;
+
+  transition: .5s ease;
+}
+
+.imagery-card:hover img{
+  transform: scale(1.08);
+}
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.imagery-overlay{
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 24px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.8),
+      transparent
+    );
+
+  opacity: 0;
+
+  transition: .4s ease;
+}
+
+.imagery-card:hover .imagery-overlay{
+  opacity: 1;
+}
+
+.imagery-title{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.imagery-cta-section{
+  padding: 200px 0;
+}
+
+.imagery-cta-box{
+  position: relative;
+
+  padding: 120px;
+
+  border-radius: 40px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(124,58,237,.25),
+      rgba(0,0,0,.8)
+    );
+
+  text-align: center;
+}
+
+.imagery-cta-box h2{
+  font-size: clamp(50px,6vw,90px);
+
+  margin: 30px 0;
+}
+
+.imagery-cta-box p{
+  width: min(760px,100%);
+  margin: auto auto 50px;
+
+  color: rgba(255,255,255,.76);
+
+  line-height: 1.9;
+}
+
+.imagery-cta-btn{
+  border: none;
+
+  background: white;
+  color: black;
+
+  padding: 18px 34px;
+
+  border-radius: 999px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+  .imagery-cta-box{
+    padding: 80px 30px;
+  }
+
+}

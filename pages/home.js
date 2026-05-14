@@ -151,7 +151,7 @@ export function Home() {
         <!-- RIGHT -->
         <div class="commercial-actions">
 
-          <a href="#filmAI" class="commercial-btn">
+          <a href="#commercial" class="commercial-btn">
             Explore Commercial →
           </a>
 
@@ -271,7 +271,7 @@ export function Home() {
   <div class="highlight-grid">
 
     <!-- CARD 1 -->
-    <div class="highlight-card large">
+    <div class="highlight-card">
 
       <img
         src="./images/chim-se-keu-chieu.jpg"

@@ -3,7 +3,7 @@ export function CommercialShowcase(videos){
   return `
   
     <section
-      id="commercial-showcase"
+      id="commercialShowcase"
       class="commercial-showcase"
     >
 
