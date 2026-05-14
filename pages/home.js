@@ -123,7 +123,7 @@ export function Home() {
     <!-- COMMERCIAL -->
     <!-- ================================================= -->
 
-    <section class="commercial-section fade-in">
+    <sectio                                                                                                                                                                                     n class="commercial-section fade-in">
 
       <div class="commercial-shell">
 
@@ -552,7 +552,7 @@ async function loadAllData() {
 
     renderCommercialSlider(data.videos);
 
-    renderImagery(data.imagery);
+    renderImagery(data.imageryHome);
 
   } catch (err) {
 

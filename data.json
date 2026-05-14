@@ -65,7 +65,34 @@
       "cardImage": ""
     }
   ],
-  
+
+  "imageryHome": [
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773247/Cartier_7__lid03a.jpg",
+      "title": "Fashion",
+      "type": "portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773245/Cartier_5_c6iq1w.jpg",
+      "title": "Fashion",
+      "type": "portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773245/Cartier_6_eriwj8.jpg",
+      "title": "Fashion",
+      "type": "portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773243/Cartier_3_qks1ok.jpg",
+      "title": "Fashion",
+      "type": "portrait"
+    },
+    {
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773241/Cartier_2_ly9h2c.jpg",
+      "title": "Fashion",
+      "type": "portrait"
+    }
+  ],
   "imageryFashion": [
     {
       "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773247/Cartier_7__lid03a.jpg",
