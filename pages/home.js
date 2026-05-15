@@ -545,10 +545,11 @@ async function loadAllData() {
   try {
 
     const data = await getVideos();
+    const videosFilmAI = data.videos.slice(0, 4);
 
     renderHero(data.hero);
 
-    renderVideoGrid(data.videos);
+    renderVideoGrid(videosFilmAI);
 
     renderCommercialSlider(data.videos);
 
