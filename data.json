@@ -44,6 +44,29 @@
       "cardImage": ""
     }
   ],
+  "highlights": 
+  [
+    {
+      "title": "Chim Sẻ Kêu Chiều",
+      "type": "AI SHORT FILM",
+      "description": "Emotional cinematic storytelling powered by AI visuals.",
+      "image": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773166/POSTER_The_Sparrow_Cries_at_Duck_uhp9k3.png"
+    },
+
+    {
+      "title": "Love In Hatred",
+      "type": "AI DRAMA",
+      "description": "A dark romantic narrative with surreal AI aesthetics.",
+      "image": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773166/LOVE_IN_HATRED_hhy5nv.jpg"
+    },
+
+    {
+      "title": "Unspoken Goodbye",
+      "type": "AI CINEMA",
+      "description": "A visual journey of silence, memory, and emotion.",
+      "image": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773164/IMG_9937_ujchrp.jpg"
+    }
+  ],
 
   "imageryHome": [
     {

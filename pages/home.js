@@ -268,95 +268,13 @@ export function Home() {
   </div>
 
   <!-- PROJECT GRID -->
-  <div class="highlight-grid">
-
-    <!-- CARD 1 -->
-    <div class="highlight-card">
-
-      <img
-        src="./images/chim-se-keu-chieu.jpg"
-        alt="Chim Se Keu Chieu"
-      />
-
-      <div class="highlight-overlay"></div>
-
-      <div class="highlight-content">
-
-        <span class="highlight-type">
-          AI SHORT FILM
-        </span>
-
-        <h3>
-          Chim Sẻ Kêu Chiều
-        </h3>
-
-        <p>
-          Emotional cinematic storytelling powered by AI visuals.
-        </p>
-
-      </div>
-
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="highlight-card">
-
-      <img
-        src="./images/love-in-hatred.jpg"
-        alt="Love In Hatred"
-      />
-
-      <div class="highlight-overlay"></div>
-
-      <div class="highlight-content">
-
-        <span class="highlight-type">
-          AI DRAMA
-        </span>
-
-        <h3>
-          Love In Hatred
-        </h3>
-
-        <p>
-          A dark romantic narrative with surreal AI aesthetics.
-        </p>
-
-      </div>
-
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="highlight-card">
-
-      <img
-        src="./images/unspoken-goodbye.jpg"
-        alt="Unspoken Goodbye"
-      />
-
-      <div class="highlight-overlay"></div>
-
-      <div class="highlight-content">
-
-        <span class="highlight-type">
-          AI CINEMA
-        </span>
-
-        <h3>
-          Unspoken Goodbye
-        </h3>
-
-        <p>
-          A visual journey of silence, memory, and emotion.
-        </p>
-
-      </div>
-
-    </div>
-
+  <div
+    id="highlight-grid"
+    class="highlight-grid"
+  >
+    ⏳ Loading...
   </div>
-
-</section>
+  </section>
     <!-- ABOUT -->
     <section class="px-6 md:px-10 py-24 fade-in">
 
@@ -552,6 +470,8 @@ async function loadAllData() {
     renderVideoGrid(videosFilmAI);
 
     renderCommercialSlider(data.videos);
+
+    renderHighlights(data.highlights);
 
     renderImagery(data.imageryHome);
 
@@ -1055,4 +975,59 @@ function initAnimations() {
     observer.observe(el)
   );
 
+}
+
+function renderHighlights(highlights = []) {
+
+  const grid =
+    document.getElementById("highlight-grid");
+
+  if (!grid)
+    return;
+
+  grid.innerHTML =
+    highlights.map(highlightCard).join("");
+
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+function highlightCard(card) {
+
+  return `
+  
+    <div class="highlight-card">
+
+      <!-- IMAGE -->
+      <img
+        src="${card.image}"
+        alt="${card.title}"
+        loading="lazy"
+      />
+
+      <!-- OVERLAY -->
+      <div class="highlight-overlay"></div>
+
+      <!-- CONTENT -->
+      <div class="highlight-content">
+
+        <span class="highlight-type">
+          ${card.type}
+        </span>
+
+        <h3>
+          ${card.title}
+        </h3>
+
+        <p>
+          ${card.description}
+        </p>
+
+      </div>
+
+    </div>
+
+  `;
 }
