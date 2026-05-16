@@ -42,27 +42,6 @@
       "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
       "thumbnail": "",
       "cardImage": ""
-    },
-    {
-      "id": "v5",
-      "title": "TVC / Commercial",
-      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4",
-      "thumbnail": "",
-      "cardImage": ""
-    },
-    {
-      "id": "v6",
-      "title": "Film AI",
-      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
-      "thumbnail": "",
-      "cardImage": ""
-    },
-    {
-      "id": "v7",
-      "title": "TVC / Commercial",
-      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4",
-      "thumbnail": "",
-      "cardImage": ""
     }
   ],
 
@@ -245,20 +224,59 @@
   ],
 
   "brands": [
-    "Kotex",
-    "Milaganics",
-    "Wonjin",
-    "Derladie",
-    "Heimish",
-    "Tfit",
-    "GGG Cosmetic",
-    "Skinfood1957",
-    "Sundays",
-    "Herherbal",
-    "Abib",
-    "Uniyoung",
-    "Macorner"
-  ]
+  {
+    "name": "Kotex",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917690/Kotex_logo_san_pham_bk96d5.png"
+  },
+  {
+    "name": "Milaganics",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917661/images_1_j5vskh.png"
+  },
+  {
+    "name": "Wonjin",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917679/images_6_luvp8i.jpg"
+  },
+  {
+    "name": "Derladie",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917694/89ec80a89454453a043754de316a1292_knflkv.jpg"
+  },
+  {
+    "name": "Heimish",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917703/heimish_nhsjsn.webp"
+  },
+  {
+    "name": "Tfit",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917664/images_2_ddrtzl.png"
+  },
+  {
+    "name": "GGG Cosmetic",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917700/a9c74917-be75-4672-b6d5-96f95bd7863d-_ayytms.png"
+  },
+  {
+    "name": "Skinfood1957",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917668/images_3_tquhhl.png"
+  },
+  {
+    "name": "Sundays",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917712/Huggies-Logo_xx3hg1.png"
+  },
+  {
+    "name": "Herherbal",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917672/images_4_tsjgj6.png"
+  },
+  {
+    "name": "Abib",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917675/images_5_vczui7.png"
+  },
+  {
+    "name": "Uniyoung",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917682/images_6_xhbagv.png"
+  },
+  {
+    "name": "Macorner",
+    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917686/images_7_l2v8er.png"
+  }
+]
 }
 
 }

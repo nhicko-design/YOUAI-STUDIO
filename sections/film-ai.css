@@ -34,20 +34,6 @@
   overflow: hidden;
 }
 
-.video-grid-neo{
-  position:relative;
-  z-index:2;
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(12,1fr);
-
-  grid-auto-rows: 70px;
-
-  gap: 22px;
-}
-
 /* =========================================================
    🎬 VIDEO GRID
 ========================================================= */
@@ -309,8 +295,14 @@
    RIGHT
 ========================================== */
 
-.film-showcase {
+.film-showcase{
+
   position: relative;
+
+  width: 100%;
+  max-width: 820px;
+
+  margin: auto;
 }
 
 .film-grid-glow {
@@ -334,14 +326,18 @@
   display: grid;
 
   grid-template-columns:
-    repeat(2, 1fr);
+    1.15fr
+    1fr
+    1fr;
 
-  gap: 22px;
+  grid-template-rows:
+    240px
+    240px;
 
-  position: relative;
-  z-index: 2;
+  gap: 20px;
+
+  width: 100%;
 }
-
 /* =========================================
    VIDEO CARD
 ========================================= */
@@ -349,24 +345,25 @@
 .film-video-card{
   position: relative;
 
-  height: 260px;
-
   overflow: hidden;
 
-  border-radius: 28px;
+  border-radius: 32px;
 
   background: #111;
 
   border:
     1px solid rgba(255,255,255,.08);
 
-  transition: .4s ease;
+  transition:
+    transform .45s ease,
+    border-color .45s ease;
 }
 
 .film-video-card:hover{
+
   transform:
     translateY(-6px)
-    scale(1.02);
+    scale(1.015);
 
   border-color:
     rgba(168,85,247,.45);
@@ -384,10 +381,9 @@
 /* =========================================
    GLOW
 ========================================= */
-
 .film-grid-glow{
-  position: absolute;
 
+  position: absolute;
   inset: 0;
 
   background:
@@ -397,7 +393,7 @@
       transparent 70%
     );
 
-  filter: blur(60px);
+  filter: blur(80px);
 
   z-index: 0;
 }
@@ -431,6 +427,95 @@
 }
 
 
+/* BIG HERO */
+.film-video-card:nth-child(1){
+
+  grid-row:
+    1 / 3;
+
+  height: 100%;
+}
+
+/* TOP RIGHT */
+.film-video-card:nth-child(2){
+
+  height: 100%;
+}
+
+/* BOTTOM LEFT */
+.film-video-card:nth-child(3){
+
+  transform:
+    translateY(-30px);
+
+  height: 100%;
+}
+
+/* BOTTOM RIGHT */
+.film-video-card:nth-child(4){
+
+  transform:
+    translateY(20px);
+
+  height: 100%;
+}
+
+
+
+/* BIG HERO */
+.film-video-card:nth-child(1){
+
+  grid-row:
+    1 / 3;
+
+  height: 100%;
+}
+
+/* TOP RIGHT */
+.film-video-card:nth-child(2){
+
+  height: 100%;
+}
+
+/* BOTTOM LEFT */
+.film-video-card:nth-child(3){
+
+  transform:
+    translateY(-30px);
+
+  height: 100%;
+}
+
+/* BOTTOM RIGHT */
+.film-video-card:nth-child(4){
+
+  transform:
+    translateY(20px);
+
+  height: 100%;
+}
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+
+.film-video-card::after{
+
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.55),
+      transparent 40%
+    );
+
+  pointer-events: none;
+}
 /* =========================================
    MOBILE
 ========================================= */
@@ -443,6 +528,29 @@
 
   .film-video-card{
     height: 240px;
+  }
+
+}
+@media(max-width: 992px){
+
+  .video-grid-neo{
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+  }
+
+  .film-video-card,
+  .film-video-card:nth-child(1),
+  .film-video-card:nth-child(2),
+  .film-video-card:nth-child(3),
+  .film-video-card:nth-child(4){
+
+    height: 240px;
+
+    transform: none;
+
+    grid-row: auto;
   }
 
 }

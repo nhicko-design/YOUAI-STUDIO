@@ -93,11 +93,6 @@ function showreelCard(project){
             ▶ Watch Preview
           </button>
 
-          <button
-            class="film-detail-btn"
-          >
-            View Case Study
-          </button>
 
         </div>
 

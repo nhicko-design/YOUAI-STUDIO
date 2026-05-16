@@ -603,9 +603,11 @@ function renderVideoGrid(videos = []) {
   const isMobile =
     window.innerWidth < 768;
 
+  // MOBILE = 2
+  // DESKTOP = 4
   const list = isMobile
-    ? videos.slice(0, 1)
-    : videos.slice(0, 6);
+    ? videos.slice(0, 2)
+    : videos.slice(0, 4);
 
   grid.innerHTML =
     list.map(videoCard).join("");

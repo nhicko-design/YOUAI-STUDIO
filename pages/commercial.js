@@ -18,7 +18,7 @@ export async function Commercial() {
 
 
 
-    ${CommercialBrands()}
+    ${CommercialBrands(data.commercial.brands)}
 
     ${CommercialCTA()}
 

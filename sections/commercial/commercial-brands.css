@@ -1,48 +1,36 @@
 /* =========================================================
-   COMMERCIAL BRANDS
+   BRANDS
 ========================================================= */
 
 .commercial-brands-section{
-  position: relative;
+
   padding: 140px 0;
-  background:
-    radial-gradient(
-      circle at top,
-      rgba(124,58,237,.12),
-      transparent 45%
-    ),
-    #040404;
+
+  background: #050505;
 }
 
 /* =========================================
    HEADING
 ========================================= */
 
-.commercial-brands-heading{
+.commercial-brand-heading{
+
   text-align: center;
-  margin-bottom: 80px;
+
+  margin-bottom: 70px;
 }
 
-.commercial-brands-heading span{
-  display: inline-block;
+.commercial-brand-heading h2{
 
-  font-size: 12px;
-  letter-spacing: 3px;
-
-  color: #c084fc;
+  font-size: clamp(40px,4vw,72px);
 
   margin-bottom: 20px;
 }
 
-.commercial-brands-heading h2{
-  font-size: clamp(40px,5vw,72px);
-  line-height: 1;
+.commercial-brand-heading p{
 
-  margin-bottom: 24px;
-}
-
-.commercial-brands-heading p{
   width: min(760px,100%);
+
   margin: auto;
 
   color: rgba(255,255,255,.7);
@@ -55,46 +43,72 @@
 ========================================= */
 
 .commercial-brand-grid{
+
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 24px;
+
+  grid-template-columns:
+    repeat(5,1fr);
+
+  gap: 22px;
 }
 
-.commercial-brand-item{
+/* =========================================
+   CARD
+========================================= */
+
+.commercial-brand-card{
+
   height: 120px;
+
+  border-radius: 24px;
+
+  background:
+    rgba(255,255,255,.03);
+
+  border:
+    1px solid rgba(255,255,255,.06);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 26px;
+  transition: .35s ease;
+}
+
+.commercial-brand-card:hover{
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(168,85,247,.35);
 
   background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.06),
-      rgba(255,255,255,.03)
-    );
+    rgba(255,255,255,.05);
+}
 
-  border: 1px solid rgba(255,255,255,.08);
+.commercial-brand-card img{
 
-  font-size: 22px;
-  font-weight: 700;
+  width: 110px;
 
-  color: rgba(255,255,255,.85);
+  max-height: 50px;
 
-  backdrop-filter: blur(20px);
+  object-fit: contain;
+
+  filter:
+    grayscale(1)
+    brightness(1.2);
+
+  opacity: .9;
 
   transition: .35s ease;
 }
 
-.commercial-brand-item:hover{
-  transform: translateY(-8px);
+.commercial-brand-card:hover img{
 
-  border-color: rgba(168,85,247,.45);
+  filter: grayscale(0);
 
-  box-shadow:
-    0 0 40px rgba(168,85,247,.18);
+  opacity: 1;
 }
 
 /* =========================================
@@ -104,15 +118,9 @@
 @media(max-width: 992px){
 
   .commercial-brand-grid{
-    grid-template-columns: repeat(2,1fr);
-  }
 
-}
-
-@media(max-width: 640px){
-
-  .commercial-brand-grid{
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      repeat(2,1fr);
   }
 
 }

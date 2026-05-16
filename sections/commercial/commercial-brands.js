@@ -1,49 +1,45 @@
-export function CommercialBrands() {
-
-  const brands = [
-    "Kotex",
-    "Milaganics",
-    "Wonjin",
-    "Derladie",
-    "Heimish",
-    "Tfit",
-    "GGG Cosmetic",
-    "Skinfood1957",
-    "Sundays",
-    "Herherbal",
-    "Abib",
-    "Uniyoung",
-    "Macorner"
-  ];
+export function CommercialBrands(brands = []) {
 
   return `
-    
+  
     <section class="commercial-brands-section">
 
-      <div class="container">
+      <div class="film-container">
 
-        <div class="commercial-brands-heading">
+        <!-- heading -->
+        <div class="commercial-brand-heading">
 
-          <span>
-            BRANDS
-          </span>
+          <div class="film-section-tag">
+            BRAND PARTNERS
+          </div>
 
           <h2>
-            Trusted By Growing Brands
+            Trusted By Modern Brands
           </h2>
 
           <p>
             We collaborate with brands to build
             distinctive visual identities and
-            storytelling-driven campaigns that
-            stand out in crowded markets.
+            storytelling-driven campaigns.
           </p>
 
         </div>
 
+        <!-- logos -->
         <div class="commercial-brand-grid">
 
-          ${brands.map(renderBrand).join("")}
+          ${brands.map(brand => `
+
+            <div class="commercial-brand-card">
+
+              <img
+                src="${brand.logo}"
+                alt="${brand.name}"
+              >
+
+            </div>
+
+          `).join("")}
 
         </div>
 
@@ -53,7 +49,6 @@ export function CommercialBrands() {
 
   `;
 }
-
 function renderBrand(name){
 
   return `
