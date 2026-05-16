@@ -1,22 +1,26 @@
 /* CARD */
 .video-card{
-
   position: relative;
 
   overflow: hidden;
 
-  border-radius: 30px;
+  border-radius: 28px;
+
+  aspect-ratio: 16 / 10;
 
   background: #111;
 
   border:
     1px solid rgba(255,255,255,.08);
 
-  transition:
-    transform .4s ease,
-    border-color .4s ease;
+  cursor: pointer;
 
   isolation: isolate;
+
+  transition:
+    transform .4s ease,
+    border-color .4s ease,
+    box-shadow .4s ease;
 }
 
 .video-card:hover{

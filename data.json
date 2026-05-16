@@ -16,33 +16,40 @@
 
   "videos": [
     {
-      "id": "v1",
-      "title": "Film AI",
-      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
-      "thumbnail": "",
-      "cardImage": ""
-    },
-    {
-      "id": "v2",
-      "title": "TVC / Commercial",
-      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4",
-      "thumbnail": "",
-      "cardImage": ""
-    },
-    {
-      "id": "v3",
-      "title": "AI Imagery",
-      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649005/samples/elephants.mp4",
-      "thumbnail": "",
-      "cardImage": ""
-    },
-    {
-      "id": "v4",
-      "title": "Film AI",
-      "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
-      "thumbnail": "",
-      "cardImage": ""
-    }
+        "id": "love-hatred",
+        "title": "Love in Hatred",
+        "genre": "Psychological Drama",
+        "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773166/LOVE_IN_HATRED_hhy5nv.jpg",
+        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
+        "description": "A dark emotionally charged coming-of-age drama exploring identity, obsession, revenge and desire."
+      },
+
+      {
+        "id": "sparrow",
+        "title": "Sparrow’s Cry at Dusk",
+        "genre": "War Drama",
+        "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773166/POSTER_The_Sparrow_Cries_at_Duck_uhp9k3.png",
+        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649006/samples/dance-2.mp4",
+        "description": "A tragic wartime journey of survival, sacrifice and silent strength."
+      },
+
+      {
+        "id": "unspoken",
+        "title": "Unspoken Goodbyes",
+        "genre": "Emotional Drama",
+        "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773164/IMG_9937_ujchrp.jpg",
+        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649005/samples/elephants.mp4",
+        "description": "A heartbreaking story about unconditional love between a grandmother and her loyal dog."
+      },
+
+      {
+        "id": "fixbug",
+        "title": "Fix Bug",
+        "genre": "Sci-Fi Psychological",
+        "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773167/IMG_9194_epwjva.jpg",
+        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
+        "description": "A surreal story of a coder trapped inside a collapsing digital world."
+      }
   ],
   "highlights": 
   [

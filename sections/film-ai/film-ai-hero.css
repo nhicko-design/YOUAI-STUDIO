@@ -1,6 +1,5 @@
 /* =========================================================
    🎬 FILM AI HERO
-   File: film-ai-hero.css
 ========================================================= */
 
 .film-ai-hero{
@@ -44,12 +43,10 @@
   transform: scale(1.05);
 
   filter:
-    brightness(.45)
+    brightness(.38)
     contrast(1.05)
-    saturate(1.1);
+    saturate(1.08);
 }
-
-/* overlay */
 
 .film-ai-bg-overlay{
   position: absolute;
@@ -58,9 +55,9 @@
   background:
     linear-gradient(
       to bottom,
-      rgba(0,0,0,.7),
+      rgba(0,0,0,.72),
       rgba(0,0,0,.45),
-      rgba(0,0,0,.92)
+      rgba(0,0,0,.94)
     );
 
   z-index: 2;
@@ -124,7 +121,9 @@
   max-width: 1500px;
 
   display: grid;
-  grid-template-columns: 1fr 620px;
+
+  grid-template-columns:
+    1fr 620px;
 
   align-items: center;
 
@@ -162,7 +161,9 @@
   color:
     rgba(255,255,255,.72);
 
-  font-size: 12px;
+  font-size: 11px;
+
+  font-weight: 700;
 
   letter-spacing: 3px;
 
@@ -177,7 +178,7 @@
   font-size:
     clamp(4rem, 9vw, 8rem);
 
-  line-height: .9;
+  line-height: .88;
 
   font-weight: 900;
 
@@ -210,15 +211,15 @@
 ========================================================= */
 
 .film-ai-main-desc{
-  max-width: 700px;
+  max-width: 680px;
 
   color:
     rgba(255,255,255,.72);
 
   font-size:
-    clamp(1rem, 1.4vw, 1.15rem);
+    clamp(1rem, 1.3vw, 1.1rem);
 
-  line-height: 1.95;
+  line-height: 1.9;
 
   margin-bottom: 42px;
 }
@@ -328,7 +329,7 @@
   position: relative;
 
   width: 100%;
-  height: 50%;
+  height: 100%;
 }
 
 /* =========================================================
@@ -340,7 +341,7 @@
 
   overflow: hidden;
 
-  border-radius: 32px;
+  border-radius: 30px;
 
   background: #111;
 
@@ -351,54 +352,24 @@
     0 30px 80px rgba(0,0,0,.45);
 
   transition:
-    transform .5s ease,
-    box-shadow .5s ease;
+    transform .45s ease,
+    box-shadow .45s ease;
 }
 
 .film-float-card:hover{
   transform:
-    translateY(-12px)
+    translateY(-10px)
     scale(1.02);
 
   box-shadow:
-    0 40px 100px rgba(168,85,247,.25);
+    0 40px 100px rgba(168,85,247,.24);
 }
 
-/* layout */
+/* =========================================
+   IMAGE
+========================================= */
 
-.film-float-card:nth-child(1){
-  width: 320px;
-  height: 520px;
-
-  top: 20px;
-  left: 0;
-
-  z-index: 2;
-}
-
-.film-float-card:nth-child(2){
-  width: 280px;
-  height: 420px;
-
-  right: 20px;
-  top: 120px;
-
-  z-index: 3;
-}
-
-.film-float-card:nth-child(3){
-  width: 300px;
-  height: 240px;
-
-  bottom: 20px;
-  left: 120px;
-
-  z-index: 4;
-}
-
-/* video */
-
-.film-float-card video{
+.film-float-card img{
   width: 100%;
   height: 100%;
 
@@ -407,14 +378,21 @@
   display: block;
 
   transition:
-    transform 1.2s ease;
+    transform .8s ease,
+    filter .4s ease;
 }
 
-.film-float-card:hover video{
+.film-float-card:hover img{
   transform: scale(1.06);
+
+  filter:
+    brightness(.92)
+    saturate(1.05);
 }
 
-/* overlay */
+/* =========================================
+   OVERLAY
+========================================= */
 
 .film-float-overlay{
   position: absolute;
@@ -423,31 +401,67 @@
   background:
     linear-gradient(
       to top,
-      rgba(0,0,0,.92),
+      rgba(0,0,0,.94),
       rgba(0,0,0,.15),
-      transparent 50%
+      transparent 55%
     );
 }
 
-/* title */
+/* =========================================
+   LABEL
+========================================= */
 
-.film-float-title{
+.film-ai-float-label{
   position: absolute;
 
   left: 24px;
   bottom: 22px;
 
-  z-index: 3;
+  z-index: 5;
 
   color: white;
 
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
 
   line-height: 1.1;
 
   text-shadow:
-    0 4px 20px rgba(0,0,0,.5);
+    0 4px 20px rgba(0,0,0,.55);
+}
+
+/* =========================================
+   LAYOUT
+========================================= */
+
+.film-float-card.one{
+  width: 320px;
+  height: 500px;
+
+  top: 20px;
+  left: 0;
+
+  z-index: 2;
+}
+
+.film-float-card.two{
+  width: 280px;
+  height: 400px;
+
+  right: 10px;
+  top: 110px;
+
+  z-index: 3;
+}
+
+.film-float-card.three{
+  width: 300px;
+  height: 220px;
+
+  bottom: 20px;
+  left: 110px;
+
+  z-index: 4;
 }
 
 /* =========================================================
@@ -522,7 +536,7 @@
   .film-ai-hero-shell{
     grid-template-columns: 1fr;
 
-    gap: 60px;
+    gap: 70px;
   }
 
   .film-ai-right{
@@ -550,6 +564,7 @@
 
   .film-ai-actions{
     flex-direction: column;
+
     align-items: stretch;
   }
 
@@ -562,29 +577,29 @@
     height: 520px;
   }
 
-  .film-float-card:nth-child(1){
+  .film-float-card.one{
     width: 220px;
-    height: 360px;
+    height: 340px;
   }
 
-  .film-float-card:nth-child(2){
+  .film-float-card.two{
     width: 180px;
-    height: 280px;
+    height: 260px;
 
     top: 80px;
     right: 0;
   }
 
-  .film-float-card:nth-child(3){
+  .film-float-card.three{
     width: 220px;
-    height: 160px;
+    height: 150px;
 
-    left: 60px;
+    left: 50px;
     bottom: 0;
   }
 
-  .film-float-title{
-    font-size: 18px;
+  .film-ai-float-label{
+    font-size: 17px;
   }
 
 }

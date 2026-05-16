@@ -53,6 +53,7 @@ function showreelCard(project){
 
       <!-- VIDEO -->
       <video
+        poster="${project.poster}"
         muted
         loop
         playsinline
@@ -92,7 +93,6 @@ function showreelCard(project){
           >
             ▶ Watch Preview
           </button>
-
 
         </div>
 

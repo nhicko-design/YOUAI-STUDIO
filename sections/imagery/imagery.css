@@ -1,17 +1,35 @@
 /* =========================================================
-   IMAGERY HERO
+   IMAGERY PAGE
+========================================================= */
+
+.imagery-page{
+  background: #020202;
+  overflow: hidden;
+
+  color: white;
+
+  font-family:
+    Inter,
+    system-ui,
+    sans-serif;
+}
+
+/* =========================================================
+   HERO
 ========================================================= */
 
 .imagery-hero{
   position: relative;
 
-  height: 100vh;
+  min-height: 100vh;
 
   overflow: hidden;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 140px 0 100px;
 }
 
 .imagery-hero-bg{
@@ -25,7 +43,11 @@
 
   object-fit: cover;
 
-  transform: scale(1.08);
+  transform: scale(1.05);
+
+  filter:
+    brightness(.42)
+    saturate(1.08);
 }
 
 .imagery-hero-overlay{
@@ -35,162 +57,412 @@
   background:
     linear-gradient(
       to bottom,
-      rgba(0,0,0,.5),
+      rgba(0,0,0,.25),
       rgba(0,0,0,.9)
     );
 }
 
-/* =========================================
-   CONTENT
-========================================= */
+/* =========================================================
+   HERO CONTENT
+========================================================= */
 
 .imagery-hero-content{
   position: relative;
   z-index: 10;
 
-  width: min(1100px, 92%);
+  width: min(1150px, 92%);
 
   text-align: center;
 }
 
+/* =========================================================
+   HERO TAG
+========================================================= */
+
 .imagery-tag{
   display: inline-flex;
 
-  padding: 12px 24px;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
 
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,.08);
+    rgba(255,255,255,.05);
 
-  backdrop-filter: blur(10px);
+  border:
+    1px solid rgba(255,255,255,.08);
 
-  margin-bottom: 30px;
-
-  letter-spacing: 2px;
-
-  font-size: 12px;
-}
-
-.imagery-hero-content h1{
-  font-size: clamp(60px, 8vw, 120px);
-
-  line-height: .95;
+  backdrop-filter: blur(12px);
 
   margin-bottom: 30px;
-}
 
-.imagery-hero-content h1 span{
-  color: #c084fc;
-}
+  letter-spacing: 3px;
 
-.imagery-hero-content p{
-  width: min(760px, 100%);
-  margin: auto;
+  font-size: 11px;
+  font-weight: 600;
 
-  color: rgba(255,255,255,.74);
+  color: #d8b4fe;
 
-  line-height: 1.8;
-
-  font-size: 18px;
+  text-transform: uppercase;
 }
 
 /* =========================================================
-   GALLERY
+   HERO TITLE
+========================================================= */
+
+.imagery-hero-content h1{
+  font-size: clamp(72px, 9vw, 150px);
+
+  line-height: .88;
+
+  letter-spacing: -6px;
+
+  font-weight: 800;
+
+  margin-bottom: 34px;
+
+  text-transform: uppercase;
+}
+
+.imagery-hero-content h1 span{
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #c084fc 45%,
+      #ec4899
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+/* =========================================================
+   HERO DESC
+========================================================= */
+
+.imagery-hero-content p{
+  width: min(760px, 100%);
+
+  margin: auto;
+
+  color: rgba(255,255,255,.68);
+
+  line-height: 1.9;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  letter-spacing: .2px;
+}
+
+/* =========================================================
+   GALLERY SECTION
 ========================================================= */
 
 .imagery-gallery-section{
-  padding: 160px 0;
+  position: relative;
+
+  padding: 140px 0;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(168,85,247,.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(236,72,153,.08),
+      transparent 30%
+    ),
+    #020202;
 }
 
+/* =========================================================
+   GLOW
+========================================================= */
+
+.imagery-bg-glow{
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  opacity: .3;
+
+  pointer-events: none;
+}
+
+.imagery-bg-glow.left{
+  top: -100px;
+  left: -100px;
+
+  background: #7c3aed;
+}
+
+.imagery-bg-glow.right{
+  bottom: -100px;
+  right: -100px;
+
+  background: #ec4899;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
 .imagery-gallery-heading{
+  position: relative;
+  z-index: 5;
+
   text-align: center;
 
   margin-bottom: 80px;
 }
 
-.imagery-gallery-heading h2{
-  font-size: clamp(46px,5vw,80px);
+/* =========================================================
+   SECTION TAG
+========================================================= */
 
-  margin-bottom: 20px;
+.imagery-gallery-tag{
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  color: #c084fc;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 24px;
 }
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.imagery-gallery-heading h2{
+  font-size: clamp(54px, 6vw, 96px);
+
+  line-height: .92;
+
+  letter-spacing: -4px;
+
+  font-weight: 800;
+
+  margin-bottom: 26px;
+
+  text-transform: uppercase;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      rgba(255,255,255,.72)
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+/* =========================================================
+   SECTION DESC
+========================================================= */
 
 .imagery-gallery-heading p{
-  width: min(700px,100%);
+  width: min(720px, 100%);
+
   margin: auto;
 
-  color: rgba(255,255,255,.7);
+  color: rgba(255,255,255,.64);
 
-  line-height: 1.8;
+  line-height: 1.9;
+
+  font-size: 16px;
 }
 
-/* =========================================
+/* =========================================================
    GRID
-========================================= */
+========================================================= */
 
 .imagery-grid{
-  columns: 4 320px;
-  column-gap: 24px;
+  display: grid;
+
+  grid-template-columns:
+    repeat(12, 1fr);
+
+  gap: 18px;
 }
+
+/* =========================================================
+   CARD
+========================================================= */
 
 .imagery-card{
   position: relative;
 
   overflow: hidden;
 
-  border-radius: 28px;
+  border-radius: 26px;
 
-  margin-bottom: 24px;
-
-  break-inside: avoid;
+  background: #111;
 
   cursor: pointer;
+
+  isolation: isolate;
+
+  border:
+    1px solid rgba(255,255,255,.05);
 }
+
+/* =========================================================
+   HERO CARD
+========================================================= */
+
+.imagery-card.hero{
+  grid-column: span 8;
+
+  height: 680px;
+}
+
+/* =========================================================
+   SMALL CARD
+========================================================= */
+
+.imagery-card.small{
+  grid-column: span 4;
+
+  height: 330px;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
 
 .imagery-card img{
   width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 
   display: block;
 
-  transition: .5s ease;
+  transition:
+    transform .8s ease,
+    filter .5s ease;
 }
 
-.imagery-card:hover img{
-  transform: scale(1.08);
-}
-
-/* =========================================
+/* =========================================================
    OVERLAY
-========================================= */
+========================================================= */
 
 .imagery-overlay{
   position: absolute;
   inset: 0;
 
-  display: flex;
-  align-items: flex-end;
-
-  padding: 24px;
-
   background:
     linear-gradient(
       to top,
-      rgba(0,0,0,.8),
+      rgba(0,0,0,.95),
+      rgba(0,0,0,.15),
       transparent
     );
 
-  opacity: 0;
-
-  transition: .4s ease;
+  z-index: 2;
 }
 
-.imagery-card:hover .imagery-overlay{
-  opacity: 1;
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.imagery-content{
+  position: absolute;
+
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+
+  z-index: 5;
+}
+
+.imagery-type{
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #d8b4fe;
+
+  margin-bottom: 10px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
 }
 
 .imagery-title{
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
+
+  line-height: 1.3;
+
+  letter-spacing: -.5px;
+}
+
+/* =========================================================
+   HERO CARD TEXT
+========================================================= */
+
+.imagery-card.hero .imagery-title{
+  font-size: 34px;
+}
+
+.imagery-card.hero .imagery-content{
+  left: 34px;
+  right: 34px;
+  bottom: 34px;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.imagery-card:hover img{
+  transform: scale(1.06);
+
+  filter:
+    brightness(.9)
+    saturate(1.05);
 }
 
 /* =========================================================
@@ -198,42 +470,87 @@
 ========================================================= */
 
 .imagery-cta-section{
-  padding: 200px 0;
+  padding: 140px 0 180px;
 }
 
 .imagery-cta-box{
   position: relative;
 
-  padding: 120px;
+  padding: 90px 60px;
 
-  border-radius: 40px;
+  border-radius: 36px;
 
   overflow: hidden;
+
+  text-align: center;
 
   background:
     linear-gradient(
       135deg,
-      rgba(124,58,237,.25),
-      rgba(0,0,0,.8)
+      rgba(124,58,237,.22),
+      rgba(0,0,0,.9)
     );
 
-  text-align: center;
+  border:
+    1px solid rgba(255,255,255,.06);
 }
+
+.imagery-cta-box::before{
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255,255,255,.08),
+      transparent 50%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   CTA TITLE
+========================================================= */
 
 .imagery-cta-box h2{
-  font-size: clamp(50px,6vw,90px);
+  font-size: clamp(58px,7vw,110px);
 
-  margin: 30px 0;
+  line-height: .9;
+
+  letter-spacing: -5px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  margin: 24px 0;
 }
+
+/* =========================================================
+   CTA DESC
+========================================================= */
 
 .imagery-cta-box p{
   width: min(760px,100%);
-  margin: auto auto 50px;
 
-  color: rgba(255,255,255,.76);
+  margin:
+    auto
+    auto
+    42px;
+
+  color: rgba(255,255,255,.72);
 
   line-height: 1.9;
+
+  font-size: 16px;
 }
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
 
 .imagery-cta-btn{
   border: none;
@@ -245,20 +562,73 @@
 
   border-radius: 999px;
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
 
   cursor: pointer;
+
+  transition: .3s ease;
+}
+
+.imagery-cta-btn:hover{
+  transform: scale(1.05);
 }
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
+@media(max-width: 992px){
+
+  .imagery-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .imagery-card.hero,
+  .imagery-card.small{
+    grid-column: span 1;
+
+    height: 300px;
+  }
+
+  .imagery-card.hero .imagery-title{
+    font-size: 24px;
+  }
+
+  .imagery-gallery-section{
+    padding: 100px 0;
+  }
+
+}
+
 @media(max-width:768px){
 
+  .imagery-hero{
+    min-height: 85vh;
+  }
+
+  .imagery-hero-content h1{
+    line-height: 1;
+
+    letter-spacing: -3px;
+  }
+
+  .imagery-hero-content p{
+    font-size: 15px;
+  }
+
+  .imagery-gallery-heading h2{
+    letter-spacing: -2px;
+  }
+
   .imagery-cta-box{
-    padding: 80px 30px;
+    padding: 70px 26px;
+  }
+
+  .imagery-cta-box h2{
+    line-height: 1.1;
+
+    letter-spacing: -2px;
   }
 
 }

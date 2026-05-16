@@ -326,17 +326,11 @@
   display: grid;
 
   grid-template-columns:
-    1.15fr
-    1fr
-    1fr;
-
-  grid-template-rows:
-    240px
-    240px;
+    repeat(2, 1fr);
 
   gap: 20px;
 
-  width: 100%;
+  align-items: stretch;
 }
 /* =========================================
    VIDEO CARD

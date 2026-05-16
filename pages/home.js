@@ -286,7 +286,7 @@ export function Home() {
           <div class="relative">
 
             <img 
-              src="https://res.cloudinary.com/djxgoqxh3/image/upload/v1777649014/samples/woman-on-a-football-field.jpg"
+              src="https://res.cloudinary.com/djxgoqxh3/image/upload/v1778920047/About_e3gawk.png"
               alt="YOUAI Studio"
               class="about-image"
             />
@@ -511,14 +511,12 @@ function renderHero(hero) {
 /* =========================================================
    VIDEO GRID
 ========================================================= */
-
 function renderVideoGrid(videos = []) {
 
   const grid =
     document.getElementById("video-grid");
 
-  if (!grid)
-    return;
+  if (!grid) return;
 
   const isMobile =
     window.innerWidth < 768;
@@ -532,6 +530,8 @@ function renderVideoGrid(videos = []) {
   grid.innerHTML =
     list.map(videoCard).join("");
 
+  // init hover play
+  initVideoHover();
 }
 
 /* =========================================================
@@ -541,22 +541,36 @@ function renderVideoGrid(videos = []) {
 function videoCard(v) {
 
   return `
+
     <div class="card-hover video-card">
+
+      <!-- POSTER -->
+      <img
+        class="video-poster"
+        src="${v.poster || v.cardImage || ''}"
+        alt="${v.title}"
+      />
 
       <!-- VIDEO -->
       <video
         class="hover-video"
-        data-src="${v.videoUrl}"
         muted
         loop
         playsinline
         preload="none"
-      ></video>
+      >
+
+        <source
+          src="${v.videoUrl}"
+          type="video/mp4"
+        >
+
+      </video>
 
       <!-- OVERLAY -->
       <div class="video-dark"></div>
 
-      <!-- TITLE -->
+      <!-- CONTENT -->
       <div class="video-info">
 
         <span class="video-label">
@@ -570,7 +584,65 @@ function videoCard(v) {
       </div>
 
     </div>
+
   `;
+}
+
+/* =========================================================
+   HOVER VIDEO
+========================================================= */
+
+function initVideoHover(){
+
+  const cards =
+    document.querySelectorAll(".video-card");
+
+  cards.forEach(card => {
+
+    const video =
+      card.querySelector(".hover-video");
+
+    const poster =
+      card.querySelector(".video-poster");
+
+    if(!video) return;
+
+    card.addEventListener("mouseenter", async () => {
+
+      try{
+
+        video.currentTime = 0;
+
+        await video.play();
+
+        video.classList.add("active");
+
+        if(poster){
+          poster.classList.add("hide");
+        }
+
+      }catch(err){
+        console.log(err);
+      }
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+      video.pause();
+
+      video.currentTime = 0;
+
+      video.classList.remove("active");
+
+      if(poster){
+        poster.classList.remove("hide");
+      }
+
+    });
+
+  });
+
 }
 
 /* =========================================================

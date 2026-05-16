@@ -8,6 +8,7 @@ export function FilmCaseStudies(projects = []) {
   const items = [
     {
       number: "01",
+
       title: "From Script To Screen",
 
       desc:
@@ -15,6 +16,9 @@ export function FilmCaseStudies(projects = []) {
 
       video:
         projects[0]?.videoUrl || "",
+
+      poster:
+        projects[0]?.poster || "",
 
       pipeline: [
         "Concept Development",
@@ -26,6 +30,7 @@ export function FilmCaseStudies(projects = []) {
 
     {
       number: "02",
+
       title: "AI Character Creation",
 
       desc:
@@ -33,6 +38,9 @@ export function FilmCaseStudies(projects = []) {
 
       video:
         projects[1]?.videoUrl || "",
+
+      poster:
+        projects[1]?.poster || "",
 
       pipeline: [
         "AI Characters",
@@ -44,6 +52,7 @@ export function FilmCaseStudies(projects = []) {
 
     {
       number: "03",
+
       title: "Scalable Film Production",
 
       desc:
@@ -51,6 +60,9 @@ export function FilmCaseStudies(projects = []) {
 
       video:
         projects[2]?.videoUrl || "",
+
+      poster:
+        projects[2]?.poster || "",
 
       pipeline: [
         "World Building",
@@ -60,6 +72,9 @@ export function FilmCaseStudies(projects = []) {
       ]
     }
   ];
+
+  // init hover after render
+  setTimeout(initCaseStudyHover, 50);
 
   return `
     <section class="film-case-section">
@@ -111,15 +126,21 @@ function card(item, index){
       <div class="film-case-media">
 
         <video
-          autoplay
+          class="film-case-video"
+
+          poster="${item.poster}"
+
           muted
           loop
           playsinline
+          preload="metadata"
         >
+
           <source
             src="${item.video}"
             type="video/mp4"
           >
+
         </video>
 
       </div>
@@ -158,4 +179,40 @@ function card(item, index){
 
     </article>
   `;
+}
+
+/* =========================================================
+   VIDEO HOVER
+========================================================= */
+
+function initCaseStudyHover(){
+
+  const cards = document.querySelectorAll(
+    ".film-case-item"
+  );
+
+  cards.forEach(card => {
+
+    const video = card.querySelector(
+      ".film-case-video"
+    );
+
+    if(!video) return;
+
+    card.addEventListener("mouseenter", () => {
+
+      video.play();
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+      video.pause();
+
+      video.currentTime = 0;
+
+    });
+
+  });
+
 }

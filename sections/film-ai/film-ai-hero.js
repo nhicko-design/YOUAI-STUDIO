@@ -1,7 +1,5 @@
-
 /* =========================================================
    🎬 FILM AI HERO
-   File: film-ai-hero.js
 ========================================================= */
 
 export function FilmAIHero(heroVideo, videos = []) {
@@ -11,6 +9,7 @@ export function FilmAIHero(heroVideo, videos = []) {
 
       <!-- background -->
       <div class="film-ai-bg-wrap">
+
         <video
           class="film-ai-bg-video"
           autoplay
@@ -18,10 +17,14 @@ export function FilmAIHero(heroVideo, videos = []) {
           loop
           playsinline
         >
-          <source src="${heroVideo?.backgroundVideo || ""}" type="video/mp4">
+          <source
+            src="${heroVideo?.backgroundVideo || ""}"
+            type="video/mp4"
+          >
         </video>
 
         <div class="film-ai-bg-overlay"></div>
+
       </div>
 
       <!-- glow -->
@@ -57,13 +60,17 @@ export function FilmAIHero(heroVideo, videos = []) {
 
           <div class="film-ai-actions">
 
-            <a href="#projects"
-               class="film-ai-btn-primary">
+            <a
+              href="#projects"
+              class="film-ai-btn-primary"
+            >
               Explore Projects
             </a>
 
-            <a href="#showreel"
-               class="film-ai-btn-secondary">
+            <a
+              href="#showreel"
+              class="film-ai-btn-secondary"
+            >
               Watch Showreel
             </a>
 
@@ -90,8 +97,13 @@ export function FilmAIHero(heroVideo, videos = []) {
 
       <!-- scroll -->
       <div class="film-ai-scroll">
-        <span>SCROLL</span>
+
+        <span>
+          SCROLL
+        </span>
+
         <div class="film-ai-scroll-line"></div>
+
       </div>
 
     </section>
@@ -99,7 +111,7 @@ export function FilmAIHero(heroVideo, videos = []) {
 }
 
 /* =========================================================
-   CARD
+   FLOATING IMAGE CARD
 ========================================================= */
 
 function floatingCard(video, title, className){
@@ -107,18 +119,16 @@ function floatingCard(video, title, className){
   return `
     <div class="film-float-card ${className}">
 
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
+      <!-- IMAGE -->
+      <img
+        src="${video?.poster || video?.thumbnail || ""}"
+        alt="${title}"
       >
-        <source
-          src="${video?.videoUrl || ""}"
-          type="video/mp4"
-        >
-      </video>
 
+      <!-- overlay -->
+      <div class="film-float-overlay"></div>
+
+      <!-- title -->
       <div class="film-ai-float-label">
         ${title}
       </div>
