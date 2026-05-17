@@ -1,7 +1,12 @@
 console.log("APP LOADED");
-import { renderRoute } from "./router.js";
 
-import { Navbar }
+import { renderRoute }
+from "./router.js";
+
+import {
+  Navbar,
+  initNavbar
+}
 from "./components/navbar.js";
 
 import { VideoModal }
@@ -25,23 +30,37 @@ function render() {
     );
 
     return;
+
   }
 
+  /* =========================================
+     RENDER LAYOUT
+  ========================================= */
+
   app.innerHTML = `
-    
+
     ${Navbar()}
 
-    <div id="page"></div>
+    <main id="page"></main>
 
     ${VideoModal()}
 
   `;
 
-  // render route sau khi DOM mount
+  /* =========================================
+     INIT NAVBAR
+  ========================================= */
+
+  initNavbar();
+
+  /* =========================================
+     RENDER PAGE
+  ========================================= */
+
   requestAnimationFrame(() => {
+
     renderRoute();
 
-    // re-init effects
     setTimeout(() => {
 
       initAnimations();
@@ -56,24 +75,30 @@ function render() {
    SHOWREEL SCROLL
 ========================================================= */
 
-window.scrollFilmShowreel = function(direction){
+window.scrollFilmShowreel =
+function(direction){
 
   const slider =
     document.getElementById(
       "film-showreel-slider"
     );
 
-  if(!slider) return;
+  if(!slider)
+    return;
 
   const amount = 600;
 
   slider.scrollBy({
-    left: amount * direction,
-    behavior: "smooth"
+
+    left:
+      amount * direction,
+
+    behavior:
+      "smooth"
+
   });
 
 };
-
 
 /* =========================================================
    FADE ANIMATION
@@ -85,19 +110,29 @@ function initAnimations() {
     document.querySelectorAll(".fade-in");
 
   const observer =
-    new IntersectionObserver((entries) => {
+    new IntersectionObserver(
 
-      entries.forEach(entry => {
+      (entries) => {
 
-        if (entry.isIntersecting) {
+        entries.forEach(entry => {
 
-          entry.target.classList.add("show");
+          if(entry.isIntersecting){
 
-        }
+            entry.target
+              .classList
+              .add("show");
 
-      });
+          }
 
-    });
+        });
+
+      },
+
+      {
+        threshold: 0.12
+      }
+
+    );
 
   elements.forEach(el =>
     observer.observe(el)
@@ -105,27 +140,31 @@ function initAnimations() {
 
 }
 
-
 /* =========================================================
    GLOW PARALLAX
 ========================================================= */
 
-window.addEventListener("scroll", () => {
+window.addEventListener(
+  "scroll",
+  () => {
 
-  const glow =
-    document.querySelector(".glow");
+    const glow =
+      document.querySelector(".glow");
 
-  if (!glow) return;
+    if(!glow)
+      return;
 
-  const scrollY = window.scrollY;
+    const scrollY =
+      window.scrollY;
 
-  glow.style.transform =
-    `translateY(${scrollY * 0.3}px)`;
+    glow.style.transform =
+      `translateY(${scrollY * 0.3}px)`;
 
-});
+  }
+);
 
 /* =========================================================
-   EVENTS
+   HASH ROUTING
 ========================================================= */
 
 window.addEventListener(
@@ -133,13 +172,15 @@ window.addEventListener(
   render
 );
 
-window.addEventListener(
-  "load",
-  render
-);
-
 /* =========================================================
-   START
+   START APP
 ========================================================= */
 
-render();
+window.addEventListener(
+  "load",
+  () => {
+
+    render();
+
+  }
+);

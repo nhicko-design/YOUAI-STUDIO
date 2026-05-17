@@ -1,24 +1,121 @@
 export function Navbar() {
+
   return `
-    <nav class="fixed top-0 w-full z-50 backdrop-blur-lg 
-                bg-black/40 border-b border-gray-800 px-6 py-4">
 
-      <div class="flex justify-between items-center max-w-7xl mx-auto">
+    <nav class="navbar">
 
-        <div class="flex items-center gap-3">
-          <img src="./images/logo.png" class="w-8 h-8 rounded-full"/>
-          <span class="font-bold text-lg">YOU AI</span>
+      <div class="navbar-container">
+
+        <!-- LOGO -->
+        <a href="#home" class="navbar-logo">
+
+          <img
+            src="./images/logo.png"
+            alt="YOU AI"
+          />
+
+          <span>
+            YOU AI
+          </span>
+
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <div class="navbar-links">
+
+          <a href="#home">
+            Home
+          </a>
+
+          <a href="#filmAI">
+            Film AI
+          </a>
+
+          <a href="#commercial">
+            Commercial
+          </a>
+
+          <a href="#imagery">
+            Imagery
+          </a>
+
+          <a href="#contact">
+            Contact
+          </a>
+
         </div>
 
-        <div class="flex gap-6 text-gray-300">
-          <a href="#home" class="hover:text-white">Home</a>
-          <a href="#filmAI" class="hover:text-white">Film AI</a>
-          <a href="#commercial" class="hover:text-white">Commercial</a>
-          <a href="#imagery" class="hover:text-white">Imagery</a>
-          <a href="#contact" class="hover:text-white">Contact</a>
-        </div>
+        <!-- MOBILE BUTTON -->
+        <button
+          class="navbar-toggle"
+          id="navbar-toggle"
+        >
+          ☰
+        </button>
 
       </div>
+
+      <!-- MOBILE MENU -->
+      <div
+        class="mobile-menu"
+        id="mobile-menu"
+      >
+
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#filmAI">
+          Film AI
+        </a>
+
+        <a href="#commercial">
+          Commercial
+        </a>
+
+        <a href="#imagery">
+          Imagery
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
     </nav>
+
   `;
+}
+
+export function initNavbar(){
+
+  const toggle =
+    document.getElementById("navbar-toggle");
+
+  const mobileMenu =
+    document.getElementById("mobile-menu");
+
+  if(toggle && mobileMenu){
+
+    toggle.addEventListener("click", () => {
+
+      mobileMenu.classList.toggle("active");
+
+    });
+
+    mobileMenu
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          mobileMenu.classList.remove("active");
+
+        });
+
+      });
+
+  }
+
 }
