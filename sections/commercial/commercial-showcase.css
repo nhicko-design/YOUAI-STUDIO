@@ -1,14 +1,19 @@
+/* =========================================================
+   🎬 COMMERCIAL SHOWCASE
+========================================================= */
+
 .commercial-showcase{
   position: relative;
 
-  padding: 80px 0;
+  padding:
+    140px 5vw;
 
   overflow: hidden;
 
   background:
     radial-gradient(
       circle at top left,
-      rgba(168,85,247,.10),
+      rgba(168,85,247,.12),
       transparent 30%
     ),
     radial-gradient(
@@ -19,6 +24,29 @@
     #050505;
 }
 
+/* =========================================================
+   GLOW
+========================================================= */
+
+.commercial-showcase-glow{
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(168,85,247,.14),
+      transparent 60%
+    );
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .commercial-heading{
   position: relative;
@@ -26,87 +54,52 @@
 
   text-align: center;
 
-  margin-bottom: 90px;
+  max-width: 900px;
+
+  margin:
+    0 auto 80px;
 }
 
+/* label */
 
 .commercial-heading span{
-  color: #a855f7;
-  letter-spacing: 3px;
-  font-size: 12px;
-}
+  display: inline-flex;
 
-.commercial-heading h2{
-  font-size: clamp(44px,5vw,72px);
-  margin: 20px 0;
-}
+  padding:
+    10px 18px;
 
-.commercial-heading p{
-  width: min(700px,100%);
-  margin: auto;
-
-  color: rgba(255,255,255,.7);
-
-  line-height: 1.8;
-}
-
-.commercial-grid{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 30px;
-}
-
-.commercial-card{
-  position: relative;
-  overflow: hidden;
-
-  border-radius: 32px;
-}
-
-.commercial-card video{
-  width: 100%;
-  height: 520px;
-
-  object-fit: cover;
-
-  transition: .5s;
-}
-
-.commercial-card:hover video{
-  transform: scale(1.05);
-}
-
-.commercial-card-overlay{
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  align-items: flex-end;
-
-  padding: 30px;
+  border-radius: 999px;
 
   background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,.85),
-      transparent
-    );
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  color: #d8b4fe;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
 }
 
-.commercial-card-overlay h3{
-  font-size: 30px;
-}
+/* title */
 
 .commercial-heading h2{
-  font-size: clamp(54px,5vw,96px);
+  font-size:
+    clamp(4rem, 8vw, 8rem);
 
-  line-height: .95;
+  line-height: .9;
 
-  margin: 28px 0 24px;
+  margin:
+    26px 0 24px;
 
-  font-weight: 800;
+  font-weight: 900;
 
-  letter-spacing: -4px;
+  letter-spacing: -5px;
 
   text-transform: uppercase;
 
@@ -114,114 +107,388 @@
     linear-gradient(
       180deg,
       #ffffff,
-      rgba(255,255,255,.7)
+      #a855f7
     );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  background-clip: text;
 }
 
-/* =========================================
-   DESCRIPTION
-========================================= */
+/* desc */
 
 .commercial-heading p{
-  width: min(760px,100%);
+  width:
+    min(760px,100%);
 
   margin: auto;
 
-  color: rgba(255,255,255,.66);
+  color:
+    rgba(255,255,255,.68);
 
   line-height: 1.9;
 
   font-size: 16px;
 }
 
-/* =========================================
-   CONTENT
-========================================= */
+/* =========================================================
+   PLAYER SHELL
+========================================================= */
 
-.commercial-card-content{
-  width: 100%;
+.commercial-player-shell{
+  position: relative;
+
+  z-index: 2;
 }
 
-/* mini label */
+/* =========================================================
+   MAIN PLAYER
+========================================================= */
 
-.commercial-card-label{
+.commercial-main-player{
+  position: relative;
+
+  width: 100%;
+
+  height:
+    clamp(
+      420px,
+      78vh,
+      860px
+    );
+
+  overflow: hidden;
+
+  border-radius: 36px;
+
+  background: #111;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+    0 40px 100px rgba(0,0,0,.45);
+}
+
+/* video */
+
+.commercial-main-player video{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.commercial-main-overlay{
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.88),
+      rgba(0,0,0,.2),
+      transparent 60%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.commercial-main-content{
+  position: absolute;
+
+  left: 34px;
+  bottom: 130px;
+
+  z-index: 5;
+}
+
+.commercial-main-label{
   display: inline-flex;
 
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 
-  color: #d8b4fe;
+  padding:
+    10px 16px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,.08);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(10px);
+
+  color: white;
 
   font-size: 11px;
   font-weight: 600;
 
   letter-spacing: 2px;
-
-  text-transform: uppercase;
 }
 
-/* title */
+.commercial-main-content h3{
+  font-size:
+    clamp(2rem, 4vw, 4rem);
 
-.commercial-card-overlay h3{
-  font-size: clamp(28px,2.6vw,42px);
+  line-height: 1;
 
-  line-height: 1.05;
+  font-weight: 800;
 
-  margin-bottom: 14px;
+  color: white;
 
-  font-weight: 700;
+  letter-spacing: -2px;
 
-  letter-spacing: -1px;
+  max-width: 700px;
 }
 
-/* desc */
+/* =========================================================
+   THUMB TRACK
+========================================================= */
 
-.commercial-card-overlay p{
-  color: rgba(255,255,255,.68);
+.commercial-thumb-track{
+  position: absolute;
 
-  line-height: 1.8;
+  left: 50%;
+  bottom: 22px;
 
-  font-size: 15px;
+  transform: translateX(-50%);
 
-  max-width: 520px;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  width: fit-content;
+  max-width:
+    calc(100% - 40px);
+
+  overflow-x: auto;
+
+  padding:
+    10px
+    20px;
+
+  border-radius: 100px;
+
+  background: transparent;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(18px);
+
+  scrollbar-width: none;
+}
+
+.commercial-thumb-track::-webkit-scrollbar{
+  display: none;
+}
+
+/* =========================================================
+   THUMB
+========================================================= */
+
+.commercial-thumb{
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 120px;
+  height: 70px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  opacity: .5;
+
+  border:
+    2px solid transparent;
+
+  transition:
+    transform .35s ease,
+    opacity .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
+
+/* active */
+
+.commercial-thumb.active{
+  opacity: 1;
+
+  border-color:
+    rgba(168,85,247,.95);
+
+  transform:
+    translateY(-3px)
+    scale(1.04);
+
+  box-shadow:
+    0 12px 28px rgba(168,85,247,.35);
+}
+
+/* hover */
+
+.commercial-thumb:hover{
+  opacity: 1;
+
+  transform:
+    translateY(-2px);
+}
+
+/* video */
+
+.commercial-thumb video{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* overlay */
+
+.commercial-thumb::after{
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.35),
+      transparent
+    );
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width: 992px){
+
+  .commercial-main-player{
+    height: 560px;
+  }
+
+  .commercial-main-content{
+    bottom: 120px;
+  }
+
 }
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
-@media(max-width:992px){
+@media(max-width: 768px){
 
-  .commercial-grid{
-    grid-template-columns: 1fr;
+  .commercial-showcase{
+    padding:
+      100px 18px;
   }
 
-  .commercial-card{
-    min-height: 460px;
+  .commercial-heading{
+    margin-bottom: 50px;
+  }
+
+  .commercial-heading h2{
+    font-size: 4.5rem;
+
+    letter-spacing: -3px;
+  }
+
+  .commercial-heading p{
+    font-size: 14px;
+  }
+
+  .commercial-main-player{
+    height: 340px;
+
+    border-radius: 24px;
+  }
+
+  .commercial-main-content{
+    left: 20px;
+    bottom: 92px;
+  }
+
+  .commercial-main-label{
+    font-size: 10px;
+
+    padding:
+      8px 14px;
+  }
+
+  .commercial-main-content h3{
+    font-size: 1.6rem;
+
+    letter-spacing: -1px;
+  }
+
+  .commercial-thumb-track{
+    bottom: 12px;
+
+    gap: 8px;
+
+    padding:
+      6px
+      8px;
+
+    max-width:
+      calc(100% - 20px);
+  }
+
+  .commercial-thumb{
+    width: 74px;
+    height: 44px;
+
+    border-radius: 10px;
   }
 
 }
 
-@media(max-width:768px){
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
-  .commercial-showcase{
-    padding: 100px 0;
-  }
+@media(max-width: 480px){
 
   .commercial-heading h2{
-    letter-spacing: -2px;
+    font-size: 3.2rem;
   }
 
-  .commercial-card-overlay{
-    padding: 24px;
+  .commercial-main-player{
+    height: 260px;
   }
 
-  .commercial-card-overlay h3{
-    font-size: 28px;
+  .commercial-main-content{
+    bottom: 82px;
+  }
+
+  .commercial-thumb{
+    width: 62px;
+    height: 38px;
   }
 
 }

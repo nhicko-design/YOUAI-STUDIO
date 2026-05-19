@@ -235,6 +235,8 @@
   min-width: 0;
 }
 
+/* glow */
+
 .film-grid-glow{
   position: absolute;
   inset: -80px;
@@ -251,6 +253,247 @@
   z-index: 0;
 }
 
+/* =========================================================
+   MAIN PLAYER
+========================================================= */
+
+.film-main-player{
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  height:
+    clamp(
+      380px,
+      72vh,
+      760px
+    );
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  background: #111;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.45);
+}
+
+/* video */
+
+.film-main-player video{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* overlay */
+
+.film-main-overlay{
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.85),
+      rgba(0,0,0,.18),
+      transparent 55%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   THUMB TRACK
+========================================================= */
+
+.film-thumb-track{
+  position: absolute;
+
+  left: 50%;
+  bottom: 20px;
+
+  transform: translateX(-50%);
+
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: fit-content;
+  max-width: calc(100% - 30px);
+
+  overflow-x: auto;
+
+  padding:
+    8px
+    20px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(0,0,0,.32);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(18px);
+
+  scrollbar-width: none;
+}
+
+.film-thumb-track::-webkit-scrollbar{
+  display: none;
+}
+
+/* =========================================================
+   THUMB
+========================================================= */
+
+.film-thumb{
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 120px;
+  height: 68px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  background: #111;
+
+  border:
+    2px solid transparent;
+
+  opacity: .55;
+
+  transition:
+    transform .35s ease,
+    opacity .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
+
+/* active */
+
+.film-thumb.active{
+  opacity: 1;
+
+  border-color:
+    rgba(168,85,247,.95);
+
+  transform:
+    translateY(-3px)
+    scale(1.04);
+
+  box-shadow:
+    0 10px 24px rgba(168,85,247,.35);
+}
+
+/* hover */
+
+.film-thumb:hover{
+  opacity: 1;
+
+  transform:
+    translateY(-2px);
+}
+
+/* thumb video */
+
+.film-thumb video{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* overlay */
+
+.film-thumb::after{
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.35),
+      transparent
+    );
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width: 992px){
+
+  .film-main-player{
+    height: 520px;
+  }
+
+}
+
+@media(max-width: 768px){
+
+  .film-main-player{
+    height: 340px;
+
+    border-radius: 24px;
+  }
+
+  .film-thumb-track{
+    bottom: 12px;
+
+    gap: 8px;
+
+    padding:
+      6px
+      8px;
+
+    max-width:
+      calc(100% - 20px);
+  }
+
+  .film-thumb{
+    width: 78px;
+    height: 46px;
+
+    border-radius: 10px;
+  }
+
+}
+
+@media(max-width: 480px){
+
+  .film-main-player{
+    height: 260px;
+  }
+
+  .film-thumb{
+    width: 64px;
+    height: 40px;
+  }
+
+}
 /* =========================================================
    VIDEO GRID
 ========================================================= */
@@ -429,10 +672,6 @@
     max-width: 520px;
   }
 
-  .film-showcase{
-    max-width: 900px;
-    margin: auto;
-  }
 
 }
 

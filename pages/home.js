@@ -109,91 +109,108 @@ export function Home() {
 
           <div class="film-grid-glow"></div>
 
-          <div id="video-grid" class="video-grid-neo">
-            ⏳ Loading...
-          </div>
+          <!-- MAIN VIDEO -->
+          <div class="film-main-player">
 
-        </div>
+            <video
+              id="film-main-video"
+              autoplay
+              muted
+              loop
+              playsinline
+            >
+              <source
+                id="film-main-source"
+                src=""
+                type="video/mp4"
+              >
+            </video>
 
-      </div>
+            <!-- overlay -->
+            <div class="film-main-overlay"></div>
 
-    </section>
-
-    <!-- ================================================= -->
-    <!-- COMMERCIAL -->
-    <!-- ================================================= -->
-
-    <sectio                                                                                                                                                                                     n class="commercial-section fade-in">
-
-      <div class="commercial-shell">
-
-        <div class="commercial-header">
-
-          <div>
-
-            <span class="commercial-tag">
-              AI COMMERCIAL SYSTEM
-            </span>
-
-            <h2 class="commercial-title">
-              COMMERCIAL
-            </h2>
-
-          </div>
-
-          <p class="commercial-desc">
-            High-impact AI commercials engineered for brands,
-            products, campaigns, and next-generation storytelling.
-          </p>
-
-        </div>
-
-        <!-- RIGHT -->
-        <div class="commercial-actions">
-
-          <a href="#commercial" class="commercial-btn">
-            Explore Commercial →
-          </a>
-
-          <div class="commercial-nav">
-
-            <button id="btn-left" class="nav-btn-commercial">
-              ←
-            </button>
-
-            <button id="btn-right" class="nav-btn-commercial">
-              →
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- SLIDER -->
-      <div class="commercial-slider-wrap">
-
-        <div class="commercial-glow"></div>
-
-        <section class="horizontal-section">
-
-          <div class="sticky-wrapper">
-
-            <div class="scroll-track commercial-track"
-              id="scroll-track">
-
+            <!-- thumbnails -->
+            <div
+              id="film-thumb-track"
+              class="film-thumb-track"
+            >
               ⏳ Loading...
-
             </div>
 
           </div>
 
-        </section>
+        </div>
 
       </div>
 
     </section>
+
+    <!-- ================================================= -->
+<!-- COMMERCIAL SHOWCASE -->
+<!-- ================================================= -->
+
+<section class="commercial-section fade-in">
+
+  <div class="commercial-glow"></div>
+
+  <!-- HEADER -->
+  <div class="commercial-shell">
+
+    <div class="commercial-header">
+
+      <span class="commercial-tag">
+        AI COMMERCIAL SYSTEM
+      </span>
+
+      <h2 class="commercial-title">
+        COMMERCIAL
+      </h2>
+
+      <p class="commercial-desc">
+        High-impact AI commercials engineered for brands,
+        products, campaigns, and next-generation storytelling.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- PLAYER -->
+  <div class="commercial-player-wrap">
+
+    <div class="commercial-main-video">
+
+      <!-- MAIN VIDEO -->
+      <video
+        id="main-commercial-video"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source
+          id="main-commercial-source"
+          src=""
+          type="video/mp4"
+        >
+      </video>
+
+      <!-- DARK OVERLAY -->
+      <div class="commercial-main-overlay"></div>
+
+      <!-- THUMBNAILS INSIDE -->
+      <div
+        class="commercial-thumb-track"
+        id="commercial-thumb-track"
+      >
+        ⏳ Loading...
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
     <!-- ================================================= -->
     <!-- AI IMAGERY -->
@@ -467,9 +484,9 @@ async function loadAllData() {
 
     renderHero(data.hero);
 
-    renderVideoGrid(videosFilmAI);
-
     renderCommercialSlider(data.videos);
+
+    renderFilmShowcase(videosFilmAI);
 
     renderHighlights(data.highlights);
 
@@ -646,19 +663,106 @@ function initVideoHover(){
 }
 
 /* =========================================================
-   COMMERCIAL SLIDER
+   COMMERCIAL VIDEO SWITCHER
 ========================================================= */
 
 function renderCommercialSlider(videos = []) {
 
-  const track =
-    document.getElementById("scroll-track");
+  const thumbTrack =
+    document.getElementById(
+      "commercial-thumb-track"
+    );
 
-  if (!track)
-    return;
+  const mainVideo =
+    document.getElementById(
+      "main-commercial-video"
+    );
 
-  track.innerHTML =
-    videos.map(videoHorizontalCard).join("");
+  const mainSource =
+    document.getElementById(
+      "main-commercial-source"
+    );
+
+  if(
+    !thumbTrack ||
+    !mainVideo ||
+    !mainSource
+  ) return;
+
+  /* DEFAULT VIDEO */
+
+  if(videos.length > 0){
+
+    mainSource.src =
+      videos[0].videoUrl;
+
+    mainVideo.load();
+
+  }
+
+  /* RENDER THUMB */
+
+  thumbTrack.innerHTML =
+    videos
+      .slice(0, 5)
+      .map((v, index) => `
+
+        <div
+          class="
+            commercial-thumb
+            ${index === 0 ? "active" : ""}
+          "
+          data-video="${v.videoUrl}"
+        >
+
+          <video
+            muted
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="${v.videoUrl}"
+              type="video/mp4"
+            >
+          </video>
+
+        </div>
+
+      `)
+      .join("");
+
+  /* CLICK CHANGE VIDEO */
+
+  const thumbs =
+    thumbTrack.querySelectorAll(
+      ".commercial-thumb"
+    );
+
+  thumbs.forEach(thumb => {
+
+    thumb.addEventListener(
+      "click",
+      () => {
+
+        thumbs.forEach(t =>
+          t.classList.remove("active")
+        );
+
+        thumb.classList.add("active");
+
+        const src =
+          thumb.dataset.video;
+
+        mainSource.src = src;
+
+        mainVideo.load();
+
+        mainVideo.play();
+
+      }
+    );
+
+  });
 
 }
 
@@ -1102,4 +1206,108 @@ function highlightCard(card) {
     </div>
 
   `;
+}
+
+/* =========================================================
+   FILM AI VIDEO PLAYER
+========================================================= */
+
+function renderFilmShowcase(videos = []) {
+
+  const thumbTrack =
+    document.getElementById(
+      "film-thumb-track"
+    );
+
+  const mainVideo =
+    document.getElementById(
+      "film-main-video"
+    );
+
+  const mainSource =
+    document.getElementById(
+      "film-main-source"
+    );
+
+  if(
+    !thumbTrack ||
+    !mainVideo ||
+    !mainSource
+  ) return;
+
+  /* DEFAULT VIDEO */
+
+  if(videos.length > 0){
+
+    mainSource.src =
+      videos[0].videoUrl;
+
+    mainVideo.load();
+
+  }
+
+  /* RENDER 3 THUMB */
+
+  thumbTrack.innerHTML =
+    videos
+      .slice(0, 3)
+      .map((v, index) => `
+
+        <div
+          class="
+            film-thumb
+            ${index === 0 ? "active" : ""}
+          "
+          data-video="${v.videoUrl}"
+        >
+
+          <video
+            muted
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="${v.videoUrl}"
+              type="video/mp4"
+            >
+          </video>
+
+        </div>
+
+      `)
+      .join("");
+
+  /* CHANGE VIDEO */
+
+  const thumbs =
+    thumbTrack.querySelectorAll(
+      ".film-thumb"
+    );
+
+  thumbs.forEach(thumb => {
+
+    thumb.addEventListener(
+      "click",
+      () => {
+
+        thumbs.forEach(t =>
+          t.classList.remove("active")
+        );
+
+        thumb.classList.add("active");
+
+        const src =
+          thumb.dataset.video;
+
+        mainSource.src = src;
+
+        mainVideo.load();
+
+        mainVideo.play();
+
+      }
+    );
+
+  });
+
 }
