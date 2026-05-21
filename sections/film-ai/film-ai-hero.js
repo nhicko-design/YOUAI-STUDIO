@@ -58,23 +58,6 @@ export function FilmAIHero(heroVideo, videos = []) {
             and without limits.
           </p>
 
-          <div class="film-ai-actions">
-
-            <a
-              href="#projects"
-              class="film-ai-btn-primary"
-            >
-              Explore Projects
-            </a>
-
-            <a
-              href="#showreel"
-              class="film-ai-btn-secondary"
-            >
-              Watch Showreel
-            </a>
-
-          </div>
 
         </div>
 

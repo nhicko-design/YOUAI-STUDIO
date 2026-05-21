@@ -45,12 +45,6 @@ export function CommercialCTA() {
               Start Your Campaign
             </a>
 
-            <a
-              href="#showcase"
-              class="commercial-cta-secondary"
-            >
-              View Showcase
-            </a>
 
           </div>
 

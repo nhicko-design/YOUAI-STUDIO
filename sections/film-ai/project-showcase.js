@@ -82,9 +82,6 @@ function card(project){
           ${project.description}
         </p>
 
-        <button class="film-showcase-btn">
-          View Project
-        </button>
 
       </div>
 

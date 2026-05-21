@@ -406,7 +406,7 @@ export function Home() {
         Work With Us
       </a>
 
-      <a href="#projects" class="cta-btn-secondary">
+      <a href="#filmAI" class="cta-btn-secondary">
         View Projects
       </a>
 

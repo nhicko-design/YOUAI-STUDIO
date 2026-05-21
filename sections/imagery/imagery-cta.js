@@ -25,9 +25,9 @@ export function ImageryCTA(){
             and leave a lasting impression.
           </p>
 
-          <button class="imagery-cta-btn">
+          <a href="#contact" class="imagery-cta-btn">
             Generate Your Visuals
-          </button>
+          </a>
 
         </div>
 

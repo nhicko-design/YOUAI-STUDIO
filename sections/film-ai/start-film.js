@@ -48,10 +48,9 @@ export function StartFilmSection() {
 
           <!-- right -->
           <div class="film-start-action">
-
-            <button class="film-start-btn">
+            <a href="#contact" class="film-start-btn" >
               Start Your AI Film Today
-            </button>
+            </a>
 
             <div class="film-start-note">
               AI-powered cinematic storytelling studio

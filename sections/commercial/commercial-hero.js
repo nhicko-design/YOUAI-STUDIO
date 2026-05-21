@@ -41,10 +41,6 @@ export function CommercialHero(hero){
 
           <div class="commercial-action">
 
-            <a href="#commercialShowcase"
-               class="commercial-btn-primary">
-              View Showcase
-            </a>
 
             <a href="#commercialCta"
                class="commercial-btn-secondary">
