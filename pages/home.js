@@ -484,7 +484,7 @@ async function loadAllData() {
 
     renderHero(data.hero);
 
-    renderCommercialSlider(data.videos);
+    renderCommercialSlider(data.commercialHome);
 
     renderFilmShowcase(videosFilmAI);
 
