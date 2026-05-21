@@ -1,21 +1,53 @@
-window.openVideoModal = function(videoUrl){
+window.openVideoModal = function(
+  videoUrl,
+  title,
+  description
+){
 
   const modal =
-    document.getElementById("video-modal");
+    document.getElementById(
+      "video-modal"
+    );
 
-  const player =
-    document.getElementById("video-modal-player");
+  const video =
+    document.getElementById(
+      "modal-video"
+    );
 
-  modal.classList.add("active");
+  const modalTitle =
+    document.getElementById(
+      "modal-title"
+    );
 
-  player.innerHTML = `
-    <source
-      src="${videoUrl}"
-      type="video/mp4"
-    >
-  `;
+  const modalDescription =
+    document.getElementById(
+      "modal-description"
+    );
 
-  player.load();
+  if(!modal || !video)
+    return;
+
+  // video
+  video.src = videoUrl;
+
+  // title
+  modalTitle.textContent =
+    title || "Untitled";
+
+  // description
+  modalDescription.textContent =
+    description ||
+    "No description available.";
+
+  // show
+  modal.classList.remove("hidden");
+
+  // play
+  video.play();
+
+  // lock scroll
+  document.body.style.overflow =
+    "hidden";
 
 };
 
@@ -24,11 +56,18 @@ window.closeVideoModal = function(){
   const modal =
     document.getElementById("video-modal");
 
-  const player =
-    document.getElementById("video-modal-player");
+  const video =
+    document.getElementById("modal-video");
 
-  modal.classList.remove("active");
+  if(!modal || !video)
+    return;
 
-  player.pause();
+  modal.classList.add("hidden");
+
+  video.pause();
+
+  video.src = "";
+
+  document.body.style.overflow = "";
 
 };
