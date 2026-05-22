@@ -55,7 +55,7 @@ function card(project){
       <div class="film-showcase-poster">
 
         <img
-          src="${project.poster}"
+          src="${project.thumbnail}"
           alt="${project.title}"
         >
 
