@@ -715,16 +715,11 @@ function renderCommercialSlider(videos = []) {
           data-video="${v.videoUrl}"
         >
 
-          <video
-            muted
-            playsinline
-            preload="metadata"
-          >
-            <source
-              src="${v.videoUrl}"
-              type="video/mp4"
-            >
-          </video>
+          <img
+            src="${v.thumbnail}"
+            alt="${v.title}"
+            loading="lazy"
+          />
 
         </div>
 

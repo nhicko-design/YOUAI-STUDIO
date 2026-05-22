@@ -54,16 +54,19 @@
   "commercialHome": [
     {
       "title": "Mackbook",
+      "thumbnail":"https://res.cloudinary.com/djxgoqxh3/image/upload/v1779467771/shopping_4_hdpaol.webp",
       "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1778772642/MACBOOK_PRO_adew4w.mov"
     },
 
     {
       "title": "Iphone",
+      "thumbnail":"https://res.cloudinary.com/djxgoqxh3/image/upload/v1779467771/mau-sac-iphone-17-pro-max_yt8jle.jpg",
       "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1778772774/IPHONE_17_PRO_v5m89y.mov"
     },
 
     {
       "title": "Nike",
+      "thumbnail":"",
       "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1778772784/NIKE_1_qr9ol9.mov"
     }
   ],
@@ -251,6 +254,7 @@
 
     {
       "title": "Iphone",
+      "thumbnail":"https://res.cloudinary.com/djxgoqxh3/image/upload/v1779467771/mau-sac-iphone-17-pro-max_yt8jle.jpg",
       "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1778772774/IPHONE_17_PRO_v5m89y.mov"
     },
 
