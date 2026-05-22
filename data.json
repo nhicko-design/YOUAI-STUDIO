@@ -3,7 +3,7 @@
     "backgroundVideos": [
       {
         "id": "bg1",
-        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4",
+        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779377420/N%C3%89N_-_FIX_BUG_dyusuy.mp4",
         "title": "BackGround1"
       },
       {
@@ -94,22 +94,22 @@
 
   "imageryHome": [
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773235/4_gdt8gb.png",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1779384132/Create_a_premium_3D_VFX_202605220002_wrjir8.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773233/3_lwzdfu.png",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1779384131/Create_a_premium_3D_VFX_202605212356_oa8xzp.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773231/2_i3jag4.png",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1779384131/Create_a_premium_3D_VFX_202605212325_fndndq.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773229/1_nesxrn.png",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1779384131/Create_a_premium_3D_VFX_202605212324_uw9vnj.jpg",
       "title": "Concept Art",
       "type": "portrait"
     }
@@ -165,22 +165,22 @@
   ],
   "imageryConceptArt": [
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773235/4_gdt8gb.png",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1779384132/Create_a_premium_3D_VFX_202605220002_wrjir8.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773233/3_lwzdfu.png",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1779384131/Create_a_premium_3D_VFX_202605212356_oa8xzp.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773231/2_i3jag4.png",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1779384131/Create_a_premium_3D_VFX_202605212325_fndndq.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773229/1_nesxrn.png",
+      "imageUrl": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1779384131/Create_a_premium_3D_VFX_202605212324_uw9vnj.jpg",
       "title": "Concept Art",
       "type": "portrait"
     }
@@ -191,7 +191,7 @@
       "title": "AI Film Production Studio",
       "subtitle": "Where Storytelling Meets Artificial Intelligence",
       "description": "We craft emotionally powerful, visually stunning films using cutting-edge AI technology — transforming ideas into cinematic experiences faster, smarter, and without limits.",
-      "backgroundVideo": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1777649128/0501_bletys.mp4"
+      "backgroundVideo": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779285256/THE_LAST_BUS_nthx1j.mov"
     },
 
     "projects": [
