@@ -27,6 +27,13 @@ window.openVideoModal = function(
   if(!modal || !video)
     return;
 
+  // decode
+  title =
+    decodeURIComponent(title);
+
+  description =
+    decodeURIComponent(description);
+
   // video
   video.src = videoUrl;
 

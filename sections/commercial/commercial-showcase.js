@@ -86,11 +86,16 @@ export function CommercialShowcase(videos){
                     data-title="${video.title}"
                   >
 
-                    <img
-                      src="${video.thumbnail}"
-                      alt="${video.title}"
-                      loading="lazy"
-                    />
+                    <video
+                      muted
+                      playsinline
+                      preload="metadata"
+                    >
+                      <source
+                        src="${video.videoUrl}"
+                        type="video/mp4"
+                      >
+                    </video>
 
                   </div>
 

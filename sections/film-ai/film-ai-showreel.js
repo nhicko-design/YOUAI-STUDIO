@@ -90,12 +90,12 @@ function showreelCard(project){
           <button
             class="film-watch-btn"
             onclick="
-                      openVideoModal(
-                        '${project.videoUrl}',
-                        '${project.title}',
-                        '${project.description}'
-                      )
-                    "
+              openVideoModal(
+                '${project.videoUrl}',
+                '${encodeURIComponent(project.title)}',
+                '${encodeURIComponent(project.description)}'
+              )
+            "
           >
             Watch Preview
           </button>

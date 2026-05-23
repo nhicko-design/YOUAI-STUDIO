@@ -133,11 +133,19 @@
 }
 
 .film-showreel-overlay p{
+  display: -webkit-box;
+
+  -webkit-line-clamp: 3; /* số dòng */
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  line-height: 1.8;
+
   color: rgba(255,255,255,.72);
-
-  line-height: 1.7;
-
-  font-size: 14px;
 }
 
 /* =========================================
