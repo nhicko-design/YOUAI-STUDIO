@@ -76,7 +76,7 @@
     {
       "title": "Chim Sẻ Kêu Chiều",
       "type": "AI SHORT FILM",
-      "description": "Emotional cinematic storytelling powered by AI visuals.",
+      "description": "Emotional cinematic storytelling powered by AI visuals. VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD",
       "image": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773166/POSTER_The_Sparrow_Cries_at_Duck_uhp9k3.png"
     },
 
@@ -90,7 +90,7 @@
     {
       "title": "Unspoken Goodbye",
       "type": "AI CINEMA",
-      "description": "A visual journey of silence, memory, and emotion.",
+      "description": "A visual journey of silence, memory, and emotion. VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD",
       "image": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773164/IMG_9937_ujchrp.jpg"
     }
   ],
@@ -204,7 +204,8 @@
         "genre": "Psychological Drama",
         "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773166/LOVE_IN_HATRED_hhy5nv.jpg",
         "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779377419/EP_12_p97cdi.mp4",
-        "description": "A dark emotionally charged coming-of-age drama exploring identity, obsession, revenge and desire."
+        "description": "A dark, emotionally charged coming-of-age drama.\n\nThe story begins with a brutal high school tragedy.\n\nHenry — a fragile, introverted boy — becomes the target of relentless bullying due to his sexual identity.\n\nThe breaking point comes when James, the very person Henry secretly loves, publicly humiliates him and destroys the only thing he holds dear.\n\nLove turns into hatred.\n\nHenry disappears after the summer break… only to return as Louis — cold, magnetic, and dangerously calculated.\n\nWhat follows is not just revenge — but a psychological game of identity, desire, and power."
+
       },
 
       {
@@ -213,8 +214,7 @@
         "genre": "War Drama",
         "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773166/POSTER_The_Sparrow_Cries_at_Duck_uhp9k3.png",
         "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779377406/N%C3%89N_-_The_Sparrow_Cries_at_Duck_h0ngmm.mp4",
-        "description": "A tragic wartime journey of survival, sacrifice and silent strength."
-      },
+        "description": "A deeply moving war-time story of loss, survival, and transformation.\n\nAfter losing both parents in a tragic misunderstanding during wartime, a young girl is left alone in a world torn apart by conflict.\n\nBranded by loss yet driven by resilience, she grows up to become part of the legendary Saigon Special Forces.\n\nHer journey is one of silent strength — from innocence shattered… to a life defined by purpose, sacrifice, and quiet courage."      },
 
       {
         "id": "unspoken",
@@ -222,8 +222,7 @@
         "genre": "Emotional Drama",
         "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773164/IMG_9937_ujchrp.jpg",
         "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779377433/N%C3%89N_-_UNSPOKEN_GOODBYE_zup1yv.mp4",
-        "description": "A heartbreaking story about unconditional love between a grandmother and her loyal dog."
-      },
+        "description": "A tender and heartbreaking story about love, loyalty, and the things we never get to say.\n\nThe film follows the quiet life of a grandmother and her devoted dog — their bond simple, yet deeply profound.\n\nWhen the grandmother falls seriously ill, the dog does everything it can to alert the neighbors and save her.\n\nBut in its desperate attempt to follow her to the hospital, tragedy strikes.\n\nThe dog never makes it.\n\nA story of unconditional love… and a goodbye that was never spoken."      },
 
       {
         "id": "fixbug",
@@ -231,8 +230,7 @@
         "genre": "Sci-Fi Psychological",
         "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773167/IMG_9194_epwjva.jpg",
         "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779377420/N%C3%89N_-_FIX_BUG_dyusuy.mp4",
-        "description": "A surreal story of a coder trapped inside a collapsing digital world."
-      }
+        "description": "A surreal tech-driven psychological story.\n\nA young female coder becomes trapped inside a digital world she unknowingly created. Around her, distorted entities emerge — the embodiment of unresolved bugs and broken code.\n\nAs the system collapses, she makes one final move: “Delete.”\n\nThe world vanishes.\n\nShe wakes up at her desk — exhausted.\n\nJust a dream… or the cost of pushing her mind too far?"      }
     ]
   }
 
