@@ -257,30 +257,107 @@
    MAIN PLAYER
 ========================================================= */
 
+/* =========================================================
+   FILM MAIN PLAYER
+========================================================= */
+
 .film-main-player{
   position: relative;
-
-  z-index: 2;
-
-  width: 100%;
-  height:
-    clamp(
-      380px,
-      72vh,
-      760px
-    );
 
   overflow: hidden;
 
   border-radius: 34px;
+}
 
-  background: #111;
+/* =========================================================
+   LEARN MORE BUTTON
+========================================================= */
+
+.film-learn-btn{
+  position: absolute;
+
+  top: 24px;
+  right: 24px;
+
+  z-index: 20;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 54px;
+
+  padding: 0 26px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(168,85,247,.88),
+      rgba(139,92,246,.82)
+    );
 
   border:
-    1px solid rgba(255,255,255,.08);
+    1px solid rgba(255,255,255,.12);
+
+  backdrop-filter: blur(18px);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: .3px;
+
+  text-decoration: none;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform: translateY(-10px);
+
+  transition:
+    opacity .35s ease,
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease;
+}
+
+/* show on hover */
+
+.film-main-player:hover
+.film-learn-btn{
+  opacity: 1;
+
+  pointer-events: auto;
+
+  transform: translateY(0);
+}
+
+/* hover */
+
+.film-learn-btn:hover{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(192,132,252,.96),
+      rgba(168,85,247,.92)
+    );
 
   box-shadow:
-    0 30px 80px rgba(0,0,0,.45);
+    0 16px 40px rgba(168,85,247,.35);
+
+  transform:
+    translateY(-2px);
+}
+
+/* optional darken */
+
+.film-main-player:hover video{
+  filter:
+    brightness(.62);
 }
 
 /* video */

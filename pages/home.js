@@ -110,34 +110,42 @@ export function Home() {
           <div class="film-grid-glow"></div>
 
           <!-- MAIN VIDEO -->
-          <div class="film-main-player">
+<div class="film-main-player">
 
-            <video
-              id="film-main-video"
-              autoplay
-              muted
-              loop
-              playsinline
-            >
-              <source
-                id="film-main-source"
-                src=""
-                type="video/mp4"
-              >
-            </video>
+  <video
+    id="film-main-video"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+    <source
+      id="film-main-source"
+      src=""
+      type="video/mp4"
+    >
+  </video>
 
-            <!-- overlay -->
-            <div class="film-main-overlay"></div>
+  <!-- overlay -->
+  <div class="film-main-overlay"></div>
 
-            <!-- thumbnails -->
-            <div
-              id="film-thumb-track"
-              class="film-thumb-track"
-            >
-              ⏳ Loading...
-            </div>
+  <!-- LEARN MORE -->
+  <a
+    href="#film-ai"
+    class="film-learn-btn"
+  >
+    Learn More
+  </a>
 
-          </div>
+  <!-- thumbnails -->
+  <div
+    id="film-thumb-track"
+    class="film-thumb-track"
+  >
+    ⏳ Loading...
+  </div>
+
+</div>
 
         </div>
 
@@ -181,29 +189,41 @@ export function Home() {
     <div class="commercial-main-video">
 
       <!-- MAIN VIDEO -->
-      <video
-        id="main-commercial-video"
-        autoplay
-        muted
-        loop
-        playsinline
-      >
-        <source
-          id="main-commercial-source"
-          src=""
-          type="video/mp4"
+      <div class="commercial-main-video">
+
+        <video
+          id="main-commercial-video"
+          autoplay
+          muted
+          loop
+          playsinline
         >
-      </video>
+          <source
+            id="main-commercial-source"
+            src=""
+            type="video/mp4"
+          >
+        </video>
 
-      <!-- DARK OVERLAY -->
-      <div class="commercial-main-overlay"></div>
+        <!-- DARK OVERLAY -->
+        <div class="commercial-main-overlay"></div>
 
-      <!-- THUMBNAILS INSIDE -->
-      <div
-        class="commercial-thumb-track"
-        id="commercial-thumb-track"
-      >
-        ⏳ Loading...
+        <!-- LEARN MORE -->
+        <a
+          href="#commercial"
+          class="commercial-learn-btn"
+        >
+          Learn More
+        </a>
+
+        <!-- THUMBNAILS -->
+        <div
+          class="commercial-thumb-track"
+          id="commercial-thumb-track"
+        >
+          ⏳ Loading...
+        </div>
+
       </div>
 
     </div>

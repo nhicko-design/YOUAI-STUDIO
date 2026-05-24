@@ -3,7 +3,7 @@
     "backgroundVideos": [
       {
         "id": "bg1",
-        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779377420/N%C3%89N_-_FIX_BUG_dyusuy.mp4",
+        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779643811/WEB_yrshnf.mp4",
         "title": "BackGround1"
       },
       {
@@ -201,7 +201,7 @@
       {
         "id": "love-hatred",
         "title": "Love in Hatred",
-        "genre": "Psychological Drama",
+        "genre": "",
         "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773166/LOVE_IN_HATRED_hhy5nv.jpg",
         "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779377419/EP_12_p97cdi.mp4",
         "description": "A dark, emotionally charged coming-of-age drama.\n\nThe story begins with a brutal high school tragedy.\n\nHenry — a fragile, introverted boy — becomes the target of relentless bullying due to his sexual identity.\n\nThe breaking point comes when James, the very person Henry secretly loves, publicly humiliates him and destroys the only thing he holds dear.\n\nLove turns into hatred.\n\nHenry disappears after the summer break… only to return as Louis — cold, magnetic, and dangerously calculated.\n\nWhat follows is not just revenge — but a psychological game of identity, desire, and power."
@@ -211,28 +211,28 @@
       {
         "id": "sparrow",
         "title": "Sparrow’s Cry at Dusk",
-        "genre": "War Drama",
+        "genre": "VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD ",
         "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773166/POSTER_The_Sparrow_Cries_at_Duck_uhp9k3.png",
         "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779377406/N%C3%89N_-_The_Sparrow_Cries_at_Duck_h0ngmm.mp4",
-        "description": "A tragic wartime journey of survival, sacrifice and silent strength."
+        "description": "A deeply moving war-time story of loss, survival, and transformation. After losing both parents in a tragic misunderstanding during wartime, a young girl is left alone in a world torn apart by conflict. Branded by loss yet driven by resilience, she grows up to become part of the legendary Saigon Special Forces. Her journey is one of silent strength — from innocence shattered… to a life defined by purpose, sacrifice, and quiet courage."
       },
 
       {
         "id": "unspoken",
         "title": "Unspoken Goodbyes",
-        "genre": "Emotional Drama",
+        "genre": "VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD",
         "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773164/IMG_9937_ujchrp.jpg",
         "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779377433/N%C3%89N_-_UNSPOKEN_GOODBYE_zup1yv.mp4",
-        "description": "A heartbreaking story about unconditional love between a grandmother and her loyal dog."
+        "description": "A tender and heartbreaking story about love, loyalty, and the things we never get to say. The film follows the quiet life of a grandmother and her devoted dog — their bond simple, yet deeply profound. When the grandmother falls seriously ill, the dog does everything it can to alert the neighbors and save her. But in its desperate attempt to follow her to the hospital, tragedy strikes. The dog never makes it. A story of unconditional love… and a goodbye that was never spoken."
       },
 
       {
-        "id": "fixbug",
-        "title": "Fix Bug",
-        "genre": "Sci-Fi Psychological",
-        "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778773167/IMG_9194_epwjva.jpg",
-        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779377420/N%C3%89N_-_FIX_BUG_dyusuy.mp4",
-        "description": "A surreal story of a coder trapped inside a collapsing digital world."
+        "id": "lastbus",
+        "title": "Last Bus",
+        "genre": "",
+        "poster": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1779643796/z7858665667115_fdfadec618bd4a58a611705753c8fb3e_mamvt5.jpg",
+        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779643811/WEB_yrshnf.mp4",
+        "description": "Short film follows a group of Korean students riding home late at night on what should have been an ordinary school bus ride. While young couple Jeamin and So Hee quietly share a romantic moment in the back seats, an infected girl suddenly boards the bus. As fear spreads through the silent vehicle, the students realize something horrifying is terribly wrong. Trapped inside the moving bus, they must survive one terrifying night before the infection reaches everyone onboard."
       }
     ]
   }
