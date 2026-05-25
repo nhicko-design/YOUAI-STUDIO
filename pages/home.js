@@ -131,7 +131,7 @@ export function Home() {
 
   <!-- LEARN MORE -->
   <a
-    href="#film-ai"
+    href="#filmAI"
     class="film-learn-btn"
   >
     Learn More
