@@ -117,12 +117,114 @@
     );
 }
 
-.film-showreel-genre{
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: #c084fc;
+/* =========================================================
+   FILM GENRE TAG
+========================================================= */
 
-  margin-bottom: 14px;
+.film-showreel-genre{
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  padding:
+    10px 20px;
+
+  margin-bottom: 20px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(168,85,247,.22),
+      rgba(236,72,153,.18)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.12);
+
+  backdrop-filter: blur(14px);
+
+  color: #f3e8ff;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  font-family:
+    "Space Grotesk",
+    "Poppins",
+    sans-serif;
+
+  box-shadow:
+    0 10px 30px rgba(168,85,247,.18);
+
+  overflow: hidden;
+}
+
+/* glow line */
+
+.film-showreel-genre::before{
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.18),
+      transparent
+    );
+
+  transform: translateX(-100%);
+
+  animation:
+    genreShine 4s linear infinite;
+}
+
+/* subtle glow */
+
+.film-showreel-genre::after{
+  content: "";
+
+  position: absolute;
+
+  inset: -1px;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(192,132,252,.22),
+      rgba(236,72,153,.14)
+    );
+
+  filter: blur(14px);
+
+  opacity: .5;
+
+  z-index: -1;
+}
+
+/* animation */
+
+@keyframes genreShine{
+
+  100%{
+    transform: translateX(100%);
+  }
+
 }
 
 .film-showreel-overlay h3{
