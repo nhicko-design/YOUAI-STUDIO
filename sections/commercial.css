@@ -145,47 +145,26 @@
 /* =========================================================
    LEARN MORE BUTTON
 ========================================================= */
-
 /* =========================================================
-   LEARN MORE BUTTON
+   LEARN MORE TEXT
 ========================================================= */
 
 .commercial-learn-btn{
   position: absolute;
 
-  top: 24px;
-  right: 24px;
+  top: 26px;
+  right: 28px;
 
   z-index: 20;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 54px;
-
-  padding: 0 26px;
-
-  border-radius: 999px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(168,85,247,.88),
-      rgba(139,92,246,.82)
-    );
-
-  border:
-    1px solid rgba(255,255,255,.12);
-
-  backdrop-filter: blur(18px);
-
-  color: white;
+  color: rgba(255,255,255,.92);
 
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
 
-  letter-spacing: .3px;
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
 
   text-decoration: none;
 
@@ -196,8 +175,9 @@
   transition:
     opacity .35s ease,
     transform .35s ease,
-    box-shadow .35s ease,
-    background .35s ease;
+    color .35s ease;
+
+  transform: translateY(-8px);
 }
 
 /* show on hover */
@@ -211,27 +191,10 @@
   transform: translateY(0);
 }
 
-/* initial hidden state */
-
-.commercial-learn-btn{
-  transform: translateY(-10px);
-}
-
 /* hover */
 
 .commercial-learn-btn:hover{
-  background:
-    linear-gradient(
-      135deg,
-      rgba(192,132,252,.96),
-      rgba(168,85,247,.92)
-    );
-
-  box-shadow:
-    0 16px 40px rgba(168,85,247,.35);
-
-  transform:
-    translateY(-2px);
+  color: #d8b4fe;
 }
 
 /* =========================================================
