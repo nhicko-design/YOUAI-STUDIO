@@ -3,12 +3,12 @@
     "backgroundVideos": [
       {
         "id": "bg1",
-        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1779643811/WEB_yrshnf.mp4",
+        "videoUrl": "https://cdn.jsdelivr.net/gh/nhicko-design/YOUAI-STUDIO@main/images/FilmAi/FIXBUG.mp4",
         "title": "BackGround1"
       },
       {
         "id": "bg2",
-        "videoUrl": "https://res.cloudinary.com/djxgoqxh3/video/upload/v1778772642/MACBOOK_PRO_adew4w.mov",
+        "videoUrl": "https://cdn.jsdelivr.net/gh/nhicko-design/YOUAI-STUDIO@main/images/Home/MACBOOKPRO.mov",
         "title": "BackGround2"
       }
     ]
