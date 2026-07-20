@@ -20,7 +20,7 @@
         "title": "The Last Bus",
         "genre": "Psychological Drama",
         "poster": "https://youai-studio.vercel.app/media/FilmAi/POSTERTheSparrowCriesatDuck.png",
-        "videoUrl": "https://youai-studio.vercel.app/media/FilmAi/THELASTBUS.mov",
+        "videoUrl": "https://cdn.jsdelivr.net/gh/nhicko-design/YOUAI-STUDIO@main/media/FilmAi/FIXBUG.mp4",
         "description": "A dark emotionally charged coming-of-age drama exploring identity, obsession, revenge and desire."
       },
 
