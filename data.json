@@ -18,7 +18,7 @@
         "id": "theLastBug",
         "title": "The Last Bus",
         "genre": "Psychological Drama",
-        "poster": "https://youai-studio.vercel.app/media/FilmAi/POSTERTheSparrowCriesatDuck.png",
+        "poster": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820111/0723_okzzay.mp4",
         "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820111/0723_okzzay.mp4",
         "description": "A dark emotionally charged coming-of-age drama exploring identity, obsession, revenge and desire."
       },
@@ -27,7 +27,7 @@
         "id": "sparrow",
         "title": "Sparrow's Cry at Dusk",
         "genre": "War Drama",
-        "poster": "https://youai-studio.vercel.app/media/FilmAi/POSTERTheSparrowCriesatDuck.png",
+        "poster": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737810/TheSparrowCriesatDuck_ombegb.mp4",
         "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737810/TheSparrowCriesatDuck_ombegb.mp4",
         "description": "A tragic wartime journey of survival, sacrifice and silent strength."
       },
@@ -53,19 +53,19 @@
   "commercialHome": [
     {
       "title": "Mackbook",
-      "thumbnail":"https://res.cloudinary.com/dyxcskrss/video/upload/v1784820398/0723_4_vcyszu.mp4",
+      "thumbnail":"https://res.cloudinary.com/dyxcskrss/image/upload/v1784824926/shopping_4_ba95qg.webp",
       "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820398/0723_4_vcyszu.mp4"
     },
 
     {
       "title": "Iphone",
-      "thumbnail":"https://res.cloudinary.com/dyxcskrss/video/upload/v1784820344/0723_1_q8oxgk.mp4",
+      "thumbnail":"https://res.cloudinary.com/dyxcskrss/image/upload/v1784824929/mau-sac-iphone-17-pro-max_tjxk1g.jpg",
       "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820344/0723_1_q8oxgk.mp4"
     },
 
     {
       "title": "Nike",
-      "thumbnail":"https://res.cloudinary.com/dyxcskrss/video/upload/v1784737771/NIKE_yugsbg.mp4",
+      "thumbnail":"https://res.cloudinary.com/dyxcskrss/image/upload/v1784824933/z4027417137451-e4f67b88df4bf8b01a3e1f78917d4e7c_t5jnzw.jpg",
       "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737771/NIKE_yugsbg.mp4"
     }
   ],
@@ -96,93 +96,93 @@
 
   "imageryHome": [
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737757/Create_a_premium_3D_VFX_202605220002_tswnze.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737755/IMG_9937_jczrz6.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737756/Create_a_premium_3D_VFX_202605212325_l17meg.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERTheSparrowCriesatDuck_ru66ud.png",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737756/Create_a_premium_3D_VFX_202605212356_ls5uky.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/LOVEINHATRED_x7xj5s.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737756/Create_a_premium_3D_VFX_202605212324_a8mohf.jpg",
       "title": "Concept Art",
       "type": "portrait"
     }
   ],
   "imageryFashion": [
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/Cartier7_upynbj.jpg",
       "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737755/IMG_9937_jczrz6.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737768/Cartier6_fgzdr8.jpg",
       "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/LOVEINHATRED_x7xj5s.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737767/Cartier5_spl2hv.jpg",
       "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERTheSparrowCriesatDuck_ru66ud.png",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737767/Cartier3_f0swb6.jpg",
       "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERNEPTUNE_upmmno.png",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737767/Cartier2_lcgzs4.jpg",
       "title": "Fashion",
       "type": "portrait"
     }
   ],
   "imageryProduct": [
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737765/4_1_krv5fn.png",
       "title": "Product",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737765/3_1_rwonge.png",
       "title": "Product",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/LOVEINHATRED_x7xj5s.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/1_1_umkqvo.png",
       "title": "Product",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERNEPTUNE_upmmno.png",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/2_1_ahendk.png",
       "title": "Product",
       "type": "portrait"
     }
   ],
   "imageryConceptArt": [
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737757/Create_a_premium_3D_VFX_202605220002_tswnze.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737756/Create_a_premium_3D_VFX_202605212325_l17meg.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/LOVEINHATRED_x7xj5s.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737756/Create_a_premium_3D_VFX_202605212356_ls5uky.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERTheSparrowCriesatDuck_ru66ud.png",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737756/Create_a_premium_3D_VFX_202605212324_a8mohf.jpg",
       "title": "Concept Art",
       "type": "portrait"
     }

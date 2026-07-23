@@ -323,7 +323,7 @@ export function Home() {
           <div class="relative">
 
             <img 
-              src="https://res.cloudinary.com/djxgoqxh3/image/upload/v1778920047/About_e3gawk.png"
+              src="https://res.cloudinary.com/dyxcskrss/image/upload/v1784824941/About_mm7jph.png"
               alt="YOUAI Studio"
               class="about-image"
             />
