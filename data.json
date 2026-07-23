@@ -3,12 +3,12 @@
     "backgroundVideos": [
       {
         "id": "bg1",
-        "videoUrl": "https://cdn.jsdelivr.net/gh/nhicko-design/YOUAI-STUDIO@main/media/FilmAi/FIXBUG.mp4",
+        "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737800/FIXBUG_krqw93.mp4",
         "title": "BackGround1"
       },
       {
         "id": "bg2",
-        "videoUrl": "https://youai-studio.vercel.app/media/Commercial/MACBOOKPRO.MOV",
+        "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737800/FIXBUG_krqw93.mp4",
         "title": "BackGround2"
       }
     ]
@@ -19,7 +19,7 @@
         "title": "The Last Bus",
         "genre": "Psychological Drama",
         "poster": "https://youai-studio.vercel.app/media/FilmAi/POSTERTheSparrowCriesatDuck.png",
-        "videoUrl": "https://cdn.jsdelivr.net/gh/nhicko-design/YOUAI-STUDIO@main/media/FilmAi/FIXBUG.mp4",
+        "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820111/0723_okzzay.mp4",
         "description": "A dark emotionally charged coming-of-age drama exploring identity, obsession, revenge and desire."
       },
 
@@ -28,7 +28,7 @@
         "title": "Sparrow's Cry at Dusk",
         "genre": "War Drama",
         "poster": "https://youai-studio.vercel.app/media/FilmAi/POSTERTheSparrowCriesatDuck.png",
-        "videoUrl": "https://youai-studio.vercel.app/media/FilmAi/TheSparrowCriesatDuck.mov",
+        "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737810/TheSparrowCriesatDuck_ombegb.mp4",
         "description": "A tragic wartime journey of survival, sacrifice and silent strength."
       },
 
@@ -36,8 +36,8 @@
         "id": "unspoken",
         "title": "Unspoken Goodbyes",
         "genre": "Emotional Drama",
-        "poster": "https://youai-studio.vercel.app/media/FilmAi/IMG_9937.JPG",
-        "videoUrl": "https://youai-studio.vercel.app/media/FilmAi/UNSPOKENGOODBYE.mov",
+        "poster": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
+        "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737812/UNSPOKENGOODBYE_a54byd.mp4",
         "description": "A heartbreaking story about unconditional love between a grandmother and her loyal dog."
       },
 
@@ -45,28 +45,28 @@
         "id": "fixbug",
         "title": "Fix Bug",
         "genre": "Sci-Fi Psychological",
-        "poster": "https://youai-studio.vercel.app/media/FilmAi/IMG_9194.JPG",
-        "videoUrl": "https://youai-studio.vercel.app/media/FilmAi/FIXBUG.mp4",
+        "poster": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
+        "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737800/FIXBUG_krqw93.mp4",
         "description": "A surreal story of a coder trapped inside a collapsing digital world."
       }
   ],
   "commercialHome": [
     {
       "title": "Mackbook",
-      "thumbnail":"https://youai-studio.vercel.app/media/Commercial/MACBOOKPRO(1).MOV",
-      "videoUrl": "https://youai-studio.vercel.app/media/Commercial/MACBOOKPRO(1).MOV"
+      "thumbnail":"https://res.cloudinary.com/dyxcskrss/video/upload/v1784820398/0723_4_vcyszu.mp4",
+      "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820398/0723_4_vcyszu.mp4"
     },
 
     {
       "title": "Iphone",
-      "thumbnail":"https://youai-studio.vercel.app/media/Commercial/IPHONE17PRO.mov",
-      "videoUrl": "https://youai-studio.vercel.app/media/Commercial/IPHONE17PRO.mov"
+      "thumbnail":"https://res.cloudinary.com/dyxcskrss/video/upload/v1784820344/0723_1_q8oxgk.mp4",
+      "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820344/0723_1_q8oxgk.mp4"
     },
 
     {
       "title": "Nike",
-      "thumbnail":"https://youai-studio.vercel.app/media/Commercial/NIKE.mov",
-      "videoUrl": "https://youai-studio.vercel.app/media/Commercial/NIKE.mov"
+      "thumbnail":"https://res.cloudinary.com/dyxcskrss/video/upload/v1784737771/NIKE_yugsbg.mp4",
+      "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737771/NIKE_yugsbg.mp4"
     }
   ],
 
@@ -76,113 +76,113 @@
       "title": "Chim Sẻ Kêu Chiều",
       "type": "AI SHORT FILM",
       "description": "VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD",
-      "image": "https://youai-studio.vercel.app/media/FilmAi/POSTERTheSparrowCriesatDuck.png"
+      "image": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERTheSparrowCriesatDuck_ru66ud.png"
     },
 
     {
       "title": "Love In Hatred",
       "type": "AI DRAMA",
       "description": "A dark romantic narrative with surreal AI aesthetics.",
-      "image": "https://youai-studio.vercel.app/media/FilmAi/LOVEINHATRED.jpg"
+      "image": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/LOVEINHATRED_x7xj5s.jpg"
     },
 
     {
       "title": "Unspoken Goodbye",
       "type": "AI CINEMA",
       "description": "VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD",
-      "image": "https://youai-studio.vercel.app/media/FilmAi/IMG_9937.JPG"
+      "image": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737755/IMG_9937_jczrz6.jpg"
     }
   ],
 
   "imageryHome": [
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/IMG_9194.JPG",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/IMG_9937.JPG",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737755/IMG_9937_jczrz6.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/POSTERTheSparrowCriesatDuck.png",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERTheSparrowCriesatDuck_ru66ud.png",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/LOVEINHATRED.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/LOVEINHATRED_x7xj5s.jpg",
       "title": "Concept Art",
       "type": "portrait"
     }
   ],
   "imageryFashion": [
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/IMG_9194.JPG",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
       "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/IMG_9937.JPG",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737755/IMG_9937_jczrz6.jpg",
       "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/LOVEINHATRED.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/LOVEINHATRED_x7xj5s.jpg",
       "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/POSTERTheSparrowCriesatDuck.png",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERTheSparrowCriesatDuck_ru66ud.png",
       "title": "Fashion",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/POSTERNEPTUNE.png",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERNEPTUNE_upmmno.png",
       "title": "Fashion",
       "type": "portrait"
     }
   ],
   "imageryProduct": [
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/IMG_9194.JPG",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
       "title": "Product",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/IMG_9937.JPG",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
       "title": "Product",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/LOVEINHATRED.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/LOVEINHATRED_x7xj5s.jpg",
       "title": "Product",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/POSTERNEPTUNE.png",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERNEPTUNE_upmmno.png",
       "title": "Product",
       "type": "portrait"
     }
   ],
   "imageryConceptArt": [
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/IMG_9194.JPG",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/IMG_9937.JPG",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/LOVEINHATRED.jpg",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/LOVEINHATRED_x7xj5s.jpg",
       "title": "Concept Art",
       "type": "portrait"
     },
     {
-      "imageUrl": "https://youai-studio.vercel.app/media/FilmAi/POSTERTheSparrowCriesatDuck.png",
+      "imageUrl": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERTheSparrowCriesatDuck_ru66ud.png",
       "title": "Concept Art",
       "type": "portrait"
     }
@@ -193,7 +193,7 @@
       "title": "AI Film Production Studio",
       "subtitle": "Where Storytelling Meets Artificial Intelligence",
       "description": "We craft emotionally powerful, visually stunning films using cutting-edge AI technology — transforming ideas into cinematic experiences faster, smarter, and without limits.",
-      "backgroundVideo": "https://youai-studio.vercel.app/media/FilmAi/THELASTBUS.mov"
+      "backgroundVideo": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820111/0723_okzzay.mp4"
     },
 
     "projects": [
@@ -201,8 +201,8 @@
         "id": "love-hatred",
         "title": "Love in Hatred",
         "genre": "",
-        "poster": "https://youai-studio.vercel.app/media/FilmAi/LOVEINHATRED.jpg",
-        "videoUrl": "https://youai-studio.vercel.app/media/FilmAi/EP12.mp4",
+        "poster": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/LOVEINHATRED_x7xj5s.jpg",
+        "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737807/EP12_je9vmk.mp4",
         "description": "A dark, emotionally charged coming-of-age drama.\n\nThe story begins with a brutal high school tragedy.\n\nHenry — a fragile, introverted boy — becomes the target of relentless bullying due to his sexual identity.\n\nThe breaking point comes when James, the very person Henry secretly loves, publicly humiliates him and destroys the only thing he holds dear.\n\nLove turns into hatred.\n\nHenry disappears after the summer break… only to return as Louis — cold, magnetic, and dangerously calculated.\n\nWhat follows is not just revenge — but a psychological game of identity, desire, and power."
 
       },
@@ -211,8 +211,8 @@
         "id": "sparrow",
         "title": "Sparrow's Cry at Dusk",
         "genre": "TOP 10 BEST VIDEOS IN VIETNAM",
-        "poster": "https://youai-studio.vercel.app/media/FilmAi/POSTERTheSparrowCriesatDuck.png",
-        "videoUrl": "https://youai-studio.vercel.app/media/FilmAi/TheSparrowCriesatDuck.mov",
+        "poster": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERTheSparrowCriesatDuck_ru66ud.png",
+        "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737810/TheSparrowCriesatDuck_ombegb.mp4",
         "description": "A deeply moving war-time story of loss, survival, and transformation. After losing both parents in a tragic misunderstanding during wartime, a young girl is left alone in a world torn apart by conflict. Branded by loss yet driven by resilience, she grows up to become part of the legendary Saigon Special Forces. Her journey is one of silent strength — from innocence shattered… to a life defined by purpose, sacrifice, and quiet courage."
       },
 
@@ -220,8 +220,8 @@
         "id": "unspoken",
         "title": "Unspoken Goodbyes",
         "genre": "TOP 10 BEST VIDEOS IN VIETNAM",
-        "poster": "https://youai-studio.vercel.app/media/FilmAi/IMG_9937.JPG",
-        "videoUrl": "https://youai-studio.vercel.app/media/FilmAi/UNSPOKENGOODBYE.mov",
+        "poster": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737769/IMG_9194_ng8ctt.jpg",
+        "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737812/UNSPOKENGOODBYE_a54byd.mp4",
         "description": "A tender and heartbreaking story about love, loyalty, and the things we never get to say. The film follows the quiet life of a grandmother and her devoted dog — their bond simple, yet deeply profound. When the grandmother falls seriously ill, the dog does everything it can to alert the neighbors and save her. But in its desperate attempt to follow her to the hospital, tragedy strikes. The dog never makes it. A story of unconditional love… and a goodbye that was never spoken."
       },
 
@@ -229,8 +229,8 @@
         "id": "lastbus",
         "title": "Last Bus",
         "genre": "",
-        "poster": "https://youai-studio.vercel.app/media/FilmAi/POSTERTheSparrowCriesatDuck.png",
-        "videoUrl": "https://youai-studio.vercel.app/media/FilmAi/THELASTBUS.mov",
+        "poster": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737764/POSTERTheSparrowCriesatDuck_ru66ud.png",
+        "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820111/0723_okzzay.mp4",
         "description": "Short film follows a group of Korean students riding home late at night on what should have been an ordinary school bus ride. While young couple Jeamin and So Hee quietly share a romantic moment in the back seats, an infected girl suddenly boards the bus. As fear spreads through the silent vehicle, the students realize something horrifying is terribly wrong. Trapped inside the moving bus, they must survive one terrifying night before the infection reaches everyone onboard."
       }
     ]
@@ -243,67 +243,67 @@
     "title": "AI-Powered Commercial Production",
     "subtitle": "Smarter Production. Faster Results. Stronger Impact.",
     "description": "We help brands create high-quality commercials using AI — reducing production time, optimizing costs, and unlocking limitless creative possibilities.",
-    "backgroundVideo": "https://youai-studio.vercel.app/media/Commercial/NIKE.mov"
+    "backgroundVideo": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784737771/NIKE_yugsbg.mp4"
   },
 
   "showcase": [
     {
       "title": "Laroche Posay",
-      "thumbnail":"https://youai-studio.vercel.app/media/Commercial/LAROCHEPOSAY.mov",
-      "videoUrl": "https://youai-studio.vercel.app/media/Commercial/LAROCHEPOSAY.mov"
+      "thumbnail":"https://res.cloudinary.com/dyxcskrss/video/upload/v1784820415/0723_2_ceccwa.mp4",
+      "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820415/0723_2_ceccwa.mp4"
     },
 
     {
       "title": "Iphone",
-      "thumbnail":"https://youai-studio.vercel.app/media/Commercial/IPHONE17PRO.mov",
-      "videoUrl": "https://youai-studio.vercel.app/media/Commercial/IPHONE17PRO.mov"
+      "thumbnail":"https://res.cloudinary.com/dyxcskrss/video/upload/v1784820344/0723_1_q8oxgk.mp4",
+      "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820344/0723_1_q8oxgk.mp4"
     },
 
     {
       "title": "CARTIER",
-      "thumbnail":"https://youai-studio.vercel.app/media/Commercial/CARTIER.mov",
-      "videoUrl": "https://youai-studio.vercel.app/media/Commercial/CARTIER.mov"
+      "thumbnail":"https://res.cloudinary.com/dyxcskrss/video/upload/v1784820345/0723_7_lya4ji.mp4",
+      "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820345/0723_7_lya4ji.mp4"
     },
 
     {
       "title": "MACORNER",
-      "thumbnail":"https://youai-studio.vercel.app/media/Commercial/MACORNER.mov",
-      "videoUrl": "https://youai-studio.vercel.app/media/Commercial/MACORNER.mov"
+      "thumbnail":"https://res.cloudinary.com/dyxcskrss/video/upload/v1784820421/0723_5_y1lzfv.mp4",
+      "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820421/0723_5_y1lzfv.mp4"
     }
   ],
 
   "brands": [
   {
     "name": "Kotex",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917690/Kotex_logo_san_pham_bk96d5.png"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737762/Kotex_logo_san_pham_dtutku.png"
   },
   {
     "name": "Milaganics",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917661/images_1_j5vskh.png"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737759/images_1_unfdw9.png"
   },
   {
     "name": "Wonjin",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917679/images_6_luvp8i.jpg"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737761/images_6_atbb3t.jpg"
   },
   {
     "name": "Derladie",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917694/89ec80a89454453a043754de316a1292_knflkv.jpg"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737756/89ec80a89454453a043754de316a1292_zatzey.jpg"
   },
   {
     "name": "Heimish",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917703/heimish_nhsjsn.webp"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737758/heimish_h3dhh6.webp"
   },
   {
     "name": "Tfit",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917664/images_2_ddrtzl.png"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737759/images_2_b56jau.png"
   },
   {
     "name": "GGG Cosmetic",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917700/a9c74917-be75-4672-b6d5-96f95bd7863d-_ayytms.png"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737757/a9c74917-be75-4672-b6d5-96f95bd7863d-_ypsbkf.png"
   },
   {
     "name": "Skinfood1957",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917668/images_3_tquhhl.png"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737760/images_3_lbhbge.png"
   },
   {
     "name": "Sundays",
@@ -311,27 +311,27 @@
   },
   {
     "name": "Herherbal",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917672/images_4_tsjgj6.png"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737760/images_4_ajpcko.png"
   },
   {
     "name": "Abib",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917675/images_5_vczui7.png"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737760/images_5_z2vzas.png"
   },
   {
     "name": "Uniyoung",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917682/images_6_xhbagv.png"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737761/images_6_qlgku5.png"
   },
   {
     "name": "Macorner",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1778917686/images_7_l2v8er.png"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737762/images_7_ic1uq2.png"
   },
   {
     "name": "Capcut",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1779467124/bo_sung_2_qqisa9.png"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737757/bosung2_ek0w9f.png"
   },
   {
     "name": "The Cocoon",
-    "logo": "https://res.cloudinary.com/djxgoqxh3/image/upload/v1779467125/bo_sung_1_wag3tj.png"
+    "logo": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784737757/bosung1_kfiqni.png"
   }
 ]
 }
