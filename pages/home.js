@@ -327,7 +327,6 @@ export function Home() {
               alt="YOUAI Studio"
               class="about-image"
             />
-
             <!-- overlay -->
             <div class="about-overlay"></div>
 
