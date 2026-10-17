@@ -35,8 +35,7 @@ export function Home() {
         </span>
 
         <h1 class="hero-title">
-          YOUAI
-          <span>STUDIO</span>
+          <img src="./images/brand/Logo_YouAI_1.png" alt="YOUAI Studio" />
         </h1>
 
         <p class="hero-desc">
@@ -56,7 +55,7 @@ export function Home() {
     <!-- FILM AI -->
     <!-- ================================================= -->
 
-    <section class="film-ai-section fade-in">
+    <section id="filmAI" class="film-ai-section fade-in">
 
       <div class="film-shell">
 
@@ -64,20 +63,24 @@ export function Home() {
         <div class="film-info">
 
           <span class="film-badge">
-            AI CINEMA ENGINE
+            <span class="material-symbols-outlined" aria-hidden="true">movie</span>
+            AI FILM STUDIO
           </span>
 
           <h2 class="film-title-neo">
             FILM <span>AI</span>
           </h2>
 
-          <div class="film-line"></div>
-
           <p class="film-desc">
-            Generate cinematic experiences powered by advanced
-            artificial intelligence — crafted with emotion,
-            motion, and visual precision.
+            From the first frame to the final cut, turn bold ideas into
+            cinematic stories with AI-assisted filmmaking.
           </p>
+
+          <div class="film-workflow" aria-label="Film production workflow">
+            <span>Concept</span><i aria-hidden="true"></i>
+            <span>Story</span><i aria-hidden="true"></i>
+            <span>Film</span>
+          </div>
 
           <div class="film-stats">
 
@@ -112,6 +115,11 @@ export function Home() {
           <!-- MAIN VIDEO -->
 <div class="film-main-player">
 
+  <div class="film-player-topline">
+    <span><i aria-hidden="true"></i> YOUAI ORIGINALS</span>
+    <span class="film-player-format">CINEMATIC SHOWREEL</span>
+  </div>
+
   <video
     id="film-main-video"
     autoplay
@@ -138,11 +146,11 @@ export function Home() {
   </a>
 
   <!-- thumbnails -->
-  <div
+    <div
     id="film-thumb-track"
     class="film-thumb-track"
   >
-    ⏳ Loading...
+    <span class="film-thumb-loading">Preparing the film collection…</span>
   </div>
 
 </div>
@@ -157,39 +165,37 @@ export function Home() {
 <!-- COMMERCIAL SHOWCASE -->
 <!-- ================================================= -->
 
-<section class="commercial-section fade-in">
+<section id="commercial" class="commercial-section fade-in">
 
   <div class="commercial-glow"></div>
 
-  <!-- HEADER -->
-  <div class="commercial-shell">
-
+  <div class="commercial-home-shell">
     <div class="commercial-header">
-
-      <span class="commercial-tag">
-        AI COMMERCIAL SYSTEM
-      </span>
-
-      <h2 class="commercial-title">
-        COMMERCIAL
-      </h2>
-
-      <p class="commercial-desc">
-        High-impact AI commercials engineered for brands,
-        products, campaigns, and next-generation storytelling.
-      </p>
-
+      <div class="commercial-headline">
+        <span class="commercial-tag">
+          <span class="material-symbols-outlined" aria-hidden="true">campaign</span>
+          AI COMMERCIAL STUDIO
+        </span>
+        <h2 class="commercial-title"><span>COMMERCIAL</span></h2>
+      </div>
+      <div class="commercial-intro">
+        <p class="commercial-desc">
+          Brand stories built to stop the scroll. Explore AI-powered product films
+          shaped around your campaign, audience, and visual identity.
+        </p>
+        <div class="commercial-workflow" aria-label="Commercial production capabilities">
+          <span>Product films</span><span>Campaigns</span><span>Brand stories</span>
+        </div>
+        <a href="#contact" class="commercial-cta">Create a campaign <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+      </div>
     </div>
 
-  </div>
-
-  <!-- PLAYER -->
-  <div class="commercial-player-wrap">
-
-    <div class="commercial-main-video">
-
-      <!-- MAIN VIDEO -->
+    <div class="commercial-player-wrap">
       <div class="commercial-main-video">
+        <div class="commercial-player-topline">
+          <span><i aria-hidden="true"></i> CAMPAIGN REEL <b>01</b></span>
+          <span class="commercial-player-format">PRODUCT · STORY · IMPACT</span>
+        </div>
 
         <video
           id="main-commercial-video"
@@ -208,22 +214,21 @@ export function Home() {
         <!-- DARK OVERLAY -->
         <div class="commercial-main-overlay"></div>
 
-        <!-- LEARN MORE -->
-        <a
-          href="#commercial"
-          class="commercial-learn-btn"
-        >
-          Learn More
-        </a>
+        <a href="#contact" class="commercial-learn-btn">Discuss a campaign <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a>
 
-        <!-- THUMBNAILS -->
+      </div>
+
+      <div class="commercial-film-nav">
+        <div class="commercial-film-nav-heading">
+          <span>SELECT A CAMPAIGN</span>
+          <small>Choose a film to preview</small>
+        </div>
         <div
           class="commercial-thumb-track"
           id="commercial-thumb-track"
         >
           ⏳ Loading...
         </div>
-
       </div>
 
     </div>
@@ -236,84 +241,41 @@ export function Home() {
     <!-- AI IMAGERY -->
     <!-- ================================================= -->
 
-    <section class="ai-gallery-section fade-in">
-
-      <div class="gallery-top">
-
-        <div>
-
-          <span class="gallery-label">
-            VISUAL INTELLIGENCE
-          </span>
-
-          <h2 class="gallery-title">
-            AI IMAGERY
-          </h2>
-
-        </div>
-
-        <a href="#imagery" class="gallery-btn">
-          View Gallery →
-        </a>
-
+<section id="ai-imagery" class="home-imagery-section fade-in">
+  <div class="home-showcase-container">
+    <div class="home-showcase-heading home-imagery-heading">
+      <div>
+        <span class="home-showcase-kicker"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span> Visual Intelligence</span>
+        <h2>AI <span>IMAGERY</span></h2>
+        <p>AI-crafted imagery blending cinematic lighting, surreal compositions, and emotionally driven storytelling.</p>
       </div>
+      <a class="home-showcase-link" href="#imagery">View Gallery <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+    </div>
 
-      <div class="gallery-stage">
-
-        <div class="gallery-side-text">
-
-          <p>
-            AI-crafted imagery blending cinematic lighting,
-            surreal compositions, futuristic aesthetics,
-            and emotionally-driven storytelling.
-          </p>
-
-        </div>
-
-        <div id="imagery-grid" class="gallery-grid">
-          ⏳ Loading...
-        </div>
-
-      </div>
-
-    </section>
+    <div id="imagery-grid" class="home-imagery-grid">
+      <div class="home-imagery-loading">Loading visual gallery…</div>
+    </div>
+  </div>
+</section>
     <!-- =========================================================
    HIGHLIGHT PROJECTS
 ========================================================= -->
 
-<section class="highlight-section fade-in">
+<section id="highlight-projects" class="home-highlight-section fade-in">
+  <div class="home-showcase-container">
+    <div class="home-showcase-heading home-highlight-heading">
+      <span class="home-showcase-kicker"><span class="material-symbols-outlined" aria-hidden="true">military_tech</span> Featured AI Projects</span>
+      <h2>Highlight <span>Projects</span></h2>
+      <p>A curated selection of cinematic AI productions crafted with storytelling, emotion, and next-generation visuals.</p>
+    </div>
 
-  <!-- glow -->
-  <div class="highlight-glow"></div>
-
-  <!-- HEADER -->
-  <div class="highlight-header">
-
-    <span class="highlight-tag">
-      FEATURED AI PROJECTS
-    </span>
-
-    <h2 class="highlight-title">
-      Highlight <span>Projects</span>
-    </h2>
-
-    <p class="highlight-desc">
-      A curated selection of cinematic AI productions crafted
-      with storytelling, emotion, and next-generation visuals.
-    </p>
-
+    <div id="highlight-grid" class="home-highlight-grid">
+      <div class="home-highlight-loading">Loading featured projects…</div>
+    </div>
   </div>
-
-  <!-- PROJECT GRID -->
-  <div
-    id="highlight-grid"
-    class="highlight-grid"
-  >
-    ⏳ Loading...
-  </div>
-  </section>
+</section>
     <!-- ABOUT -->
-    <section class="px-6 md:px-10 py-24 fade-in">
+    <section id="about-studio" class="px-6 md:px-10 py-24 fade-in">
 
       <div class="section-box overflow-hidden">
 
@@ -346,7 +308,7 @@ export function Home() {
 
             <h2 class="about-title mt-4">
               Cinematic AI Production <br />
-              For The Next Generation
+              <span>For The Next Generation</span>
             </h2>
 
             <p class="about-text mt-6">
@@ -422,13 +384,15 @@ export function Home() {
     <div class="cta-actions">
 
       <a href="#contact" class="cta-btn-primary">
-        Work With Us
+        Contact Us
       </a>
 
-      <a href="#filmAI" class="cta-btn-secondary">
-        View Projects
-      </a>
+    </div>
 
+    <div class="cta-proof" aria-label="Our services">
+      <span>AI-Powered Production</span>
+      <span>Brand Storytelling</span>
+      <span>Campaign-Ready Visuals</span>
     </div>
 
   </div>
@@ -480,13 +444,9 @@ async function initPage() {
 
   initAnimations();
 
-  initSlider();
-
   initGallery();
 
   initGalleryControls();
-
-  initHoverVideos();
 
 }
 
@@ -545,143 +505,6 @@ function renderHero(hero) {
 }
 
 /* =========================================================
-   VIDEO GRID
-========================================================= */
-function renderVideoGrid(videos = []) {
-
-  const grid =
-    document.getElementById("video-grid");
-
-  if (!grid) return;
-
-  const isMobile =
-    window.innerWidth < 768;
-
-  // MOBILE = 2
-  // DESKTOP = 4
-  const list = isMobile
-    ? videos.slice(0, 2)
-    : videos.slice(0, 4);
-
-  grid.innerHTML =
-    list.map(videoCard).join("");
-
-  // init hover play
-  initVideoHover();
-}
-
-/* =========================================================
-   VIDEO CARD
-========================================================= */
-
-function videoCard(v) {
-
-  return `
-
-    <div class="card-hover video-card">
-
-      <!-- POSTER -->
-      <img
-        class="video-poster"
-        src="${v.poster || v.cardImage || ''}"
-        alt="${v.title}"
-      />
-
-      <!-- VIDEO -->
-      <video
-        class="hover-video"
-        muted
-        loop
-        playsinline
-        preload="none"
-      >
-
-        <source
-          src="${v.videoUrl}"
-          type="video/mp4"
-        >
-
-      </video>
-
-      <!-- OVERLAY -->
-      <div class="video-dark"></div>
-
-      <!-- CONTENT -->
-      <div class="video-info">
-
-        <span class="video-label">
-          AI FILM
-        </span>
-
-        <h3 class="video-title">
-          ${v.title}
-        </h3>
-
-      </div>
-
-    </div>
-
-  `;
-}
-
-/* =========================================================
-   HOVER VIDEO
-========================================================= */
-
-function initVideoHover(){
-
-  const cards =
-    document.querySelectorAll(".video-card");
-
-  cards.forEach(card => {
-
-    const video =
-      card.querySelector(".hover-video");
-
-    const poster =
-      card.querySelector(".video-poster");
-
-    if(!video) return;
-
-    card.addEventListener("mouseenter", async () => {
-
-      try{
-
-        video.currentTime = 0;
-
-        await video.play();
-
-        video.classList.add("active");
-
-        if(poster){
-          poster.classList.add("hide");
-        }
-
-      }catch(err){
-        console.log(err);
-      }
-
-    });
-
-    card.addEventListener("mouseleave", () => {
-
-      video.pause();
-
-      video.currentTime = 0;
-
-      video.classList.remove("active");
-
-      if(poster){
-        poster.classList.remove("hide");
-      }
-
-    });
-
-  });
-
-}
-
-/* =========================================================
    COMMERCIAL VIDEO SWITCHER
 ========================================================= */
 
@@ -708,39 +531,39 @@ function renderCommercialSlider(videos = []) {
     !mainSource
   ) return;
 
+  const availableVideos = videos.filter(video => video?.videoUrl).slice(0, 5);
+
+  if (!availableVideos.length) {
+    thumbTrack.innerHTML = '<span class="commercial-thumb-loading">Commercial films are being prepared. Please check back soon.</span>';
+    return;
+  }
+
   /* DEFAULT VIDEO */
 
-  if(videos.length > 0){
-
-    mainSource.src =
-      videos[0].videoUrl;
-
-    mainVideo.load();
-
-  }
+  mainSource.src = availableVideos[0].videoUrl;
+  mainVideo.load();
+  mainVideo.play().catch(() => {});
 
   /* RENDER THUMB */
 
   thumbTrack.innerHTML =
-    videos
-      .slice(0, 5)
+    availableVideos
       .map((v, index) => `
 
-        <div
-          class="
-            commercial-thumb
-            ${index === 0 ? "active" : ""}
-          "
+        <button
+          type="button"
+          class="commercial-thumb ${index === 0 ? "active" : ""}"
           data-video="${v.videoUrl}"
+          aria-pressed="${index === 0}"
+          aria-label="Play ${v.title || `commercial ${index + 1}`}"
         >
-
-          <img
-            src="${v.thumbnail}"
-            alt="${v.title}"
-            loading="lazy"
-          />
-
-        </div>
+          <img src="${v.thumbnail || ""}" alt="" loading="lazy" />
+          <span class="commercial-thumb-copy">
+            <strong>${v.title || `Campaign ${index + 1}`}</strong>
+            <small>BRAND FILM</small>
+          </span>
+          <span class="commercial-thumb-play material-symbols-outlined" aria-hidden="true">play_arrow</span>
+        </button>
 
       `)
       .join("");
@@ -758,11 +581,13 @@ function renderCommercialSlider(videos = []) {
       "click",
       () => {
 
-        thumbs.forEach(t =>
-          t.classList.remove("active")
-        );
+        thumbs.forEach(t => {
+          t.classList.remove("active");
+          t.setAttribute("aria-pressed", "false");
+        });
 
         thumb.classList.add("active");
+        thumb.setAttribute("aria-pressed", "true");
 
         const src =
           thumb.dataset.video;
@@ -771,228 +596,12 @@ function renderCommercialSlider(videos = []) {
 
         mainVideo.load();
 
-        mainVideo.play();
+        mainVideo.play().catch(() => {});
 
       }
     );
 
   });
-
-}
-
-function videoHorizontalCard(v, index) {
-
-  return `
-    <div class="snap-card" data-index="${index}">
-
-      <video
-        class="snap-video"
-        data-src="${v.videoUrl}"
-        muted
-        loop
-        playsinline
-        preload="none"
-      ></video>
-
-    </div>
-  `;
-}
-
-/* =========================================================
-   SLIDER
-========================================================= */
-
-function initSlider() {
-
-  const track =
-    document.getElementById("scroll-track");
-
-  const cards =
-    document.querySelectorAll(".snap-card");
-
-  const next =
-    document.getElementById("btn-right");
-
-  const prev =
-    document.getElementById("btn-left");
-
-  if (!track || !cards.length)
-    return;
-
-  let current = 0;
-
-  const gap = 24;
-
-  const cardWidth =
-    cards[0].offsetWidth + gap;
-
-  function updateSlider() {
-
-    track.style.transform =
-      `translate3d(-${current * cardWidth}px,0,0)`;
-
-    playActiveVideo(current);
-
-  }
-
-  next?.addEventListener("click", () => {
-
-    current =
-      Math.min(current + 1, cards.length - 1);
-
-    updateSlider();
-
-  });
-
-  prev?.addEventListener("click", () => {
-
-    current =
-      Math.max(current - 1, 0);
-
-    updateSlider();
-
-  });
-
-  updateSlider();
-
-}
-
-function initHoverVideos() {
-
-  const cards =
-    document.querySelectorAll(".video-card");
-
-  cards.forEach(card => {
-
-    const video =
-      card.querySelector(".hover-video");
-
-    // LOAD VIDEO 1 LẦN
-    function loadVideo() {
-
-      if (!video.src) {
-
-        video.src =
-          video.dataset.src;
-
-        video.load();
-
-      }
-
-    }
-
-    // HOVER IN
-    card.addEventListener("mouseenter", () => {
-
-      loadVideo();
-
-      // pause tất cả video khác
-      document
-        .querySelectorAll(".hover-video")
-        .forEach(v => {
-
-          if (v !== video) {
-
-            v.pause();
-            v.currentTime = 0;
-
-          }
-
-        });
-
-      video.play().catch(() => {});
-
-    });
-
-    // HOVER OUT
-    card.addEventListener("mouseleave", () => {
-
-      video.pause();
-
-      video.currentTime = 0;
-
-    });
-
-  });
-
-}
-
-function playActiveVideo(index) {
-
-  const videos =
-    document.querySelectorAll(".snap-video");
-
-  videos.forEach((video, i) => {
-
-    if (!video.src) {
-
-      video.src = video.dataset.src;
-
-      video.load();
-
-    }
-
-    if (i === index) {
-
-      video.play().catch(() => {});
-
-    } else {
-
-      video.pause();
-
-    }
-
-  });
-
-}
-
-/* =========================================================
-   LAZY VIDEOS
-========================================================= */
-
-function initLazyVideos() {
-
-  const videos =
-    document.querySelectorAll(".lazy-video");
-
-  if (!videos.length)
-    return;
-
-  const observer =
-    new IntersectionObserver((entries) => {
-
-      entries.forEach(entry => {
-
-        const video = entry.target;
-
-        if (entry.isIntersecting) {
-
-          if (!video.src) {
-
-            video.src =
-              video.dataset.src;
-
-            video.load();
-
-          }
-
-          video.play().catch(() => {});
-
-        } else {
-
-          video.pause();
-
-        }
-
-      });
-
-    }, {
-      threshold: 0.35
-    });
-
-  videos.forEach(video =>
-    observer.observe(video)
-  );
 
 }
 
@@ -1013,18 +622,26 @@ function renderImagery(images = []) {
 
 }
 
-function imageCard(img) {
+function imageCard(img, index) {
+  const captions = [
+    ["Product Visual Study", "Sculpted studio light, rich materials, and reflective surfaces."],
+    ["Material & Refraction", "A close-up study of form, texture, and light."],
+    ["Spatial Composition", "A surreal product scene shaped by color and geometry."],
+    ["Campaign Art Direction", "A cohesive visual built for modern brand storytelling."]
+  ];
+  const [title, description] = captions[index] || [img.title, "AI-generated visual concept by YOUAI Studio."];
 
   return `
-    <div class="img-card">
-
-      <img
-        src="${img.imageUrl}"
-        alt="${img.title}"
-        loading="lazy"
-      />
-
-    </div>
+    <article class="home-image-card img-card">
+      <img src="${img.imageUrl}" alt="${img.title || title}" loading="lazy" />
+      <div class="home-image-shade"></div>
+      <div class="home-image-copy">
+        <span class="home-image-label">${img.title || img.type || "AI Visual"}</span>
+        <h3>${title}</h3>
+        <p>${description}</p>
+      </div>
+      ${index === 3 ? '<span class="home-image-quality">AI VISUAL SERIES</span>' : ""}
+    </article>
   `;
 }
 
@@ -1184,41 +801,29 @@ function renderHighlights(highlights = []) {
    CARD
 ========================================================= */
 
-function highlightCard(card) {
+function highlightCard(card, index, projects) {
+  const hasAward = /top 10|award/i.test(card.description || "");
+  const number = String(index + 1).padStart(2, "0");
 
   return `
-  
-    <div class="highlight-card">
-
-      <!-- IMAGE -->
-      <img
-        src="${card.image}"
-        alt="${card.title}"
-        loading="lazy"
-      />
-
-      <!-- OVERLAY -->
-      <div class="highlight-overlay"></div>
-
-      <!-- CONTENT -->
-      <div class="highlight-content">
-
-        <span class="highlight-type">
-          ${card.type}
-        </span>
-
-        <h3>
-          ${card.title}
-        </h3>
-
-        <p>
-          ${card.description}
-        </p>
-
+    <article class="home-highlight-card">
+      <div class="home-highlight-poster">
+        <img src="${card.image}" alt="${card.title}" loading="lazy" />
+        <div class="home-highlight-badges">
+          <span>${card.type || "AI FILM"}</span>
+          ${hasAward ? "<strong>TOP 10 BEST</strong>" : ""}
+        </div>
+        <a class="home-highlight-play" href="#filmAI" aria-label="Explore ${card.title} in Film AI"><span class="material-symbols-outlined" aria-hidden="true">play_arrow</span></a>
       </div>
-
-    </div>
-
+      <div class="home-highlight-copy">
+        <h3>${card.title}</h3>
+        <p>${card.description}</p>
+        <div class="home-highlight-meta">
+          <span>FEATURED PROJECT ${number} / ${String(projects.length).padStart(2, "0")}</span>
+          <span>AI CINEMA</span>
+        </div>
+      </div>
+    </article>
   `;
 }
 
@@ -1249,46 +854,47 @@ function renderFilmShowcase(videos = []) {
     !mainSource
   ) return;
 
-  /* DEFAULT VIDEO */
+  const availableVideos = videos.filter(video => video?.videoUrl).slice(0, 4);
 
-  if(videos.length > 0){
-
-    mainSource.src =
-      videos[0].videoUrl;
-
-    mainVideo.load();
-
+  if (!availableVideos.length) {
+    thumbTrack.innerHTML = '<p class="film-thumb-loading">Films are being prepared. Please check back soon.</p>';
+    return;
   }
 
-  /* RENDER 3 THUMB */
+  /* DEFAULT VIDEO */
+
+  mainSource.src = availableVideos[0].videoUrl;
+  const defaultPoster = availableVideos[0].poster || "";
+  if (/\.(jpe?g|png|webp|avif)(\?|$)/i.test(defaultPoster)) mainVideo.poster = defaultPoster;
+  mainVideo.load();
+  mainVideo.play().catch(() => {});
+
+  /* FILM THUMBNAILS */
 
   thumbTrack.innerHTML =
-    videos
-      .slice(0, 3)
-      .map((v, index) => `
+    availableVideos
+      .map((v, index) => {
+        const poster = /\.(jpe?g|png|webp|avif)(\?|$)/i.test(v.poster || "") ? v.poster : "";
+        return `
 
-        <div
-          class="
-            film-thumb
-            ${index === 0 ? "active" : ""}
-          "
+        <button
+          type="button"
+          class="film-thumb ${index === 0 ? "active" : ""}"
           data-video="${v.videoUrl}"
+          data-poster="${poster}"
+          aria-pressed="${index === 0}"
+          aria-label="Play ${v.title || `film ${index + 1}`}"
         >
+          ${poster ? `<img src="${poster}" alt="" loading="lazy" />` : `<video muted playsinline preload="metadata"><source src="${v.videoUrl}" type="video/mp4"></video>`}
+          <span class="film-thumb-copy">
+            <strong>${v.title || `Film ${index + 1}`}</strong>
+            <small>${v.genre || "AI FILM"}</small>
+          </span>
+          <span class="film-thumb-play material-symbols-outlined" aria-hidden="true">play_arrow</span>
+        </button>
 
-          <video
-            muted
-            playsinline
-            preload="metadata"
-          >
-            <source
-              src="${v.videoUrl}"
-              type="video/mp4"
-            >
-          </video>
-
-        </div>
-
-      `)
+      `;
+      })
       .join("");
 
   /* CHANGE VIDEO */
@@ -1304,20 +910,23 @@ function renderFilmShowcase(videos = []) {
       "click",
       () => {
 
-        thumbs.forEach(t =>
-          t.classList.remove("active")
-        );
+        thumbs.forEach(t => {
+          t.classList.remove("active");
+          t.setAttribute("aria-pressed", "false");
+        });
 
         thumb.classList.add("active");
+        thumb.setAttribute("aria-pressed", "true");
 
         const src =
           thumb.dataset.video;
 
         mainSource.src = src;
+        if (thumb.dataset.poster) mainVideo.poster = thumb.dataset.poster;
 
         mainVideo.load();
 
-        mainVideo.play();
+        mainVideo.play().catch(() => {});
 
       }
     );

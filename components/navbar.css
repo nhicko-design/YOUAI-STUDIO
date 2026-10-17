@@ -51,21 +51,10 @@
 }
 
 .navbar-logo img{
-  width: 42px;
-  height: 42px;
-
-  border-radius: 50%;
-
-  object-fit: cover;
-}
-
-.navbar-logo span{
-  color: white;
-
-  font-size: 18px;
-  font-weight: 800;
-
-  letter-spacing: 1px;
+  display: block;
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
 }
 
 /* =========================================================

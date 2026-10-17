@@ -76,6 +76,14 @@
   font-weight: 800;
 }
 
+.hero-title img {
+  display: block;
+  width: min(570px, 82vw);
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 28px rgba(168, 85, 247, .22));
+}
+
 /* 🌌 GLOW */
 
 .hero-glow {

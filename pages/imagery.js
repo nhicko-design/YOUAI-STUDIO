@@ -22,19 +22,22 @@ export async function Imagery(){
     ${ImageryGallery(
       "Fashion",
       "Bold editorial visuals crafted to define identity and set trends.",
-      data.imageryFashion
+      data.imageryFashion,
+      "imagery-fashion"
     )}
 
     ${ImageryGallery(
       "Product",
       "High-end product visuals for advertising, ecommerce and campaigns.",
-      data.imageryProduct
+      data.imageryProduct,
+      "imagery-product"
     )}
 
     ${ImageryGallery(
       "Concept Art",
       "Unlimited creativity from surreal worlds to cinematic universes.",
-      data.imageryConceptArt
+      data.imageryConceptArt,
+      "imagery-concept-art"
     )}
 
     ${ImageryCTA()}

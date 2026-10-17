@@ -189,14 +189,11 @@
 ========================================================= */
 
 .about-title{
-  font-size:
-    clamp(3rem, 6vw, 6rem);
-
-  line-height: .92;
-
-  font-weight: 900;
-
-  letter-spacing: -4px;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2.8rem, 4.4vw, 4.4rem);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -.04em;
 
   color: white;
 
@@ -206,11 +203,13 @@
 .about-title span{
   background:
     linear-gradient(
-      90deg,
-      #a855f7,
-      #ec4899
+      100deg,
+      #a84dff 0%,
+      #c647d6 50%,
+      #ef3f9f 100%
     );
 
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
