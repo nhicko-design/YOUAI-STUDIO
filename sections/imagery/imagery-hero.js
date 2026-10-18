@@ -1,5 +1,5 @@
-export function ImageryHero(images = []) {
-  const hero = images[0]?.imageUrl || "";
+export function ImageryHero(heroImageUrl = "") {
+  const hero = heroImageUrl || "";
 
   return `
     <section class="imagery-hero" aria-labelledby="imagery-hero-title">

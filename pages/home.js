@@ -1,4 +1,8 @@
-import { getVideos } from "../api.js";
+import {
+  getContent,
+  pickByIds,
+  resolveHighlights,
+} from "../api.js";
 
 /* =========================================================
    HOME
@@ -285,7 +289,8 @@ export function Home() {
           <div class="relative">
 
             <img 
-              src="https://assets.youaistudio.vn/images/About.png"
+              id="about-studio-image"
+              src=""
               alt="YOUAI Studio"
               class="about-image"
             />
@@ -458,18 +463,27 @@ async function loadAllData() {
 
   try {
 
-    const data = await getVideos();
-    const videosFilmAI = data.videos.slice(0, 4);
+    const data = await getContent();
 
-    renderHero(data.hero);
+    renderHero(data.home?.hero);
 
-    renderCommercialSlider(data.commercialHome);
+    renderAboutImage(data.home?.about?.image);
 
-    renderFilmShowcase(videosFilmAI);
+    renderFilmShowcase(
+      pickByIds(data.filmAI.projects, data.home.filmPreviewIds)
+    );
 
-    renderHighlights(data.highlights);
+    renderCommercialSlider(
+      pickByIds(data.commercial.campaigns, data.home.commercialPreviewIds)
+    );
 
-    renderImagery(data.imageryHome);
+    renderHighlights(
+      resolveHighlights(data.home.highlights, data.filmAI.projects)
+    );
+
+    renderImagery(
+      pickByIds(data.imagery.images, data.home.imageryPreviewIds)
+    );
 
   } catch (err) {
 
@@ -485,10 +499,10 @@ async function loadAllData() {
 
 function renderHero(hero) {
 
-  if (!hero?.backgroundVideos?.length)
-    return;
+  const src = hero?.backgroundVideo;
 
-  const bg = hero.backgroundVideos[0];
+  if (!src)
+    return;
 
   const video =
     document.querySelector(".bg-video");
@@ -496,11 +510,24 @@ function renderHero(hero) {
   if (!video)
     return;
 
-  video.src = bg.videoUrl;
+  video.src = src;
 
   video.load();
 
   video.play().catch(() => {});
+
+}
+
+function renderAboutImage(imageUrl) {
+
+  if (!imageUrl)
+    return;
+
+  const img =
+    document.getElementById("about-studio-image");
+
+  if (img)
+    img.src = imageUrl;
 
 }
 
@@ -793,7 +820,9 @@ function renderHighlights(highlights = []) {
     return;
 
   grid.innerHTML =
-    highlights.map(highlightCard).join("");
+    highlights
+      .map((card, index) => highlightCard(card, index, highlights))
+      .join("");
 
 }
 

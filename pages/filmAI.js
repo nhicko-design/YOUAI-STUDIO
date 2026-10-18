@@ -1,4 +1,4 @@
-import { getVideos } from "../api.js";
+import { getContent } from "../api.js";
 
 import { FilmAIHero }
 from "../sections/film-ai/film-ai-hero.js";
@@ -16,7 +16,7 @@ import { StartFilmSection }
 from "../sections/film-ai/start-film.js";
 export async function FilmAI() {
 
-  const data = await getVideos();
+  const data = await getContent();
 
   return `
 

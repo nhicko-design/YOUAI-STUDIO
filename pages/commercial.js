@@ -1,4 +1,4 @@
-import { getVideos } from "../api.js";
+import { getContent, pickByIds } from "../api.js";
 
 import { CommercialHero }
 from "../sections/commercial/commercial-hero.js";
@@ -17,9 +17,12 @@ from "../sections/commercial/commercial-player.js";
 
 export async function Commercial() {
 
-  const data = await getVideos();
+  const data = await getContent();
+  const showcase = pickByIds(
+    data.commercial.campaigns,
+    data.commercial.showcaseIds
+  );
 
-  // 🔥 init sau khi DOM render
   setTimeout(() => {
 
     initCommercialPlayer();
@@ -32,9 +35,7 @@ export async function Commercial() {
       data.commercial.hero
     )}
 
-    ${CommercialShowcase(
-      data.commercial.showcase
-    )}
+    ${CommercialShowcase(showcase)}
 
     ${CommercialBrands(
       data.commercial.brands
