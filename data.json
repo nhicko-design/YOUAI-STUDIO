@@ -1,4 +1,4 @@
-{
+﻿{
   "version": 1,
 
   "home": {
@@ -85,7 +85,24 @@
         "poster": "https://assets.youaistudio.vn/videos/filmAI/final%20animation%206.mp4",
         "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/final%20animation%206.mp4",
         "description": "A surreal story of a coder trapped inside a collapsing digital world."
+      },
+      {
+        "id": "frost",
+        "title": "Frost and Fire",
+        "genre": "Sci-Fi Psychological",
+        "poster": "https://assets.youaistudio.vn/videos/filmAI/FROST%20AND%20FIRE%20.mp4",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/FROST%20AND%20FIRE%20.mp4",
+        "description": "A surreal story of a coder trapped inside a collapsing digital world."
+      },
+      {
+        "id": "spirit",
+        "title": "Spirit Summoning",
+        "genre": "Sci-Fi Psychological",
+        "poster": "https://assets.youaistudio.vn/videos/filmAI/GoiHon.mp4",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/GoiHon.mp4",
+        "description": "A surreal story of a coder trapped inside a collapsing digital world."
       }
+      
     ]
   },
 
