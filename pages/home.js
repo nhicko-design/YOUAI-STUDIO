@@ -153,6 +153,23 @@ export function Home() {
 
     </section>
 
+    <!-- FEATURED FILM -->
+    <section class="home-featured-film" aria-labelledby="home-featured-film-heading-title">
+      <div class="home-featured-film-inner">
+        <div class="home-featured-film-heading">
+          <span class="home-featured-film-kicker">YOUAI ORIGINAL · FEATURED FILM</span>
+          <h2 id="home-featured-film-heading-title">Featured film: <span id="home-featured-film-title">Hết Khó</span></h2>
+          <p id="home-featured-film-caption">An original film by YOUAI Studio.</p>
+        </div>
+        <div class="home-featured-film-frame">
+          <video id="home-featured-film-video" controls playsinline preload="metadata" aria-label="Featured YOUAI Studio film">
+            <source id="home-featured-film-source" src="" />
+            Your browser does not support video playback.
+          </video>
+        </div>
+      </div>
+    </section>
+
     <!-- ================================================= -->
 <!-- COMMERCIAL SHOWCASE -->
 <!-- ================================================= -->
@@ -507,6 +524,8 @@ async function loadAllData() {
 
     renderFilmShowcase(videosFilmAI);
 
+    renderFeaturedFilm(data.featuredFilm);
+
     renderHighlights(data.highlights);
 
     renderImagery(data.imageryHome);
@@ -542,6 +561,21 @@ function renderHero(hero) {
 
   video.play().catch(() => {});
 
+}
+
+function renderFeaturedFilm(film) {
+  const video = document.getElementById("home-featured-film-video");
+  const source = document.getElementById("home-featured-film-source");
+  const title = document.getElementById("home-featured-film-title");
+  const caption = document.getElementById("home-featured-film-caption");
+
+  if (!video || !source || !film?.videoUrl) return;
+
+  source.src = film.videoUrl;
+  if (film.poster) video.poster = film.poster;
+  if (title && film.title) title.textContent = film.title;
+  if (caption && film.description) caption.textContent = film.description;
+  video.load();
 }
 
 /* =========================================================

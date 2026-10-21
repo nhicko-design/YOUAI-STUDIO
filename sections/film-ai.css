@@ -13,6 +13,80 @@
   overflow: hidden;
 }
 
+/* Homepage featured film player */
+.home-featured-film{
+  position: relative;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 108px) 24px;
+  background:
+    radial-gradient(ellipse at 50% 38%, rgba(126,34,206,.16), transparent 58%),
+    #09090c;
+  color: #f8fafc;
+}
+
+.home-featured-film-inner{
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.home-featured-film-heading{
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.home-featured-film-kicker{
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  border: 1px solid rgba(224,186,255,.55);
+  border-radius: 999px;
+  background: rgba(111,0,190,.34);
+  color: #e9d5ff;
+  font: 700 10px/1.2 "Plus Jakarta Sans", sans-serif;
+  letter-spacing: .12em;
+}
+
+.home-featured-film-heading h2{
+  margin: 0;
+  color: #fff;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(30px, 4.3vw, 54px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.04em;
+}
+
+.home-featured-film-heading h2 span{
+  background: linear-gradient(100deg, #a84dff 0%, #c647d6 55%, #ef3f9f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-featured-film-heading p{
+  margin: 12px 0 0;
+  color: #a7a2b1;
+  font: 14px/1.65 "Plus Jakarta Sans", sans-serif;
+}
+
+.home-featured-film-frame{
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(216,180,254,.32);
+  border-radius: clamp(14px, 2vw, 24px);
+  background: #050507;
+  box-shadow: 0 24px 80px rgba(0,0,0,.48), 0 0 52px rgba(168,85,247,.13);
+}
+
+.home-featured-film-frame video{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #050507;
+}
+
 .film-shell{
   position: relative;
   z-index: 2;
@@ -725,6 +799,18 @@
 ========================================================= */
 
 @media(max-width: 768px){
+
+  .home-featured-film{
+    padding: 58px 16px;
+  }
+
+  .home-featured-film-heading{
+    margin-bottom: 20px;
+  }
+
+  .home-featured-film-heading p{
+    font-size: 12px;
+  }
 
   .film-ai-section{
     padding: 80px 16px;

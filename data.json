@@ -45,6 +45,11 @@
         "description": "A surreal story of a coder trapped inside a collapsing digital world."
       }
   ],
+  "featuredFilm": {
+    "title": "H\u1ebft Kh\u00f3",
+    "description": "An original film by YOUAI Studio.",
+    "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/H%E1%BA%BET%20KH%C3%93.mov"
+  },
   "commercialHome": [
     {
       "title": "Mackbook",
