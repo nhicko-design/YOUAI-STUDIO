@@ -14,7 +14,7 @@
       "image": "https://assets.youaistudio.vn/images/about.JPG"
     },
     "filmPreviewIds": ["frost", "spirit", "seedance", "animation"],
-    "commercialPreviewIds": ["macbook", "iphone", "nike"],
+    "commercialPreviewIds": ["tiktokshop01", "tiktokshop02", "viettel-5g", "vt"],
     "imageryPreviewIds": ["perfume-1", "perfume-2", "perfume-3", "perfume-4"],
     "highlights": [
       {
@@ -111,45 +111,33 @@
       "title": "AI-Powered Commercial Production",
       "subtitle": "Smarter Production. Faster Results. Stronger Impact.",
       "description": "We help brands create high-quality commercials using AI — reducing production time, optimizing costs, and unlocking limitless creative possibilities.",
-      "backgroundVideo": "https://assets.youaistudio.vn/videos/commercial/NIKE.mov"
+      "backgroundVideo": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TIKOKSHOP%208.8%20(1).mp4"
     },
     "showcaseIds": ["laroche-posay", "iphone", "cartier", "macorner"],
     "campaigns": [
       {
-        "id": "macbook",
-        "title": "Mackbook",
-        "thumbnail": "https://assets.youaistudio.vn/images/commercial/shopping%20(4).webp",
-        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/MACBOOKPRo.MOV"
+        "id": "tiktokshop01",
+        "title": "TikTok Shop",
+        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TIKOKSHOP%208.8%20(1).mp4",
+        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TIKOKSHOP%208.8%20(1).mp4"
       },
       {
-        "id": "iphone",
-        "title": "Iphone",
-        "thumbnail": "https://assets.youaistudio.vn/images/commercial/mau-sac-iphone-17-pro-max.jpg",
-        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/IPHONE17.mov"
+        "id": "tiktokshop02",
+        "title": "TikTok Shop",
+        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TIKTOKSHOP%208.8.mp4",
+        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TIKTOKSHOP%208.8.mp4"
       },
       {
-        "id": "nike",
-        "title": "Nike",
-        "thumbnail": "https://assets.youaistudio.vn/images/commercial/z4027417137451-e4f67b88df4bf8b01a3e1f78917d4e7c.webp",
-        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/NIKE.mov"
+        "id": "viettel-5g",
+        "title": "Viettel 5G",
+        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TVC%20VIETTEL%205G.mov",
+        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TVC%20VIETTEL%205G.mov"
       },
       {
-        "id": "laroche-posay",
-        "title": "Laroche Posay",
-        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/LAROCHE%20POSAY.mov",
-        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/LAROCHE%20POSAY.mov"
-      },
-      {
-        "id": "cartier",
-        "title": "CARTIER",
-        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/CARTIER.mov",
-        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/CARTIER.mov"
-      },
-      {
-        "id": "macorner",
-        "title": "MACORNER",
-        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/MACORNER.mov",
-        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/MACORNER.mov"
+        "id": "vt",
+        "title": "VT",
+        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TVC%20VT.mp4",
+        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TVC%20VT.mp4"
       }
     ],
     "brands": [
