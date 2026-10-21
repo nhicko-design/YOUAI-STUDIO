@@ -346,7 +346,7 @@ export function Home() {
               </div>
 
               <div class="about-stat">
-                <h3>50+</h3>
+                <h3>300+</h3>
                 <p>Creative Projects</p>
               </div>
 

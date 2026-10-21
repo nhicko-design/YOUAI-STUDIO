@@ -3,30 +3,30 @@
 
   "home": {
     "hero": {
-      "backgroundVideo": "https://assets.youaistudio.vn/videos/filmAI/N%C3%89N%20-%20FIX%20BUG.mp4"
+      "backgroundVideo": "https://assets.youaistudio.vn/videos/filmAI/GoiHon.mp4"
     },
     "about": {
-      "image": "https://assets.youaistudio.vn/images/About.png"
+      "image": "https://assets.youaistudio.vn/images/about.JPG"
     },
-    "filmPreviewIds": ["lastbus", "sparrow", "unspoken", "fixbug"],
+    "filmPreviewIds": ["frost", "spirit", "seedance", "animation"],
     "commercialPreviewIds": ["macbook", "iphone", "nike"],
     "imageryPreviewIds": ["perfume-1", "perfume-2", "perfume-3", "perfume-4"],
     "highlights": [
       {
-        "filmId": "sparrow",
-        "title": "Chim Sẻ Kêu Chiều",
+        "filmId": "run-or-die",
+        "title": "Run or Die",
         "type": "AI SHORT FILM",
         "description": "VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD"
       },
       {
-        "filmId": "love-hatred",
-        "title": "Love In Hatred",
+        "filmId": "in-love",
+        "title": "OH NO! I'M IN LOVE WITH MY BEST FRIEND",
         "type": "AI DRAMA",
         "description": "A dark romantic narrative with surreal AI aesthetics."
       },
       {
-        "filmId": "unspoken",
-        "title": "Unspoken Goodbye",
+        "filmId": "zombie",
+        "title": "Zombie Flight",
         "type": "AI CINEMA",
         "description": "VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD"
       }
@@ -42,43 +42,43 @@
     },
     "projects": [
       {
-        "id": "love-hatred",
-        "title": "Love in Hatred",
+        "id": "run-or-die",
+        "title": "Run or Die",
         "genre": "",
-        "poster": "https://assets.youaistudio.vn/thumbnails/LOVE_IN_HATRED.jpg",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/LOVE_IN_HATRED.mp4",
+        "poster": "https://assets.youaistudio.vn/thumbnails/RunOrDie.jpg",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/RUN%20OR%20DIE.mp4",
         "description": "A dark, emotionally charged coming-of-age drama.\n\nThe story begins with a brutal high school tragedy.\n\nHenry — a fragile, introverted boy — becomes the target of relentless bullying due to his sexual identity.\n\nThe breaking point comes when James, the very person Henry secretly loves, publicly humiliates him and destroys the only thing he holds dear.\n\nLove turns into hatred.\n\nHenry disappears after the summer break… only to return as Louis — cold, magnetic, and dangerously calculated.\n\nWhat follows is not just revenge — but a psychological game of identity, desire, and power."
       },
       {
-        "id": "sparrow",
-        "title": "Sparrow's Cry at Dusk",
+        "id": "in-love",
+        "title": "OH NO! I'M IN LOVE WITH MY BEST FRIEND",
         "genre": "TOP 10 BEST VIDEOS IN VIETNAM",
-        "poster": "https://assets.youaistudio.vn/thumbnails/POSTER%20The%20Sparrow%20Cries%20at%20Duck.png",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/The%20Sparrow%20Cries%20at%20Duck.mov",
+        "poster": "https://assets.youaistudio.vn/thumbnails/OH%20NO!%20I'M%20IN%20LOVE%20WITH%20MY%20BEST%20FRIEND__.jpg",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/OH%20NO!%20I'M%20IN%20LOVE%20WITH%20MY%20BEST%20FRIEND.mp4",
         "description": "A deeply moving war-time story of loss, survival, and transformation. After losing both parents in a tragic misunderstanding during wartime, a young girl is left alone in a world torn apart by conflict. Branded by loss yet driven by resilience, she grows up to become part of the legendary Saigon Special Forces. Her journey is one of silent strength — from innocence shattered… to a life defined by purpose, sacrifice, and quiet courage."
       },
       {
-        "id": "unspoken",
-        "title": "Unspoken Goodbyes",
+        "id": "zombie",
+        "title": "Zombie Flight",
         "genre": "TOP 10 BEST VIDEOS IN VIETNAM",
-        "poster": "https://assets.youaistudio.vn/thumbnails/unspoken_goodbye_thumb.JPG",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/UNSPOKEN%20GOODBYE.mov",
+        "poster": "https://assets.youaistudio.vn/thumbnails/ZombieFlight.jpg",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/ZombieFlight.mp4",
         "description": "A tender and heartbreaking story about love, loyalty, and the things we never get to say. The film follows the quiet life of a grandmother and her devoted dog — their bond simple, yet deeply profound. When the grandmother falls seriously ill, the dog does everything it can to alert the neighbors and save her. But in its desperate attempt to follow her to the hospital, tragedy strikes. The dog never makes it. A story of unconditional love… and a goodbye that was never spoken."
       },
       {
-        "id": "lastbus",
-        "title": "Last Bus",
+        "id": "seedance",
+        "title": "Seedance 2.5",
         "genre": "Psychological Drama",
-        "poster": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784827023/Screenshot_2026-07-24_001557_khs3yb.png",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/THE%20LAST%20BUS.mov",
+        "poster": "https://assets.youaistudio.vn/thumbnails/SEEDANCE2.5.png",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/SEEDANCE2.5.MP4",
         "description": "Short film follows a group of Korean students riding home late at night on what should have been an ordinary school bus ride. While young couple Jeamin and So Hee quietly share a romantic moment in the back seats, an infected girl suddenly boards the bus. As fear spreads through the silent vehicle, the students realize something horrifying is terribly wrong. Trapped inside the moving bus, they must survive one terrifying night before the infection reaches everyone onboard."
       },
       {
-        "id": "fixbug",
-        "title": "Fix Bug",
+        "id": "animation",
+        "title": "Final Animation 6 ",
         "genre": "Sci-Fi Psychological",
-        "poster": "https://assets.youaistudio.vn/thumbnails/fixbug_thumb.JPG",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/N%C3%89N%20-%20FIX%20BUG.mp4",
+        "poster": "https://assets.youaistudio.vn/videos/filmAI/final%20animation%206.mp4",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/final%20animation%206.mp4",
         "description": "A surreal story of a coder trapped inside a collapsing digital world."
       }
     ]
