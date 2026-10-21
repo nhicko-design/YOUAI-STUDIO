@@ -1,0 +1,391 @@
+/* Keep homepage campaign thumbnails isolated from the Commercial page styles. */
+#commercial .commercial-thumb-track{
+  left: 16px;
+  right: 116px;
+  bottom: 16px;
+  transform: none;
+  width: auto;
+  max-width: none;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 6px 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+#commercial .commercial-thumb{
+  flex: 0 0 clamp(100px, 12vw, 140px);
+  width: clamp(100px, 12vw, 140px);
+  height: 76px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 10px;
+  color: white;
+}
+
+#commercial .commercial-thumb img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#commercial .commercial-thumb::after{
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(0,0,0,.06) 10%, rgba(0,0,0,.82) 100%);
+}
+
+#commercial .commercial-thumb.active{
+  border: 1px solid #d2a4ff;
+  box-shadow: 0 0 0 2px rgba(175, 105, 255, .28), 0 8px 24px rgba(0, 0, 0, .3);
+  transform: translateY(-2px);
+}
+
+#commercial .commercial-thumb:hover{
+  transform: translateY(-2px);
+}
+
+#commercial .commercial-thumb-copy{
+  position: absolute;
+  z-index: 2;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  display: grid;
+  gap: 3px;
+  pointer-events: none;
+}
+
+#commercial .commercial-thumb-copy strong{
+  overflow: hidden;
+  color: white;
+  font-size: 10px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#commercial .commercial-thumb-copy small{
+  color: rgba(255, 255, 255, .7);
+  font-size: 7px;
+  letter-spacing: .1em;
+}
+
+#commercial .commercial-thumb-play{
+  position: absolute;
+  z-index: 2;
+  top: 6px;
+  right: 6px;
+  display: grid;
+  width: 21px;
+  height: 21px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(8, 8, 11, .55);
+  color: white;
+  font-size: 15px;
+  pointer-events: none;
+}
+
+#commercial .commercial-thumb.active .commercial-thumb-play{
+  background: #a855f7;
+}
+
+#commercial .commercial-thumb-loading{
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 9px;
+  background: rgba(8, 8, 11, .55);
+  color: rgba(255, 255, 255, .7);
+  font-size: 11px;
+}
+
+@media(max-width: 768px){
+  #commercial .commercial-thumb-track{
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    gap: 6px;
+    padding: 6px 5px;
+  }
+
+  #commercial .commercial-thumb{
+    flex-basis: 112px;
+    width: 112px;
+    height: 64px;
+  }
+}
+
+@media(max-width: 420px){
+  #commercial .commercial-thumb{
+    flex-basis: 96px;
+    width: 96px;
+    height: 58px;
+  }
+}
+
+/* Editorial campaign reel: full-width film with a separate campaign selector. */
+#commercial .commercial-home-shell{
+  display: block;
+  max-width: 1440px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+#commercial .commercial-header{
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .65fr);
+  align-items: end;
+  gap: 48px;
+  max-width: none;
+  margin: 0 0 34px;
+}
+
+#commercial .commercial-headline{
+  min-width: 0;
+}
+
+#commercial .commercial-title{
+  font-family: "Syne", sans-serif;
+  font-size: clamp(3.4rem, 7vw, 6.5rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -.04em;
+}
+
+#commercial .commercial-title span{
+  margin-top: 0;
+  background: linear-gradient(100deg, #a84dff 0%, #c647d6 50%, #ef3f9f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#commercial .commercial-tag{
+  border-color: rgba(183, 135, 255, .25);
+  background: rgba(153, 87, 255, .1);
+  color: #d8b4fe;
+}
+
+#commercial .commercial-intro{
+  padding-bottom: 5px;
+}
+
+#commercial .commercial-desc{
+  max-width: 430px;
+  margin: 0;
+}
+
+#commercial .commercial-workflow span{
+  border-color: rgba(183, 135, 255, .18);
+  color: rgba(233, 221, 248, .78);
+}
+
+#commercial .commercial-cta{
+  border-color: rgba(198, 151, 255, .3);
+  background: linear-gradient(120deg, #a855f7, #7939d4);
+  box-shadow: 0 10px 28px rgba(130, 63, 214, .2);
+}
+
+#commercial .commercial-cta:hover{
+  box-shadow: 0 14px 34px rgba(168, 85, 247, .3);
+}
+
+#commercial .commercial-player-wrap{
+  max-width: none;
+}
+
+#commercial .commercial-main-video{
+  aspect-ratio: 16 / 9;
+  border-color: rgba(255, 255, 255, .15);
+  border-radius: 16px;
+  box-shadow: 0 28px 72px rgba(0, 0, 0, .38);
+}
+
+#commercial .commercial-player-topline{
+  top: 22px;
+  left: 24px;
+  right: 24px;
+  letter-spacing: .17em;
+}
+
+#commercial .commercial-player-topline b{
+  margin-left: 6px;
+  color: #d8b4fe;
+  font-weight: 700;
+}
+
+#commercial .commercial-player-format{
+  background: rgba(22, 14, 12, .42);
+}
+
+#commercial .commercial-learn-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  right: 24px;
+  bottom: 22px;
+  border-color: rgba(255, 220, 198, .35);
+  background: rgba(30, 19, 15, .52);
+  font-size: 10px;
+}
+
+#commercial .commercial-learn-btn .material-symbols-outlined{
+  font-size: 15px;
+}
+
+#commercial .commercial-film-nav{
+  margin-top: 22px;
+}
+
+#commercial .commercial-film-nav-heading{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 11px;
+}
+
+#commercial .commercial-film-nav-heading span{
+  color: #d8b4fe;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+#commercial .commercial-film-nav-heading small{
+  color: rgba(255, 255, 255, .48);
+  font-size: 11px;
+}
+
+#commercial .commercial-thumb-track{
+  position: relative;
+  inset: auto;
+  transform: none;
+  display: flex;
+  width: 100%;
+  max-width: none;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 5px 4px 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+#commercial .commercial-thumb{
+  flex: 0 0 clamp(190px, 20vw, 250px);
+  width: clamp(190px, 20vw, 250px);
+  height: 116px;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 10px;
+  background: #171311;
+  opacity: .75;
+}
+
+#commercial .commercial-thumb.active{
+  border-color: #c084fc;
+  box-shadow: 0 0 0 2px rgba(175, 105, 255, .22);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+#commercial .commercial-thumb:hover{
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+#commercial .commercial-thumb::after{
+  background: linear-gradient(180deg, rgba(0,0,0,.02) 0%, rgba(13,9,7,.82) 100%);
+}
+
+#commercial .commercial-thumb-copy{
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  gap: 5px;
+}
+
+#commercial .commercial-thumb-copy strong{
+  font-size: 12px;
+}
+
+#commercial .commercial-thumb-copy small{
+  color: #d8b4fe;
+  font-size: 8px;
+}
+
+#commercial .commercial-thumb-play{
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  font-size: 17px;
+}
+
+#commercial .commercial-thumb.active .commercial-thumb-play{
+  background: #a855f7;
+}
+
+@media(max-width: 900px){
+  #commercial .commercial-header{
+    grid-template-columns: 1fr .9fr;
+    gap: 28px;
+  }
+}
+
+@media(max-width: 700px){
+  #commercial .commercial-header{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 26px;
+  }
+
+  #commercial .commercial-title{
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  #commercial .commercial-desc{
+    font-size: 14px;
+  }
+
+  #commercial .commercial-main-video{
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+  }
+
+  #commercial .commercial-player-topline{
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    font-size: 7px;
+  }
+
+  #commercial .commercial-player-format{
+    display: none;
+  }
+
+  #commercial .commercial-learn-btn{
+    display: none;
+  }
+
+  #commercial .commercial-thumb-track{
+    gap: 9px;
+  }
+
+  #commercial .commercial-thumb{
+    flex-basis: 190px;
+    width: 190px;
+    height: 100px;
+  }
+}

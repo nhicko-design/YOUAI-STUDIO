@@ -10,13 +10,9 @@ export function Navbar() {
         <a href="#home" class="navbar-logo">
 
           <img
-            src="./images/logo.png"
-            alt="YOU AI"
+            src="./images/brand/Logo_YouAI_3.png"
+            alt="YOUAI Studio"
           />
-
-          <span>
-            YOU AI
-          </span>
 
         </a>
 
