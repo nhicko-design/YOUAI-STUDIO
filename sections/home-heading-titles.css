@@ -1,0 +1,24 @@
+/* Shared heading scale for the main studio introduction sections. */
+.film-ai-section .film-title-neo,
+#commercial .commercial-title,
+#about-studio .about-title{
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -.04em;
+}
+
+#commercial .commercial-title span{
+  display: inline;
+  margin: 0;
+}
+
+@media(max-width: 700px){
+  .film-ai-section .film-title-neo,
+  #commercial .commercial-title,
+  #about-studio .about-title{
+    font-size: clamp(2.15rem, 8vw, 2.6rem);
+    line-height: 1.08;
+  }
+}

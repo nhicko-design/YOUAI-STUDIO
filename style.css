@@ -34,6 +34,10 @@
 
 @import url("./sections/imagery/imagery.css");
 @import url("./sections/contact.css");
+@import url("./sections/footer.css");
+@import url("./sections/home-showcases.css");
+@import url("./sections/commercial-home.css");
+@import url("./sections/home-heading-titles.css");
 
 .container{
   width: min(1400px, calc(100% - 80px));

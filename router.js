@@ -9,8 +9,18 @@ export async function renderRoute() {
   const page =
     document.getElementById("page");
 
-  const hash =
+  const requestedHash =
     window.location.hash || "#home";
+
+  const homeAnchors = {
+    "#ai-imagery": "ai-imagery",
+    "#highlight-projects": "highlight-projects",
+    "#about-studio": "about-studio"
+  };
+
+  const hash = homeAnchors[requestedHash]
+    ? "#home"
+    : requestedHash;
 
   if (hash === "#filmAI") {
 
@@ -41,6 +51,14 @@ export async function renderRoute() {
     page.innerHTML =
       await Home();
 
+  }
+
+  const anchorId = homeAnchors[requestedHash];
+
+  if (anchorId) {
+    requestAnimationFrame(() => {
+      document.getElementById(anchorId)?.scrollIntoView();
+    });
   }
 
 }

@@ -12,6 +12,9 @@ from "./components/navbar.js";
 import { VideoModal }
 from "./components/video-modal.js";
 
+import { Footer }
+from "./components/footer.js";
+
 import "./components/video-modal-handler.js";
 
 /* =========================================================
@@ -42,6 +45,8 @@ function render() {
     ${Navbar()}
 
     <main id="page"></main>
+
+    ${Footer()}
 
     ${VideoModal()}
 

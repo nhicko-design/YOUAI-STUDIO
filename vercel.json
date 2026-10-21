@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/media/**/*.mov",
+      "source": "/media/:path(.*\\.mov)",
       "headers": [
         {
           "key": "Content-Type",
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "source": "/media/**/*.mp4",
+      "source": "/media/:path(.*\\.mp4)",
       "headers": [
         {
           "key": "Content-Type",

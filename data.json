@@ -1,187 +1,37 @@
 {
-  "hero": {
-    "backgroundVideos": [
+  "version": 1,
+
+  "home": {
+    "hero": {
+      "backgroundVideo": "https://assets.youaistudio.vn/videos/filmAI/GoiHon.mp4"
+    },
+    "about": {
+      "image": "https://assets.youaistudio.vn/images/about.JPG"
+    },
+    "filmPreviewIds": ["frost", "spirit", "seedance", "animation"],
+    "commercialPreviewIds": ["macbook", "iphone", "nike"],
+    "imageryPreviewIds": ["perfume-1", "perfume-2", "perfume-3", "perfume-4"],
+    "highlights": [
       {
-        "id": "bg1",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/N%C3%89N%20-%20FIX%20BUG.mp4",
-        "title": "BackGround1"
+        "filmId": "run-or-die",
+        "title": "Run or Die",
+        "type": "AI SHORT FILM",
+        "description": "VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD"
+      },
+      {
+        "filmId": "in-love",
+        "title": "OH NO! I'M IN LOVE WITH MY BEST FRIEND",
+        "type": "AI DRAMA",
+        "description": "A dark romantic narrative with surreal AI aesthetics."
+      },
+      {
+        "filmId": "zombie",
+        "title": "Zombie Flight",
+        "type": "AI CINEMA",
+        "description": "VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD"
       }
     ]
   },
-  "videos": [
-    {
-        "id": "theLastBug",
-        "title": "The Last Bus",
-        "genre": "Psychological Drama",
-        "poster": "https://assets.youaistudio.vn/videos/filmAI/The%20Last%20Bus.mp4",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/THE%20LAST%20BUS.mov",
-        "description": "A dark emotionally charged coming-of-age drama exploring identity, obsession, revenge and desire."
-      },
-
-      {
-        "id": "sparrow",
-        "title": "Sparrow's Cry at Dusk",
-        "genre": "War Drama",
-        "poster": "https://assets.youaistudio.vn/thumbnails/POSTER%20The%20Sparrow%20Cries%20at%20Duck.png",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/The%20Sparrow%20Cries%20at%20Duck.mov",
-        "description": "A tragic wartime journey of survival, sacrifice and silent strength."
-      },
-
-      {
-        "id": "unspoken",
-        "title": "Unspoken Goodbyes",
-        "genre": "Emotional Drama",
-        "poster": "https://assets.youaistudio.vn/thumbnails/unspoken_goodbye_thumb.JPG",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/UNSPOKEN%20GOODBYE.mov",
-        "description": "A heartbreaking story about unconditional love between a grandmother and her loyal dog."
-      },
-
-      {
-        "id": "fixbug",
-        "title": "Fix Bug",
-        "genre": "Sci-Fi Psychological",
-        "poster": "https://assets.youaistudio.vn/thumbnails/fixbug_thumb.JPG",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/N%C3%89N%20-%20FIX%20BUG.mp4",
-        "description": "A surreal story of a coder trapped inside a collapsing digital world."
-      }
-  ],
-  "commercialHome": [
-    {
-      "title": "Mackbook",
-      "thumbnail":"https://assets.youaistudio.vn/images/commercial/shopping%20(4).webp",
-      "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820398/0723_4_vcyszu.mp4"
-    },
-
-    {
-      "title": "Iphone",
-      "thumbnail":"https://assets.youaistudio.vn/images/commercial/mau-sac-iphone-17-pro-max.jpg",
-      "videoUrl": "https://assets.youaistudio.vn/videos/commercial/IPHONE17.mov"
-    },
-
-    {
-      "title": "Nike",
-      "thumbnail":"https://assets.youaistudio.vn/images/commercial/z4027417137451-e4f67b88df4bf8b01a3e1f78917d4e7c.webp",
-      "videoUrl": "https://assets.youaistudio.vn/videos/commercial/NIKE.mov"
-    }
-  ],
-
-  "highlights": 
-  [
-    {
-      "title": "Chim Sẻ Kêu Chiều",
-      "type": "AI SHORT FILM",
-      "description": "VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD",
-      "image": "https://assets.youaistudio.vn/thumbnails/POSTER%20The%20Sparrow%20Cries%20at%20Duck.png"
-    },
-
-    {
-      "title": "Love In Hatred",
-      "type": "AI DRAMA",
-      "description": "A dark romantic narrative with surreal AI aesthetics.",
-      "image": "https://assets.youaistudio.vn/thumbnails/LOVE_IN_HATRED.jpg"
-    },
-
-    {
-      "title": "Unspoken Goodbye",
-      "type": "AI CINEMA",
-      "description": "VIDEO RANKED AMONG THE TOP 10 BEST VIDEOS IN VIETNAM - CAPCUT SEEDANCE 2.0 GLOBAL AWARD",
-      "image": "https://assets.youaistudio.vn/thumbnails/unspoken_goodbye_thumb.JPG"
-    }
-  ],
-
-  "imageryHome": [
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume1.jpeg",
-      "title": "Concept Art",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume2.jpeg",
-      "title": "Concept Art",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume3.jpeg",
-      "title": "Concept Art",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume4.jpeg",
-      "title": "Concept Art",
-      "type": "portrait"
-    }
-  ],
-  "imageryFashion": [
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/Cartier%201.jpg",
-      "title": "Fashion",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/Cartier%202.jpg",
-      "title": "Fashion",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/Cartier%203.jpg",
-      "title": "Fashion",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/Cartier%205.jpg",
-      "title": "Fashion",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/Cartier%206.jpg",
-      "title": "Fashion",
-      "type": "portrait"
-    }
-  ],
-  "imageryProduct": [
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/snack1.png",
-      "title": "Product",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/snack2.png",
-      "title": "Product",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/snack3.png",
-      "title": "Product",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/snack4.png",
-      "title": "Product",
-      "type": "portrait"
-    }
-  ],
-  "imageryConceptArt": [
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume1.jpeg",
-      "title": "Concept Art",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume2.jpeg",
-      "title": "Concept Art",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume3.jpeg",
-      "title": "Concept Art",
-      "type": "portrait"
-    },
-    {
-      "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume4.jpeg",
-      "title": "Concept Art",
-      "type": "portrait"
-    }
-  ],
 
   "filmAI": {
     "hero": {
@@ -190,145 +40,223 @@
       "description": "We craft emotionally powerful, visually stunning films using cutting-edge AI technology — transforming ideas into cinematic experiences faster, smarter, and without limits.",
       "backgroundVideo": "https://assets.youaistudio.vn/videos/filmAI/THE%20LAST%20BUS.mov"
     },
-
     "projects": [
       {
-        "id": "love-hatred",
-        "title": "Love in Hatred",
+        "id": "run-or-die",
+        "title": "Run or Die",
         "genre": "",
-        "poster": "https://assets.youaistudio.vn/thumbnails/LOVE_IN_HATRED.jpg",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/LOVE_IN_HATRED.mp4",
+        "poster": "https://assets.youaistudio.vn/thumbnails/RunOrDie.jpg",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/RUN%20OR%20DIE.mp4",
         "description": "A dark, emotionally charged coming-of-age drama.\n\nThe story begins with a brutal high school tragedy.\n\nHenry — a fragile, introverted boy — becomes the target of relentless bullying due to his sexual identity.\n\nThe breaking point comes when James, the very person Henry secretly loves, publicly humiliates him and destroys the only thing he holds dear.\n\nLove turns into hatred.\n\nHenry disappears after the summer break… only to return as Louis — cold, magnetic, and dangerously calculated.\n\nWhat follows is not just revenge — but a psychological game of identity, desire, and power."
-
       },
-
       {
-        "id": "sparrow",
-        "title": "Sparrow's Cry at Dusk",
+        "id": "in-love",
+        "title": "OH NO! I'M IN LOVE WITH MY BEST FRIEND",
         "genre": "TOP 10 BEST VIDEOS IN VIETNAM",
-        "poster": "https://assets.youaistudio.vn/thumbnails/POSTER%20The%20Sparrow%20Cries%20at%20Duck.png",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/The%20Sparrow%20Cries%20at%20Duck.mov",
+        "poster": "https://assets.youaistudio.vn/thumbnails/OH%20NO!%20I'M%20IN%20LOVE%20WITH%20MY%20BEST%20FRIEND__.jpg",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/OH%20NO!%20I'M%20IN%20LOVE%20WITH%20MY%20BEST%20FRIEND.mp4",
         "description": "A deeply moving war-time story of loss, survival, and transformation. After losing both parents in a tragic misunderstanding during wartime, a young girl is left alone in a world torn apart by conflict. Branded by loss yet driven by resilience, she grows up to become part of the legendary Saigon Special Forces. Her journey is one of silent strength — from innocence shattered… to a life defined by purpose, sacrifice, and quiet courage."
       },
-
       {
-        "id": "unspoken",
-        "title": "Unspoken Goodbyes",
+        "id": "zombie",
+        "title": "Zombie Flight",
         "genre": "TOP 10 BEST VIDEOS IN VIETNAM",
-        "poster": "https://assets.youaistudio.vn/thumbnails/unspoken_goodbye_thumb.JPG",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/UNSPOKEN%20GOODBYE.mov",
+        "poster": "https://assets.youaistudio.vn/thumbnails/ZombieFlight.jpg",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/ZombieFlight.mp4",
         "description": "A tender and heartbreaking story about love, loyalty, and the things we never get to say. The film follows the quiet life of a grandmother and her devoted dog — their bond simple, yet deeply profound. When the grandmother falls seriously ill, the dog does everything it can to alert the neighbors and save her. But in its desperate attempt to follow her to the hospital, tragedy strikes. The dog never makes it. A story of unconditional love… and a goodbye that was never spoken."
       },
-
       {
-        "id": "lastbus",
-        "title": "Last Bus",
-        "genre": "",
-        "poster": "https://res.cloudinary.com/dyxcskrss/image/upload/v1784827023/Screenshot_2026-07-24_001557_khs3yb.png",
-        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/THE%20LAST%20BUS.mov",
+        "id": "seedance",
+        "title": "Seedance 2.5",
+        "genre": "Psychological Drama",
+        "poster": "https://assets.youaistudio.vn/thumbnails/SEEDANCE2.5.png",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/SEEDANCE2.5.MP4",
         "description": "Short film follows a group of Korean students riding home late at night on what should have been an ordinary school bus ride. While young couple Jeamin and So Hee quietly share a romantic moment in the back seats, an infected girl suddenly boards the bus. As fear spreads through the silent vehicle, the students realize something horrifying is terribly wrong. Trapped inside the moving bus, they must survive one terrifying night before the infection reaches everyone onboard."
+      },
+      {
+        "id": "animation",
+        "title": "Final Animation 6 ",
+        "genre": "Sci-Fi Psychological",
+        "poster": "https://assets.youaistudio.vn/videos/filmAI/final%20animation%206.mp4",
+        "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/final%20animation%206.mp4",
+        "description": "A surreal story of a coder trapped inside a collapsing digital world."
+      }
+    ]
+  },
+
+  "commercial": {
+    "hero": {
+      "title": "AI-Powered Commercial Production",
+      "subtitle": "Smarter Production. Faster Results. Stronger Impact.",
+      "description": "We help brands create high-quality commercials using AI — reducing production time, optimizing costs, and unlocking limitless creative possibilities.",
+      "backgroundVideo": "https://assets.youaistudio.vn/videos/commercial/NIKE.mov"
+    },
+    "showcaseIds": ["laroche-posay", "iphone", "cartier", "macorner"],
+    "campaigns": [
+      {
+        "id": "macbook",
+        "title": "Mackbook",
+        "thumbnail": "https://assets.youaistudio.vn/images/commercial/shopping%20(4).webp",
+        "videoUrl": "https://res.cloudinary.com/dyxcskrss/video/upload/v1784820398/0723_4_vcyszu.mp4"
+      },
+      {
+        "id": "iphone",
+        "title": "Iphone",
+        "thumbnail": "https://assets.youaistudio.vn/images/commercial/mau-sac-iphone-17-pro-max.jpg",
+        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/IPHONE17.mov"
+      },
+      {
+        "id": "nike",
+        "title": "Nike",
+        "thumbnail": "https://assets.youaistudio.vn/images/commercial/z4027417137451-e4f67b88df4bf8b01a3e1f78917d4e7c.webp",
+        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/NIKE.mov"
+      },
+      {
+        "id": "laroche-posay",
+        "title": "Laroche Posay",
+        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/LAROCHE%20POSAY.mov",
+        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/LAROCHE%20POSAY.mov"
+      },
+      {
+        "id": "cartier",
+        "title": "CARTIER",
+        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/CARTIER.mov",
+        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/CARTIER.mov"
+      },
+      {
+        "id": "macorner",
+        "title": "MACORNER",
+        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/MACORNER.mov",
+        "videoUrl": "https://assets.youaistudio.vn/videos/commercial/MACORNER.mov"
+      }
+    ],
+    "brands": [
+      { "name": "Kotex", "logo": "https://assets.youaistudio.vn/images/logo/Kotex.jpg" },
+      { "name": "Milaganics", "logo": "https://assets.youaistudio.vn/images/logo/mijaganics.jpg" },
+      { "name": "Wonjin", "logo": "https://assets.youaistudio.vn/images/logo/wonjin.jpg" },
+      { "name": "Derladie", "logo": "https://assets.youaistudio.vn/images/logo/derladie.jpg" },
+      { "name": "Heimish", "logo": "https://assets.youaistudio.vn/images/logo/heimish.jpg" },
+      { "name": "Tfit", "logo": "https://assets.youaistudio.vn/images/logo/tfit.jpg" },
+      { "name": "GGG Cosmetic", "logo": "https://assets.youaistudio.vn/images/logo/g.g.g.png" },
+      { "name": "Skinfood1957", "logo": "https://assets.youaistudio.vn/images/logo/skinfood.jpg" },
+      { "name": "Sundays", "logo": "https://assets.youaistudio.vn/images/logo/Huggies-Logo.png" },
+      { "name": "Herherbal", "logo": "https://assets.youaistudio.vn/images/logo/herherbal.jpg" },
+      { "name": "Abib", "logo": "https://assets.youaistudio.vn/images/logo/abib.jpg" },
+      { "name": "Uniyoung", "logo": "https://assets.youaistudio.vn/images/logo/uniyoung.jpg" },
+      { "name": "Macorner", "logo": "https://assets.youaistudio.vn/images/logo/m.jpg" },
+      { "name": "Capcut", "logo": "https://assets.youaistudio.vn/images/logo/capcut.png" },
+      { "name": "The Cocoon", "logo": "https://assets.youaistudio.vn/images/logo/cocoon.jpg" }
+    ]
+  },
+
+  "imagery": {
+    "heroImageId": "cartier-1",
+    "categories": {
+      "fashion": {
+        "title": "Fashion",
+        "description": "Bold editorial visuals crafted to define identity and set trends."
+      },
+      "product": {
+        "title": "Product",
+        "description": "High-end product visuals for advertising, ecommerce and campaigns."
+      },
+      "conceptArt": {
+        "title": "Concept Art",
+        "description": "Unlimited creativity from surreal worlds to cinematic universes."
+      }
+    },
+    "images": [
+      {
+        "id": "cartier-1",
+        "category": "fashion",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/Cartier%201.jpg",
+        "title": "Fashion",
+        "type": "portrait"
+      },
+      {
+        "id": "cartier-2",
+        "category": "fashion",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/Cartier%202.jpg",
+        "title": "Fashion",
+        "type": "portrait"
+      },
+      {
+        "id": "cartier-3",
+        "category": "fashion",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/Cartier%203.jpg",
+        "title": "Fashion",
+        "type": "portrait"
+      },
+      {
+        "id": "cartier-5",
+        "category": "fashion",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/Cartier%205.jpg",
+        "title": "Fashion",
+        "type": "portrait"
+      },
+      {
+        "id": "cartier-6",
+        "category": "fashion",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/Cartier%206.jpg",
+        "title": "Fashion",
+        "type": "portrait"
+      },
+      {
+        "id": "snack-1",
+        "category": "product",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/snack1.png",
+        "title": "Product",
+        "type": "portrait"
+      },
+      {
+        "id": "snack-2",
+        "category": "product",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/snack2.png",
+        "title": "Product",
+        "type": "portrait"
+      },
+      {
+        "id": "snack-3",
+        "category": "product",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/snack3.png",
+        "title": "Product",
+        "type": "portrait"
+      },
+      {
+        "id": "snack-4",
+        "category": "product",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/snack4.png",
+        "title": "Product",
+        "type": "portrait"
+      },
+      {
+        "id": "perfume-1",
+        "category": "conceptArt",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume1.jpeg",
+        "title": "Concept Art",
+        "type": "portrait"
+      },
+      {
+        "id": "perfume-2",
+        "category": "conceptArt",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume2.jpeg",
+        "title": "Concept Art",
+        "type": "portrait"
+      },
+      {
+        "id": "perfume-3",
+        "category": "conceptArt",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume3.jpeg",
+        "title": "Concept Art",
+        "type": "portrait"
+      },
+      {
+        "id": "perfume-4",
+        "category": "conceptArt",
+        "imageUrl": "https://assets.youaistudio.vn/images/imageAI/perfume4.jpeg",
+        "title": "Concept Art",
+        "type": "portrait"
       }
     ]
   }
-
-  ,
-"commercial": {
-
-  "hero": {
-    "title": "AI-Powered Commercial Production",
-    "subtitle": "Smarter Production. Faster Results. Stronger Impact.",
-    "description": "We help brands create high-quality commercials using AI — reducing production time, optimizing costs, and unlocking limitless creative possibilities.",
-    "backgroundVideo": "https://assets.youaistudio.vn/videos/commercial/NIKE.mov"
-  },
-
-  "showcase": [
-    {
-      "title": "Laroche Posay",
-      "thumbnail":"https://assets.youaistudio.vn/videos/commercial/LAROCHE%20POSAY.mov",
-      "videoUrl": "https://assets.youaistudio.vn/videos/commercial/LAROCHE%20POSAY.mov"
-    },
-
-    {
-      "title": "Iphone",
-      "thumbnail":"https://assets.youaistudio.vn/videos/commercial/IPHONE17.mov",
-      "videoUrl": "https://assets.youaistudio.vn/videos/commercial/IPHONE17.mov"
-    },
-
-    {
-      "title": "CARTIER",
-      "thumbnail":"https://assets.youaistudio.vn/videos/commercial/CARTIER.mov",
-      "videoUrl": "https://assets.youaistudio.vn/videos/commercial/CARTIER.mov"
-    },
-
-    {
-      "title": "MACORNER",
-      "thumbnail":"https://assets.youaistudio.vn/videos/commercial/MACORNER.mov",
-      "videoUrl": "https://assets.youaistudio.vn/videos/commercial/MACORNER.mov"
-    }
-  ],
-
-  "brands": [
-  {
-    "name": "Kotex",
-    "logo": "https://assets.youaistudio.vn/images/logo/Kotex.jpg"
-  },
-  {
-    "name": "Milaganics",
-    "logo": "https://assets.youaistudio.vn/images/logo/mijaganics.jpg"
-  },
-  {
-    "name": "Wonjin",
-    "logo": "https://assets.youaistudio.vn/images/logo/wonjin.jpg"
-  },
-  {
-    "name": "Derladie",
-    "logo": "https://assets.youaistudio.vn/images/logo/derladie.jpg"
-  },
-  {
-    "name": "Heimish",
-    "logo": "https://assets.youaistudio.vn/images/logo/heimish.jpg"
-  },
-  {
-    "name": "Tfit",
-    "logo": "https://assets.youaistudio.vn/images/logo/tfit.jpg"
-  },
-  {
-    "name": "GGG Cosmetic",
-    "logo": "https://assets.youaistudio.vn/images/logo/g.g.g.png"
-  },
-  {
-    "name": "Skinfood1957",
-    "logo": "https://assets.youaistudio.vn/images/logo/skinfood.jpg"
-  },
-  {
-    "name": "Sundays",
-    "logo": "https://assets.youaistudio.vn/images/logo/Huggies-Logo.png"
-  },
-  {
-    "name": "Herherbal",
-    "logo": "https://assets.youaistudio.vn/images/logo/herherbal.jpg"
-  },
-  {
-    "name": "Abib",
-    "logo": "https://assets.youaistudio.vn/images/logo/abib.jpg"
-  },
-  {
-    "name": "Uniyoung",
-    "logo": "https://assets.youaistudio.vn/images/logo/uniyoung.jpg"
-  },
-  {
-    "name": "Macorner",
-    "logo": "https://assets.youaistudio.vn/images/logo/m.jpg"
-  },
-  {
-    "name": "Capcut",
-    "logo": "https://assets.youaistudio.vn/images/logo/capcut.png"
-  },
-  {
-    "name": "The Cocoon",
-    "logo": "https://assets.youaistudio.vn/images/logo/cocoon.jpg"
-  }
-]
-}
-
 }

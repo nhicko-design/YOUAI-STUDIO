@@ -1,39 +1,14 @@
-export function ImageryCTA(){
-
+export function ImageryCTA() {
   return `
-
-    <section class="imagery-cta-section">
-
+    <section class="imagery-cta-section" aria-labelledby="imagery-cta-title">
       <div class="film-container">
-
         <div class="imagery-cta-box">
-
-          <div class="imagery-tag">
-            GENERATE YOUR VISUALS
-          </div>
-
-          <h2>
-            Create Without Limits
-          </h2>
-
-          <p>
-            Turn your ideas into striking visuals in minutes.
-            Whether for branding, campaigns,
-            or creative exploration —
-            we create images that stand out,
-            scale fast,
-            and leave a lasting impression.
-          </p>
-
-          <a href="#contact" class="imagery-cta-btn">
-            Generate Your Visuals
-          </a>
-
+          <div class="imagery-tag">MAKE THE NEXT IMAGE YOURS</div>
+          <h2 id="imagery-cta-title">A clear idea.<br><span>A striking image.</span></h2>
+          <p>Bring us a brief, a product, or just the first spark of an idea. We’ll shape it into a visual direction made for your brand.</p>
+          <a href="#contact" class="imagery-cta-btn">Start a project <span aria-hidden="true">↗</span></a>
         </div>
-
       </div>
-
     </section>
-
   `;
 }
