@@ -82,7 +82,7 @@
         "id": "animation",
         "title": "Final Animation 6 ",
         "genre": "Sci-Fi Psychological",
-        "poster": "https://assets.youaistudio.vn/videos/filmAI/final%20animation%206.mp4",
+        "poster": "https://assets.youaistudio.vn/thumbnails/ANIMATION%20%5B%20FIRE%5D.png",
         "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/final%20animation%206.mp4",
         "description": "A surreal story of a coder trapped inside a collapsing digital world."
       },
@@ -90,7 +90,7 @@
         "id": "frost",
         "title": "Frost and Fire",
         "genre": "Sci-Fi Psychological",
-        "poster": "https://assets.youaistudio.vn/videos/filmAI/FROST%20AND%20FIRE%20.mp4",
+        "poster": "https://assets.youaistudio.vn/thumbnails/FROST%20AND%20FIRE.png",
         "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/FROST%20AND%20FIRE%20.mp4",
         "description": "A surreal story of a coder trapped inside a collapsing digital world."
       },
@@ -98,7 +98,7 @@
         "id": "spirit",
         "title": "Spirit Summoning",
         "genre": "Sci-Fi Psychological",
-        "poster": "https://assets.youaistudio.vn/videos/filmAI/GoiHon.mp4",
+        "poster": "https://assets.youaistudio.vn/thumbnails/SPIRIT.png",
         "videoUrl": "https://assets.youaistudio.vn/videos/filmAI/GoiHon.mp4",
         "description": "A surreal story of a coder trapped inside a collapsing digital world."
       }
@@ -118,25 +118,25 @@
       {
         "id": "tiktokshop01",
         "title": "TikTok Shop",
-        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TIKOKSHOP%208.8%20(1).mp4",
+        "thumbnail": "https://assets.youaistudio.vn/thumbnails/TIKTOKSHOP.png",
         "videoUrl": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TIKOKSHOP%208.8%20(1).mp4"
       },
       {
         "id": "tiktokshop02",
         "title": "TikTok Shop",
-        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TIKTOKSHOP%208.8.mp4",
+        "thumbnail": "https://assets.youaistudio.vn/thumbnails/TIKTOKSHOP%202.png",
         "videoUrl": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TIKTOKSHOP%208.8.mp4"
       },
       {
         "id": "viettel-5g",
         "title": "Viettel 5G",
-        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TVC%20VIETTEL%205G.mov",
+        "thumbnail": "https://assets.youaistudio.vn/thumbnails/POSTER%20VIETTEL%205G.png",
         "videoUrl": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TVC%20VIETTEL%205G.mov"
       },
       {
         "id": "vt",
         "title": "VT",
-        "thumbnail": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TVC%20VT.mp4",
+        "thumbnail": "https://assets.youaistudio.vn/thumbnails/POSTER%20VT.jpeg",
         "videoUrl": "https://assets.youaistudio.vn/videos/commercial/B%E1%BA%A3n%20sao%20c%E1%BB%A7a%20TVC%20VT.mp4"
       }
     ],
